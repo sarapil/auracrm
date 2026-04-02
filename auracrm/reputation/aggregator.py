@@ -139,6 +139,8 @@ def _pull_facebook_reviews(settings):
 @frappe.whitelist()
 def get_reputation_summary():
     """Return aggregate reputation metrics."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     total = frappe.db.count("Review Entry")
     if not total:
         return {

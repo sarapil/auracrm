@@ -83,6 +83,7 @@ def record_event(event_key, user=None, reference_doctype=None, reference_name=No
     Returns:
         dict with points awarded, or None if blocked by anti-gaming
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     if not is_enabled():
         return None
 
@@ -523,6 +524,7 @@ def _update_challenges(user, event_key):
 @frappe.whitelist()
 def get_leaderboard(period=None, limit=None):
     """Get ranked agent leaderboard for the given period."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     if not is_enabled():
         return []
 
@@ -574,6 +576,7 @@ def get_leaderboard(period=None, limit=None):
 @frappe.whitelist()
 def get_agent_gamification_profile(user=None):
     """Full gamification profile for an agent."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     if not is_enabled():
         return {}
 
@@ -872,6 +875,7 @@ def check_challenge_expiry():
 @frappe.whitelist()
 def seed_default_events():
     """Create the default gamification events if they don't exist."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     defaults = [
         # Sales Activity
         {"event_key": "call_completed", "event_name": "Call Completed", "category": "Sales Activity",
@@ -963,6 +967,7 @@ def seed_default_events():
 @frappe.whitelist()
 def seed_default_badges():
     """Create default badge definitions."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     defaults = [
         # Bronze
         {"badge_name": "First Steps", "tier": "Bronze", "badge_type": "Milestone", "icon": "👣",
@@ -1052,6 +1057,7 @@ def seed_default_badges():
 @frappe.whitelist()
 def seed_default_levels():
     """Create default level definitions."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     defaults = [
         {"level_number": 1, "level_name": "Rookie", "min_points": 0, "icon": "🌱", "color": "#6b7280",
          "perks": "Welcome! Start earning points to level up."},

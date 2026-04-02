@@ -129,12 +129,14 @@ def _validate_key(key: str) -> bool:
 @frappe.whitelist()
 def get_license_status() -> dict:
 	"""API: Get current license status."""
+	frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
 	return get_license_info()
 
 
 @frappe.whitelist()
 def validate_license_key(key: str) -> dict:
 	"""API: Validate a license key without saving."""
+	frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
 	is_valid = _validate_key(key)
 	return {
 		"valid": is_valid,

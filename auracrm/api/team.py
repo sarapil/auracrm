@@ -14,6 +14,8 @@ from caps.utils.resolver import require_capability
 @cached(ttl=120, key_prefix="team:overview")
 def get_team_overview():
     """Team overview — batch queries instead of per-agent loops."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("team:overview:view")
     # Step 1: Get sales users via Has Role (single query)
     sales_users = frappe.db.sql("""
@@ -86,6 +88,8 @@ def get_team_overview():
 @frappe.whitelist()
 def get_agent_detail(agent):
     """Get detailed stats for a single agent — batch query."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("team:agent_detail:view")
     today = getdate(now_datetime())
     month_start = today.replace(day=1)

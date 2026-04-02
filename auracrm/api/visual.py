@@ -27,6 +27,8 @@ def get_command_center_graph():
     Each major module is a child node with live counts.
     Edges connect central → module nodes.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("analytics:dashboard:view")
     start = add_days(getdate(now_datetime()), -30)
 
@@ -244,6 +246,8 @@ def get_pipeline_flow():
     [Lead Source] → [Stage 1] → [Stage 2] → ... → [Won/Lost]
     Each stage node has live count + value as summary.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("pipeline:stages:view")
 
     # Stages
@@ -595,6 +599,8 @@ def get_team_graph():
     Returns an org-tree graph:
     [CRM] → [Manager] → [Agent] with live metrics on each agent node.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("team:overview:view")
     start = add_days(getdate(now_datetime()), -30)
 
@@ -750,6 +756,8 @@ def get_analytics_funnel():
     Returns a layered graph for the conversion funnel.
     Visitors → Leads → Qualified → Opportunities → Won
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("analytics:dashboard:view")
     start = add_days(getdate(now_datetime()), -30)
 
@@ -833,6 +841,8 @@ def get_score_heatmap():
     Returns nodes grouped by score temperature band (Hot/Warm/Cool/Cold)
     with top leads in each band as child nodes.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:scores:view")
 
     bands = frappe.db.sql("""
@@ -904,6 +914,8 @@ def get_crm_node_types():
     Returns CRM-specific node type definitions for
     ColorSystem.registerNodeType() on the client side.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     return {
         "crm-hub":           {"palette": "indigo",  "icon": "✦", "shape": "ellipse",         "width": 180, "height": 70},
         "crm-leads":         {"palette": "blue",    "icon": "👤", "shape": "roundrectangle", "width": 150, "height": 55},

@@ -22,6 +22,7 @@ def get_lead_list(
 
     API: /api/method/auracrm.api.leads.get_lead_list
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     filters = get_leads_query_filter()
 
     if status:
@@ -165,6 +166,7 @@ def generate_content(lead_name: str = None, topic: str = None, platform: str = "
 
     API: /api/method/auracrm.api.leads.generate_content
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     context = {}
 
     if lead_name and frappe.db.exists("Lead", lead_name):
@@ -220,6 +222,7 @@ def get_lead_capabilities():
 
     API: /api/method/auracrm.api.leads.get_lead_capabilities
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     return {
         "can_create": check_capability("crm_lead_create"),
         "can_edit": check_capability("crm_lead_edit"),

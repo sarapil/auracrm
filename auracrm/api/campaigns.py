@@ -12,6 +12,7 @@ from caps.utils.resolver import require_capability
 @frappe.whitelist()
 def activate_sequence(sequence_name):
     """Activate a campaign sequence."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("campaigns:activate")
     from auracrm.engines.campaign_engine import activate_sequence as _activate
     return _activate(sequence_name)
@@ -20,6 +21,7 @@ def activate_sequence(sequence_name):
 @frappe.whitelist()
 def pause_sequence(sequence_name):
     """Pause an active sequence."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("campaigns:pause")
     from auracrm.engines.campaign_engine import pause_sequence as _pause
     return _pause(sequence_name)
@@ -28,6 +30,7 @@ def pause_sequence(sequence_name):
 @frappe.whitelist()
 def get_sequence_progress(sequence_name):
     """Get sequence progress with step-level breakdown."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("campaigns:progress:view")
     from auracrm.engines.campaign_engine import get_sequence_progress as _progress
     return _progress(sequence_name)
@@ -37,6 +40,7 @@ def get_sequence_progress(sequence_name):
 def enroll_contact(sequence_name, contact_doctype, contact_name,
                    email=None, phone=None):
     """Manually enroll a contact in a sequence."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("campaigns:enroll")
     from auracrm.engines.campaign_engine import enroll_contact as _enroll
     return _enroll(sequence_name, contact_doctype, contact_name, email, phone)
@@ -45,6 +49,7 @@ def enroll_contact(sequence_name, contact_doctype, contact_name,
 @frappe.whitelist()
 def opt_out(sequence_name, contact_doctype, contact_name, reason=None):
     """Opt-out a contact from a sequence."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("campaigns:opt_out")
     from auracrm.engines.campaign_engine import opt_out_contact as _opt_out
     return _opt_out(sequence_name, contact_doctype, contact_name, reason)

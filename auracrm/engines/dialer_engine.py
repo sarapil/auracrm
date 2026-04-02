@@ -532,6 +532,8 @@ def handle_call_result(entry_name, disposition, duration=0, notes=None, call_log
     Called by the frontend softphone after call ends, or by AMI event handler.
     Handles retry scheduling, DNC marking, and stat updates.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     entry = frappe.get_doc("Auto Dialer Entry", entry_name)
     campaign = frappe.get_doc("Auto Dialer Campaign", entry.campaign)
 

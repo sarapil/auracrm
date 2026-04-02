@@ -25,6 +25,8 @@ def _period_start(period):
 @cached(ttl=90, key_prefix="analytics:kpis")
 def get_dashboard_kpis(period="month"):
     """Get KPI data — single aggregated query per DocType."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("analytics:dashboard:view")
     start = _period_start(period)
 
@@ -66,6 +68,8 @@ def get_dashboard_kpis(period="month"):
 @cached(ttl=120, key_prefix="analytics:agent_perf")
 def get_agent_performance(period="month"):
     """Per-agent metrics — single aggregated SQL instead of N+1 loops."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("analytics:agent_performance:view")
     start = _period_start(period)
 
@@ -99,6 +103,8 @@ def get_agent_performance(period="month"):
 @cached(ttl=180, key_prefix="analytics:overview")
 def get_overview():
     """System-wide AuraCRM stats — single compound query."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("analytics:overview:view")
     stats = frappe.db.sql("""
         SELECT

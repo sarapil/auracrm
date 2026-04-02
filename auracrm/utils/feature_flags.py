@@ -11,6 +11,8 @@ Usage::
     @frappe.whitelist()
     @require_premium("ai_lead_scoring")
     def score_lead_with_ai(lead):
+        frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
         ...
 
     # Runtime check
@@ -94,6 +96,8 @@ def require_premium(feature_key: str):
 	    @frappe.whitelist()
 	    @require_premium("automation_builder")
 	    def create_automation(data):
+	        frappe.only_for(["AuraCRM Manager", "System Manager"])
+
 	        ...
 	"""
 	def decorator(func):
@@ -166,6 +170,8 @@ def get_all_features() -> dict[str, dict]:
 @frappe.whitelist()
 def get_enabled_features() -> dict[str, bool]:
 	"""API: Get dictionary of feature:enabled for client-side use."""
+	frappe.only_for(["AuraCRM Manager", "System Manager"])
+
 	from auracrm.utils.license import is_premium_active
 	premium = is_premium_active()
 
@@ -178,6 +184,8 @@ def get_enabled_features() -> dict[str, bool]:
 @frappe.whitelist()
 def check_feature(feature_key: str) -> dict:
 	"""API: Check if a specific feature is available."""
+	frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
 	enabled = is_feature_enabled(feature_key)
 	tier = get_feature_tier(feature_key)
 

@@ -65,6 +65,8 @@ def require_capability(capability_code: str):
         @frappe.whitelist()
         @require_capability("crm_lead_create")
         def create_lead(**kwargs):
+            frappe.only_for(["AuraCRM Manager", "System Manager"])
+
             ...
     """
     def decorator(fn):
@@ -139,6 +141,8 @@ def get_user_capabilities(user: str = None) -> list:
 @frappe.whitelist()
 def get_my_capabilities():
     """API endpoint to get current user's capabilities."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     return get_user_capabilities()
 
 

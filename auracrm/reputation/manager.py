@@ -59,6 +59,8 @@ def _notify_admins_negative_review(doc):
 @frappe.whitelist()
 def generate_ai_response(review_name):
     """Generate an AI-powered response to a review."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("Review Entry", review_name)
     settings = frappe.get_cached_doc("AuraCRM Settings")
     api_key = settings.get("anthropic_api_key")
@@ -125,6 +127,8 @@ Generate ONLY the response text, no metadata."""
 @frappe.whitelist()
 def approve_response(review_name):
     """Approve and mark a suggested response as ready to post."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("Review Entry", review_name)
     if not doc.get("suggested_response"):
         frappe.throw("No suggested response available")
@@ -140,6 +144,8 @@ def approve_response(review_name):
 def publish_response(review_name):
     """Publish the approved response to the review platform.
     Note: Platform-specific publishing requires API integration."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("Review Entry", review_name)
 
     if doc.get("response_status") != "Approved":

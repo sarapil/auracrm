@@ -16,6 +16,8 @@ def get_dashboard_data(period: str = "month"):
     Args:
         period: "week", "month", "quarter", "year"
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     from_date = _get_period_start(period)
 
     return {

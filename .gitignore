@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+
+# Virtual Environment
+env/
+venv/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+
+# Node
+node_modules/
+package-lock.json
+yarn.lock
+
+# Frappe
+*.pyc
+sites/
+archived/
+
+# AI Tools
+.aider*
+.copilot/
+.cursor/
+
+# Coverage & Testing
+.coverage
+htmlcov/
+.pytest_cache/
+.tox/
+
+# Logs
+*.log
+
+# Distribution
+*.tar.gz
+*.whl

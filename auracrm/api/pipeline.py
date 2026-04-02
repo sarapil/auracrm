@@ -11,6 +11,8 @@ from caps.utils.resolver import require_capability
 @cached(ttl=60, key_prefix="pipeline:stages")
 def get_pipeline_stages():
     """Get pipeline stages with counts — single aggregated query."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("pipeline:stages:view")
     stages = frappe.get_all("Sales Stage", fields=["name", "stage_name"], order_by="idx asc")
     if not stages:
@@ -43,6 +45,8 @@ def get_pipeline_stages():
 @frappe.whitelist()
 def get_pipeline_board(filters=None):
     """Get Kanban board data — single query for all stage opportunities."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("pipeline:board:view")
     if isinstance(filters, str):
         filters = json.loads(filters)
@@ -87,6 +91,8 @@ def get_pipeline_board(filters=None):
 @frappe.whitelist()
 def move_opportunity(opportunity, new_stage):
     """Move an opportunity to a new pipeline stage."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("pipeline:move")
     frappe.db.set_value("Opportunity", opportunity, "sales_stage", new_stage)
     from auracrm.cache import invalidate_prefix

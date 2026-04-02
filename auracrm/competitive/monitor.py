@@ -208,6 +208,8 @@ def _scan_social(comp):
 @frappe.whitelist()
 def analyze_competitor_with_ai(competitor_name):
     """Use AI to analyze recent competitive intel and generate insights."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     settings = frappe.get_cached_doc("AuraCRM Settings")
     api_key = settings.get("anthropic_api_key")
     if not api_key:

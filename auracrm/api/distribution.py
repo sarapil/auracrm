@@ -10,6 +10,8 @@ from caps.utils.resolver import require_capability
 @cached(ttl=60, key_prefix="dist:stats")
 def get_distribution_stats():
     """Get lead distribution statistics — batch queries instead of per-agent loop."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("distribution:stats:view")
     agents = frappe.db.sql("""
         SELECT DISTINCT u.name, u.full_name, u.user_image

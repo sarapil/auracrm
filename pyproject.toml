@@ -1,14 +1,21 @@
 [project]
 name = "auracrm"
-authors = [
-    { name = "Arkan Lab", email = "moatazsarapil@gmail.com"}
-]
+version = "1.0.0"
 description = "Open-source CRM for Frappe/ERPNext — Lead Scoring, Pipeline Management, AI Intelligence, Gamification & Marketing Automation"
+authors = [{name = "Arkan Lab", email = "dev@arkan.tech"}]
 requires-python = ">=3.10"
 readme = "README.md"
-dynamic = ["version"]
 license = {text = "MIT"}
 keywords = ["frappe", "erpnext", "crm", "lead-management", "sales", "pipeline", "ai", "gamification", "arabic", "rtl"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Web Environment",
+    "Framework :: Frappe",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: JavaScript",
+]
 
 [project.urls]
 Homepage = "https://github.com/ArkanLab/auracrm"
@@ -16,15 +23,18 @@ Repository = "https://github.com/ArkanLab/auracrm"
 Documentation = "https://github.com/ArkanLab/auracrm/tree/main/docs"
 Issues = "https://github.com/ArkanLab/auracrm/issues"
 Changelog = "https://github.com/ArkanLab/auracrm/blob/main/CHANGELOG.md"
-dependencies = [
-    # "frappe~=16.0.0" # Installed and managed by bench.
-]
 
 [build-system]
 requires = ["flit_core >=3.4,<4"]
 build-backend = "flit_core.buildapi"
 
-# These dependencies are only installed when developer mode is enabled
+[tool.bench.frappe-dependencies]
+frappe = ">=16.0.0,<17.0.0"
+erpnext = ">=16.0.0,<17.0.0"
+frappe_visual = ">=0.1.0"
+arrowz = ">=16.0.0"
+caps = ">=1.0.0"
+
 [tool.bench.dev-dependencies]
 # package_name = "~=1.1.0"
 
@@ -33,34 +43,25 @@ line-length = 110
 target-version = "py310"
 
 [tool.ruff.lint]
-select = [
-    "F",
-    "E",
-    "W",
-    "I",
-    "UP",
-    "B",
-    "RUF",
-]
+select = ["F", "E", "W", "I", "UP", "B", "RUF"]
 ignore = [
-    "B017", # assertRaises(Exception) - should be more specific
-    "B018", # useless expression, not assigned to anything
-    "B023", # function doesn't bind loop variable - will have last iteration's value
-    "B904", # raise inside except without from
-    "E101", # indentation contains mixed spaces and tabs
-    "E402", # module level import not at top of file
-    "E501", # line too long
-    "E741", # ambiguous variable name
-    "F401", # "unused" imports
-    "F403", # can't detect undefined names from * import
-    "F405", # can't detect undefined names from * import
-    "F722", # syntax error in forward type annotation
-    "W191", # indentation contains tabs
-    "UP030", # Use implicit references for positional format fields (translations)
-    "UP031", # Use format specifiers instead of percent format
-    "UP032", # Use f-string instead of `format` call (translations)
-    "UP037", # quoted annotations
-    "UP040", # Use type aliases instead of type annotations
+    "B017",   # assertRaises(Exception)
+    "B018",   # useless expression
+    "B023",   # function definition in loop
+    "B904",   # raise without from
+    "E101",   # mixed spaces and tabs
+    "E402",   # module level import not at top
+    "E501",   # line too long
+    "E741",   # ambiguous variable name
+    "F401",   # unused import
+    "F403",   # star imports
+    "F405",   # may be undefined from star import
+    "F722",   # syntax error in forward annotation
+    "W191",   # indentation contains tabs
+    "UP030",  # implicit positional references
+    "UP031",  # percent format
+    "UP032",  # f-string vs format
+    "RUF001", # ambiguous unicode
 ]
 typing-modules = ["frappe.types.DF"]
 
@@ -68,3 +69,16 @@ typing-modules = ["frappe.types.DF"]
 quote-style = "double"
 indent-style = "tab"
 docstring-code-format = true
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --strict-markers"
+testpaths = ["auracrm/tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+markers = [
+    "slow: marks tests as slow",
+    "integration: integration tests",
+    "unit: unit tests",
+]

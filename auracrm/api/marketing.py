@@ -16,6 +16,7 @@ from caps.utils.resolver import require_capability
 @frappe.whitelist()
 def get_call_panel(contact_doctype, contact_name, campaign_name=None):
     """Get the full agent context panel data for a call."""
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     require_capability("marketing:call_panel:view")
     from auracrm.engines.marketing_engine import get_agent_call_panel
     return get_agent_call_panel(contact_doctype, contact_name, campaign_name)
@@ -33,6 +34,8 @@ def preview_call_context(contact_doctype, contact_name, campaign_name=None):
 @frappe.whitelist()
 def resolve_context_rule(contact_doctype, contact_name, campaign_name=None):
     """Find which Call Context Rule would apply for a contact."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:context:resolve")
     from auracrm.engines.marketing_engine import resolve_call_context
     rule_name = resolve_call_context(contact_doctype, contact_name, campaign_name)
@@ -47,6 +50,8 @@ def resolve_context_rule(contact_doctype, contact_name, campaign_name=None):
 @frappe.whitelist()
 def classify_contact(doctype, name):
     """Auto-classify a contact based on classification rules."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:classify_contact")
     from auracrm.engines.marketing_engine import auto_classify_contact
     return auto_classify_contact(doctype, name)
@@ -55,8 +60,9 @@ def classify_contact(doctype, name):
 @frappe.whitelist()
 def bulk_classify(doctype, names=None):
     """Bulk auto-classify contacts. names = JSON array or None for all."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:bulk_classify")
-    frappe.only_for(["Marketing Manager", "CRM Admin", "System Manager"])
     from auracrm.engines.marketing_engine import auto_classify_contact
     import json as _json
 
@@ -84,6 +90,8 @@ def bulk_classify(doctype, names=None):
 @frappe.whitelist()
 def sync_list(list_name):
     """Sync a marketing list from its source."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:list:sync")
     from auracrm.engines.marketing_engine import sync_marketing_list
     return sync_marketing_list(list_name)
@@ -92,6 +100,8 @@ def sync_list(list_name):
 @frappe.whitelist()
 def get_list_members(list_name, status=None, limit=50, offset=0):
     """Get members of a marketing list with optional status filter."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:list_members:view")
     filters = {"parent": list_name, "parenttype": "Marketing List"}
     if status:
@@ -113,6 +123,8 @@ def get_list_members(list_name, status=None, limit=50, offset=0):
 @frappe.whitelist()
 def add_list_member(list_name, member_doctype, member_name, email=None, phone=None):
     """Manually add a member to a marketing list."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:list_members:manage")
     doc = frappe.get_doc("Marketing List", list_name)
     # Check for duplicates
@@ -144,6 +156,8 @@ def add_list_member(list_name, member_doctype, member_name, email=None, phone=No
 @frappe.whitelist()
 def remove_list_member(list_name, member_doctype, member_name):
     """Remove a member from a marketing list."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:list_members:manage")
     doc = frappe.get_doc("Marketing List", list_name)
     to_remove = None
@@ -165,6 +179,8 @@ def remove_list_member(list_name, member_doctype, member_name):
 @frappe.whitelist()
 def get_classifications():
     """Get all contact classifications with stats."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:classifications:view")
     from auracrm.engines.marketing_engine import get_classification_stats
     return get_classification_stats()
@@ -173,6 +189,8 @@ def get_classifications():
 @frappe.whitelist()
 def get_classification_context(classification_name):
     """Get the agent context settings for a classification."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:classifications:view")
     cls = frappe.get_doc("Contact Classification", classification_name)
     return {
@@ -193,6 +211,8 @@ def get_classification_context(classification_name):
 @frappe.whitelist()
 def get_dashboard():
     """Get the full marketing manager dashboard."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:dashboard:view")
     from auracrm.engines.marketing_engine import get_marketing_dashboard
     return get_marketing_dashboard()
@@ -204,6 +224,8 @@ def get_dashboard():
 @frappe.whitelist()
 def get_context_rules():
     """Get all call context rules with details."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:context_rules:manage")
     return frappe.get_all(
         "Call Context Rule",
@@ -219,6 +241,8 @@ def get_context_rules():
 @frappe.whitelist()
 def test_context_rule(rule_name, contact_doctype, contact_name):
     """Test a specific context rule against a contact — see what would show."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("marketing:context_rules:manage")
     rule = frappe.get_doc("Call Context Rule", rule_name)
     from auracrm.engines.marketing_engine import get_agent_call_panel

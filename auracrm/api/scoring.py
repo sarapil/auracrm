@@ -9,6 +9,8 @@ from caps.utils.resolver import require_capability
 @frappe.whitelist()
 def get_lead_scores(filters=None, limit=50):
     """Get leads with their scores for the scoring dashboard."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:scores:view")
     if isinstance(filters, str):
         filters = json.loads(filters)
@@ -31,6 +33,8 @@ def get_lead_scores(filters=None, limit=50):
 @cached(ttl=120, key_prefix="scoring:dist")
 def get_score_distribution():
     """Get distribution of lead scores — single query with CASE WHEN."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:distribution:view")
     row = frappe.db.sql("""
         SELECT
@@ -54,6 +58,8 @@ def get_score_distribution():
 @cached(ttl=300, key_prefix="scoring:rules")
 def get_scoring_rules():
     """Get all scoring rules with criteria — batch fetch."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:rules:view")
     rules = frappe.get_all(
         "Lead Scoring Rule",
@@ -87,8 +93,9 @@ def get_scoring_rules():
 @frappe.whitelist()
 def recalculate_all_scores():
     """Admin: Recalculate scores for all open leads. Returns count."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:recalculate")
-    frappe.only_for(["System Manager", "Sales Manager"])
 
     leads = frappe.get_all(
         "Lead",
@@ -114,6 +121,8 @@ def recalculate_all_scores():
 @frappe.whitelist()
 def get_score_history(lead_name, limit=20):
     """Get score change history for a specific lead."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("scoring:history:view")
     logs = frappe.get_all(
         "Lead Score Log",

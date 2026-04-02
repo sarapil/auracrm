@@ -44,6 +44,8 @@ doctype_js = {
 }
 
 after_install = "auracrm.install.after_install"
+
+after_migrate = ["auracrm.auracrm.seed.seed_data"]
 before_uninstall = "auracrm.install.before_uninstall"
 
 fixtures = [

@@ -12,6 +12,8 @@ def apply_preset(preset_code: str, company: str = None):
     Applies an industry preset to AuraCRM configuration.
     Idempotent — safe to re-run.
     """
+    frappe.only_for(["System Manager"])
+
     preset = frappe.get_doc("AuraCRM Industry Preset", {"preset_code": preset_code})
     settings = frappe.get_single("AuraCRM Settings")
 

@@ -25,6 +25,10 @@ def create_deal_room(opportunity=None, lead=None, title=None, assets=None):
     Returns:
         dict with room name, url_key, and full_url.
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     url_key = _generate_url_key()
 
     room = frappe.new_doc("Deal Room")
@@ -61,6 +65,8 @@ def create_deal_room(opportunity=None, lead=None, title=None, assets=None):
 @frappe.whitelist()
 def add_asset_to_room(room_name, asset_type, label, url, description=""):
     """Add a single asset to an existing deal room."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     room = frappe.get_doc("Deal Room", room_name)
 
     count = frappe.db.count("Deal Room Asset", {"parent": room_name})
@@ -82,6 +88,8 @@ def add_asset_to_room(room_name, asset_type, label, url, description=""):
 @frappe.whitelist()
 def deactivate_room(room_name):
     """Mark a deal room as inactive."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     frappe.db.set_value("Deal Room", room_name, "status", "Inactive")
     frappe.db.commit()
     return {"status": "success"}

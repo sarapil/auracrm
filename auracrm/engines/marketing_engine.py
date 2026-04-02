@@ -42,6 +42,10 @@ def resolve_call_context(contact_doctype, contact_name, campaign_name=None):
     Returns:
         Call Context Rule name or None
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     rules = frappe.get_all(
         "Call Context Rule",
         filters={"enabled": 1},
@@ -186,6 +190,10 @@ def get_agent_call_panel(contact_doctype, contact_name, campaign_name=None):
       - post_call_checklist: Post-call action items
       - classification: Contact's classification(s)
     """
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     # Get the matching context rule
     rule_name = resolve_call_context(contact_doctype, contact_name, campaign_name)
     rule = None
@@ -514,6 +522,8 @@ def auto_classify_contact(doctype, name):
     Returns:
         list of classification names applied
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     classifications = frappe.get_all(
         "Contact Classification",
         filters={"auto_classify": 1},
@@ -614,6 +624,8 @@ def _evaluate_filter(actual_value, operator, expected_value):
 @frappe.whitelist()
 def sync_marketing_list(list_name):
     """Manually sync a marketing list from its source."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("Marketing List", list_name)
     if doc.source == "Segment" and doc.audience_segment:
         doc.sync_from_segment()
@@ -723,6 +735,8 @@ def get_marketing_dashboard():
 @frappe.whitelist()
 def get_classification_stats():
     """Get per-classification contact counts."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     classifications = frappe.get_all(
         "Contact Classification",
         fields=["name", "classification_name", "color", "icon", "target_doctype"],
@@ -744,4 +758,6 @@ def get_classification_stats():
 @frappe.whitelist()
 def get_call_context_preview(contact_doctype, contact_name, campaign_name=None):
     """Preview what an agent would see for a given contact — for marketing managers."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     return get_agent_call_panel(contact_doctype, contact_name, campaign_name)

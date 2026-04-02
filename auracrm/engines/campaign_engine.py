@@ -501,6 +501,8 @@ def pause_sequence(sequence_name):
 @frappe.whitelist()
 def opt_out_contact(sequence_name, contact_doctype, contact_name, reason=None):
     """Opt-out a contact from a sequence."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     enrollment = frappe.db.get_value(
         "Sequence Enrollment",
         {

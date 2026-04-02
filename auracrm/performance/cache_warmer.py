@@ -134,8 +134,16 @@ def create_indexes():
 
     created = 0
     skipped = 0
+    import re
+    _safe_ident = re.compile(r"^[a-zA-Z_][a-zA-Z0-9_ ,]*$")
+
     for table, index_name, columns in INDEXES:
         try:
+            # Validate identifiers to prevent DDL injection
+            if not (_safe_ident.match(table) and _safe_ident.match(index_name) and _safe_ident.match(columns)):
+                frappe.log_error(f"Unsafe identifier skipped: {index_name} on {table}", "AuraCRM Indexes")
+                continue
+
             if not _index_exists(table, index_name):
                 frappe.db.sql(f"CREATE INDEX `{index_name}` ON `{table}` ({columns})")
                 created += 1

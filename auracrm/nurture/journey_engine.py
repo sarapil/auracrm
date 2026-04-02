@@ -86,6 +86,8 @@ def enroll_lead(lead_name, journey_name, source="manual"):
 @frappe.whitelist()
 def enroll_lead_api(lead_name, journey_name):
     """Whitelisted API to enroll a lead."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     return enroll_lead(lead_name, journey_name, source="api")
 
 

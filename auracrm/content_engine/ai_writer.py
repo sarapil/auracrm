@@ -14,6 +14,8 @@ import requests
 @frappe.whitelist()
 def generate_content(request_name):
     """Process an AI Content Request and save the result."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("AI Content Request", request_name)
     if doc.status == "Completed":
         frappe.throw("This content request has already been completed.")
@@ -69,6 +71,8 @@ def on_content_request_insert(doc, method):
 @frappe.whitelist()
 def regenerate_content(request_name):
     """Regenerate content for an existing request."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("AI Content Request", request_name)
     doc.status = "Pending"
     doc.generated_content = ""
@@ -81,6 +85,8 @@ def regenerate_content(request_name):
 @frappe.whitelist()
 def quick_generate(content_type, topic, language="en", tone="professional"):
     """Quick one-shot content generation without creating a request doc."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     settings = frappe.get_cached_doc("AuraCRM Settings")
     provider = settings.get("ai_provider") or "anthropic"
 

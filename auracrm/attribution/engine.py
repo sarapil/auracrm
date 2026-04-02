@@ -144,6 +144,8 @@ def calculate_attribution(journey_name, model_name=None):
     Returns:
         dict with channel_attribution breakdown.
     """
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     journey = frappe.get_doc("Customer Journey", journey_name)
 
     # Get the model
@@ -377,6 +379,8 @@ def _get_journey_revenue(journey):
 @frappe.whitelist()
 def get_channel_performance(period_days=30):
     """Return aggregated channel performance across all journeys."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     cutoff = add_to_date(now_datetime(), days=-period_days)
 
     journeys = frappe.get_all(

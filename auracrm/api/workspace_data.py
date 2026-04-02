@@ -8,6 +8,8 @@ from caps.utils.resolver import require_capability
 @frappe.whitelist()
 def get_sales_agent_workspace():
     """Get all data needed for the Sales Agent workspace."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("workspace:agent:view")
     user = frappe.session.user
 

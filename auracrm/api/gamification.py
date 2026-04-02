@@ -17,6 +17,8 @@ from caps.utils.resolver import require_capability
 def record_event(event_key, reference_doctype=None, reference_name=None,
                  notes=None, extra_multiplier=1.0):
     """Record a gamification event for the current user."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:record_event")
     from auracrm.engines.gamification_engine import record_event as _record
     return _record(
@@ -31,6 +33,8 @@ def record_event(event_key, reference_doctype=None, reference_name=None,
 @frappe.whitelist()
 def get_my_profile():
     """Get the current user's full gamification profile."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:my_profile:view")
     from auracrm.engines.gamification_engine import get_agent_gamification_profile
     return get_agent_gamification_profile()
@@ -39,6 +43,8 @@ def get_my_profile():
 @frappe.whitelist()
 def get_agent_profile(user):
     """Get a specific agent's gamification profile (managers only)."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:agent_profile:view")
     roles = frappe.get_roles()
     if not any(r in roles for r in ["Sales Manager", "CRM Admin", "System Manager"]):
@@ -53,6 +59,8 @@ def get_agent_profile(user):
 @frappe.whitelist()
 def get_leaderboard(period=None, limit=None):
     """Get the gamification leaderboard."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:leaderboard:view")
     from auracrm.engines.gamification_engine import get_leaderboard as _lb
     return _lb(period=period, limit=cint(limit) if limit else None)
@@ -64,6 +72,8 @@ def get_leaderboard(period=None, limit=None):
 @frappe.whitelist()
 def get_my_badges():
     """Get badges earned by the current user."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:badges:view")
     user = frappe.session.user
     badge_logs = frappe.db.sql("""
@@ -95,6 +105,8 @@ def get_my_badges():
 @frappe.whitelist()
 def get_all_badges():
     """Get all available badges with earned status for current user."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:badges:view")
     user = frappe.session.user
     earned = set()
@@ -132,6 +144,8 @@ def get_all_badges():
 @frappe.whitelist()
 def get_active_challenges():
     """Get all active challenges the current user is participating in."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:challenges:view")
     user = frappe.session.user
     challenges = frappe.db.sql("""
@@ -157,6 +171,8 @@ def get_active_challenges():
 @frappe.whitelist()
 def get_all_challenges():
     """Get all challenges with participant info (for managers)."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:challenges:view")
     return frappe.get_all(
         "Gamification Challenge",
@@ -171,6 +187,8 @@ def get_all_challenges():
 @frappe.whitelist()
 def join_challenge(challenge_name):
     """Join an active challenge."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:challenge:join")
     user = frappe.session.user
     ch = frappe.get_doc("Gamification Challenge", challenge_name)
@@ -198,6 +216,8 @@ def join_challenge(challenge_name):
 @frappe.whitelist()
 def get_points_feed(limit=20, offset=0):
     """Get the current user's recent points activity feed."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:points_feed:view")
     user = frappe.session.user
     logs = frappe.get_all(
@@ -235,6 +255,8 @@ def get_points_feed(limit=20, offset=0):
 @frappe.whitelist()
 def get_team_feed(limit=30):
     """Get recent team gamification activity (managers only)."""
+    frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
+
     require_capability("gamification:team_feed:view")
     roles = frappe.get_roles()
     if not any(r in roles for r in ["Sales Manager", "CRM Admin", "System Manager"]):
@@ -272,8 +294,9 @@ def get_team_feed(limit=30):
 @frappe.whitelist()
 def seed_defaults():
     """Seed all default gamification data (events, badges, levels)."""
+    frappe.only_for(["System Manager"])
+
     require_capability("gamification:seed_defaults")
-    frappe.only_for(["System Manager", "CRM Admin"])
     from auracrm.engines.gamification_engine import (
         seed_default_events, seed_default_badges, seed_default_levels,
     )

@@ -220,6 +220,8 @@ def _node_save_data(node, user_input, phone_number):
 @frappe.whitelist()
 def send_broadcast(broadcast_name):
     """Execute a WhatsApp Broadcast — send message to all recipients."""
+    frappe.only_for(["AuraCRM Manager", "System Manager"])
+
     doc = frappe.get_doc("WhatsApp Broadcast", broadcast_name)
 
     if doc.status == "Sent":
