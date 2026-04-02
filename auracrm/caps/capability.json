@@ -1,0 +1,82 @@
+[
+  {
+    "name": "AC_view_dashboard",
+    "category": "Module",
+    "description": "View the AuraCRM dashboard"
+  },
+  {
+    "name": "AC_manage_leads",
+    "category": "Module",
+    "description": "Create and manage leads"
+  },
+  {
+    "name": "AC_manage_pipeline",
+    "category": "Module",
+    "description": "Manage sales pipeline and opportunities"
+  },
+  {
+    "name": "AC_manage_campaigns",
+    "category": "Module",
+    "description": "Create and manage campaigns"
+  },
+  {
+    "name": "AC_manage_automation",
+    "category": "Action",
+    "description": "Configure automation rules"
+  },
+  {
+    "name": "AC_use_auto_dialer",
+    "category": "Action",
+    "description": "Use the auto dialer"
+  },
+  {
+    "name": "AC_manage_deal_rooms",
+    "category": "Action",
+    "description": "Create and manage deal rooms"
+  },
+  {
+    "name": "AC_view_analytics",
+    "category": "Report",
+    "description": "View CRM analytics and reports"
+  },
+  {
+    "name": "AC_manage_gamification",
+    "category": "Module",
+    "description": "Configure gamification settings"
+  },
+  {
+    "name": "AC_ai_features",
+    "category": "Action",
+    "description": "Use AI lead profiling and content generation"
+  },
+  {
+    "name": "AC_manage_scoring",
+    "category": "Action",
+    "description": "Configure lead scoring rules"
+  },
+  {
+    "name": "AC_manage_distribution",
+    "category": "Action",
+    "description": "Configure lead distribution rules"
+  },
+  {
+    "name": "AC_manage_sla",
+    "category": "Action",
+    "description": "Configure SLA policies"
+  },
+  {
+    "name": "AC_competitor_intel",
+    "category": "Report",
+    "description": "View competitor intelligence"
+  },
+  {
+    "name": "AC_whatsapp_broadcast",
+    "category": "Action",
+    "description": "Send WhatsApp broadcasts"
+  },
+  {
+    "name": "AC_configure_settings",
+    "category": "Module",
+    "description": "Configure AuraCRM settings"
+  }
+]

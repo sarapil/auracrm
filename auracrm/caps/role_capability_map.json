@@ -1,0 +1,23 @@
+[
+  {
+    "role": "System Manager",
+    "capabilities": [
+      "AC_view_dashboard",
+      "AC_manage_leads",
+      "AC_manage_pipeline",
+      "AC_manage_campaigns",
+      "AC_manage_automation",
+      "AC_use_auto_dialer",
+      "AC_manage_deal_rooms",
+      "AC_view_analytics",
+      "AC_manage_gamification",
+      "AC_ai_features",
+      "AC_manage_scoring",
+      "AC_manage_distribution",
+      "AC_manage_sla",
+      "AC_competitor_intel",
+      "AC_whatsapp_broadcast",
+      "AC_configure_settings"
+    ]
+  }
+]
