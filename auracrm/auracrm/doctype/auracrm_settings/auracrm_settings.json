@@ -1,0 +1,675 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "scoring_enabled",
+  "dialer_enabled",
+  "sla_enabled",
+  "automation_enabled",
+  "dedup_enabled",
+  "column_break_general",
+  "default_distribution_method",
+  "scoring_section",
+  "score_decay_after_days",
+  "score_decay_points_per_day",
+  "column_break_scoring",
+  "max_lead_score",
+  "sla_section",
+  "default_response_time_minutes",
+  "column_break_sla",
+  "sla_warning_threshold_percent",
+  "distribution_section",
+  "auto_assign_on_create",
+  "column_break_distribution",
+  "rebalance_enabled",
+  "ai_section",
+  "ai_provider",
+  "anthropic_api_key",
+  "openai_api_key",
+  "column_break_ai",
+  "ai_content_model",
+  "ai_fast_model",
+  "brand_voice_description",
+  "osint_section",
+  "google_cse_api_key",
+  "google_cse_id",
+  "column_break_osint",
+  "apollo_api_key",
+  "truecaller_api_key",
+  "advertising_section",
+  "meta_access_token",
+  "meta_ad_account_id",
+  "meta_page_access_token",
+  "column_break_advertising",
+  "facebook_page_id",
+  "instagram_business_account_id",
+  "social_section",
+  "twitter_bearer_token",
+  "linkedin_access_token",
+  "linkedin_organization_id",
+  "column_break_social",
+  "tiktok_access_token",
+  "auto_sold_posts",
+  "sold_post_language",
+  "sold_proof_platforms",
+  "whatsapp_section",
+  "whatsapp_api_token",
+  "whatsapp_phone_number_id",
+  "reputation_section",
+  "google_place_id",
+  "google_places_api_key",
+  "column_break_reputation",
+  "auto_review_response",
+  "brand_name",
+  "deal_rooms_section",
+  "auto_deal_rooms",
+  "deal_room_trigger_status"
+ ],
+ "fields": [
+  {
+   "fieldname": "license_tab",
+   "fieldtype": "Tab Break",
+   "label": "License & Subscription",
+   "insert_after": ""
+  },
+  {
+   "fieldname": "license_section",
+   "fieldtype": "Section Break",
+   "label": "License Configuration"
+  },
+  {
+   "fieldname": "license_key",
+   "fieldtype": "Password",
+   "label": "License Key",
+   "description": "Enter your premium license key. Not required on Frappe Cloud."
+  },
+  {
+   "fieldname": "license_status",
+   "fieldtype": "Data",
+   "label": "License Status",
+   "read_only": 1,
+   "default": "Free Tier",
+   "bold": 1
+  },
+  {
+   "fieldname": "cb_license",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "license_tier",
+   "fieldtype": "Select",
+   "label": "Current Tier",
+   "options": "Free\nPremium",
+   "read_only": 1,
+   "default": "Free"
+  },
+  {
+   "fieldname": "license_source",
+   "fieldtype": "Data",
+   "label": "License Source",
+   "read_only": 1,
+   "default": ""
+  },
+  {
+   "fieldname": "license_info_section",
+   "fieldtype": "Section Break",
+   "label": "License Information"
+  },
+  {
+   "fieldname": "license_info_html",
+   "fieldtype": "HTML",
+   "label": "Feature Status"
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General Settings"
+  },
+  {
+   "default": "1",
+   "fieldname": "scoring_enabled",
+   "fieldtype": "Check",
+   "label": "Lead Scoring Enabled"
+  },
+  {
+   "default": "0",
+   "fieldname": "dialer_enabled",
+   "fieldtype": "Check",
+   "label": "Auto-Dialer Enabled"
+  },
+  {
+   "default": "1",
+   "fieldname": "sla_enabled",
+   "fieldtype": "Check",
+   "label": "SLA Tracking Enabled"
+  },
+  {
+   "fieldname": "automation_enabled",
+   "fieldtype": "Check",
+   "label": "Automation Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "dedup_enabled",
+   "fieldtype": "Check",
+   "label": "Duplicate Detection Enabled",
+   "default": "1"
+  },
+  {
+   "fieldname": "column_break_general",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "round_robin",
+   "fieldname": "default_distribution_method",
+   "fieldtype": "Select",
+   "label": "Default Distribution Method",
+   "options": "round_robin\nweighted_round_robin\nskill_based\ngeographic\nload_based\nperformance_based\nmanual_pool"
+  },
+  {
+   "fieldname": "scoring_section",
+   "fieldtype": "Section Break",
+   "label": "Scoring Configuration"
+  },
+  {
+   "default": "7",
+   "fieldname": "score_decay_after_days",
+   "fieldtype": "Int",
+   "label": "Score Decay After (Days)",
+   "description": "Number of days without interaction before score starts decaying"
+  },
+  {
+   "default": "2",
+   "fieldname": "score_decay_points_per_day",
+   "fieldtype": "Int",
+   "label": "Score Decay Points/Day",
+   "description": "Points to subtract per day of inactivity"
+  },
+  {
+   "fieldname": "column_break_scoring",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "100",
+   "fieldname": "max_lead_score",
+   "fieldtype": "Int",
+   "label": "Maximum Lead Score"
+  },
+  {
+   "fieldname": "sla_section",
+   "fieldtype": "Section Break",
+   "label": "SLA Configuration"
+  },
+  {
+   "default": "60",
+   "fieldname": "default_response_time_minutes",
+   "fieldtype": "Int",
+   "label": "Default Response Time (Minutes)"
+  },
+  {
+   "fieldname": "column_break_sla",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "80",
+   "fieldname": "sla_warning_threshold_percent",
+   "fieldtype": "Int",
+   "label": "SLA Warning Threshold (%)",
+   "description": "Show warning when this percentage of SLA time has elapsed"
+  },
+  {
+   "fieldname": "distribution_section",
+   "fieldtype": "Section Break",
+   "label": "Distribution Configuration"
+  },
+  {
+   "default": "1",
+   "fieldname": "auto_assign_on_create",
+   "fieldtype": "Check",
+   "label": "Auto-Assign on Lead Creation"
+  },
+  {
+   "fieldname": "column_break_distribution",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "rebalance_enabled",
+   "fieldtype": "Check",
+   "label": "Daily Workload Rebalancing"
+  },
+  {
+   "fieldname": "ai_section",
+   "fieldtype": "Section Break",
+   "label": "AI Provider Configuration",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "ai_provider",
+   "fieldtype": "Select",
+   "label": "AI Provider",
+   "options": "anthropic\nopenai",
+   "default": "anthropic"
+  },
+  {
+   "fieldname": "anthropic_api_key",
+   "fieldtype": "Password",
+   "label": "Anthropic API Key"
+  },
+  {
+   "fieldname": "openai_api_key",
+   "fieldtype": "Password",
+   "label": "OpenAI API Key"
+  },
+  {
+   "fieldname": "column_break_ai",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ai_content_model",
+   "fieldtype": "Data",
+   "label": "AI Content Model",
+   "default": "claude-sonnet-4-20250514",
+   "description": "Model for quality content generation"
+  },
+  {
+   "fieldname": "ai_fast_model",
+   "fieldtype": "Data",
+   "label": "AI Fast Model",
+   "default": "claude-haiku-4-5-20251001",
+   "description": "Model for quick tasks (profiling, tagging)"
+  },
+  {
+   "fieldname": "external_services_section",
+   "fieldtype": "Section Break",
+   "label": "External Services"
+  },
+  {
+   "fieldname": "calendarific_api_key",
+   "fieldtype": "Password",
+   "label": "Calendarific API Key",
+   "description": "Holiday checking API"
+  },
+  {
+   "fieldname": "stability_api_key",
+   "fieldtype": "Password",
+   "label": "Stability AI API Key",
+   "description": "Image generation"
+  },
+  {
+   "fieldname": "external_cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "heygen_api_key",
+   "fieldtype": "Password",
+   "label": "HeyGen API Key",
+   "description": "Video personalization"
+  },
+  {
+   "fieldname": "vapi_api_key",
+   "fieldtype": "Password",
+   "label": "Vapi API Key",
+   "description": "Voice AI agents"
+  },
+  {
+   "fieldname": "brand_voice_description",
+   "fieldtype": "Small Text",
+   "label": "Brand Voice Description",
+   "description": "Guidelines for AI-generated content tone and style"
+  },
+  {
+   "fieldname": "osint_section",
+   "fieldtype": "Section Break",
+   "label": "OSINT & Enrichment APIs",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "google_cse_api_key",
+   "fieldtype": "Password",
+   "label": "Google CSE API Key"
+  },
+  {
+   "fieldname": "google_cse_id",
+   "fieldtype": "Data",
+   "label": "Google CSE ID"
+  },
+  {
+   "fieldname": "column_break_osint",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "apollo_api_key",
+   "fieldtype": "Password",
+   "label": "Apollo API Key"
+  },
+  {
+   "fieldname": "truecaller_api_key",
+   "fieldtype": "Password",
+   "label": "TrueCaller API Key"
+  },
+  {
+   "fieldname": "lusha_api_key",
+   "fieldtype": "Password",
+   "label": "Lusha API Key",
+   "description": "Lusha enrichment API key"
+  },
+  {
+   "fieldname": "advertising_section",
+   "fieldtype": "Section Break",
+   "label": "Advertising Platforms",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "meta_access_token",
+   "fieldtype": "Password",
+   "label": "Meta Access Token",
+   "description": "Facebook/Instagram Marketing API token"
+  },
+  {
+   "fieldname": "meta_ad_account_id",
+   "fieldtype": "Data",
+   "label": "Meta Ad Account ID"
+  },
+  {
+   "fieldname": "google_ads_developer_token",
+   "fieldtype": "Password",
+   "label": "Google Ads Developer Token"
+  },
+  {
+   "fieldname": "google_ads_customer_id",
+   "fieldtype": "Data",
+   "label": "Google Ads Customer ID"
+  },
+  {
+   "fieldname": "meta_page_access_token",
+   "fieldtype": "Password",
+   "label": "Meta Page Access Token"
+  },
+  {
+   "fieldname": "column_break_advertising",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "facebook_page_id",
+   "fieldtype": "Data",
+   "label": "Facebook Page ID"
+  },
+  {
+   "fieldname": "instagram_business_account_id",
+   "fieldtype": "Data",
+   "label": "Instagram Business Account ID"
+  },
+  {
+   "fieldname": "social_section",
+   "fieldtype": "Section Break",
+   "label": "Social Publishing",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "twitter_bearer_token",
+   "fieldtype": "Password",
+   "label": "Twitter/X Bearer Token"
+  },
+  {
+   "fieldname": "linkedin_access_token",
+   "fieldtype": "Password",
+   "label": "LinkedIn Access Token"
+  },
+  {
+   "fieldname": "linkedin_organization_id",
+   "fieldtype": "Data",
+   "label": "LinkedIn Organization ID"
+  },
+  {
+   "fieldname": "column_break_social",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tiktok_access_token",
+   "fieldtype": "Password",
+   "label": "TikTok Access Token"
+  },
+  {
+   "fieldname": "auto_sold_posts",
+   "fieldtype": "Check",
+   "label": "Auto Sold-Proof Posts",
+   "default": "0",
+   "description": "Automatically post 'Just Sold' content on opportunity win"
+  },
+  {
+   "fieldname": "sold_post_language",
+   "fieldtype": "Select",
+   "label": "Sold Post Language",
+   "options": "en\nar\nmixed",
+   "default": "en"
+  },
+  {
+   "fieldname": "sold_proof_platforms",
+   "fieldtype": "Data",
+   "label": "Sold-Proof Platforms",
+   "default": "Facebook,Instagram",
+   "description": "Comma-separated list: Facebook,Instagram,Twitter,LinkedIn"
+  },
+  {
+   "fieldname": "whatsapp_section",
+   "fieldtype": "Section Break",
+   "label": "WhatsApp Configuration",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "whatsapp_api_token",
+   "fieldtype": "Password",
+   "label": "WhatsApp Cloud API Token"
+  },
+  {
+   "fieldname": "whatsapp_phone_number_id",
+   "fieldtype": "Data",
+   "label": "WhatsApp Phone Number ID"
+  },
+  {
+   "fieldname": "reputation_section",
+   "fieldtype": "Section Break",
+   "label": "Reputation Management",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "google_place_id",
+   "fieldtype": "Data",
+   "label": "Google Place ID",
+   "description": "For pulling Google Business reviews"
+  },
+  {
+   "fieldname": "google_places_api_key",
+   "fieldtype": "Password",
+   "label": "Google Places API Key"
+  },
+  {
+   "fieldname": "column_break_reputation",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "auto_review_response",
+   "fieldtype": "Check",
+   "label": "Auto-Generate Review Responses",
+   "default": "0"
+  },
+  {
+   "fieldname": "brand_name",
+   "fieldtype": "Data",
+   "label": "Brand Name",
+   "description": "Used in AI-generated review responses"
+  },
+  {
+   "fieldname": "deal_rooms_section",
+   "fieldtype": "Section Break",
+   "label": "Deal Rooms",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "auto_deal_rooms",
+   "fieldtype": "Check",
+   "label": "Auto-Generate Deal Rooms",
+   "default": "0"
+  },
+  {
+   "fieldname": "deal_room_trigger_status",
+   "fieldtype": "Data",
+   "label": "Deal Room Trigger Status",
+   "default": "Quotation",
+   "description": "Opportunity status that triggers auto deal room creation"
+  },
+  {
+   "fieldname": "industry_preset_section",
+   "fieldtype": "Section Break",
+   "label": "Industry Preset",
+   "collapsible": 1
+  },
+  {
+   "fieldname": "active_industry_preset",
+   "fieldtype": "Link",
+   "label": "Active Industry Preset",
+   "options": "AuraCRM Industry Preset",
+   "description": "Currently applied industry preset"
+  },
+  {
+   "fieldname": "industry_col_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "preset_applied_on",
+   "fieldtype": "Datetime",
+   "label": "Preset Applied On",
+   "read_only": 1
+  },
+  {
+   "fieldname": "terminology_section",
+   "fieldtype": "Section Break",
+   "label": "Terminology",
+   "collapsible": 1,
+   "description": "Customize labels per industry"
+  },
+  {
+   "fieldname": "term_lead",
+   "fieldtype": "Data",
+   "label": "Lead Label",
+   "default": "Lead"
+  },
+  {
+   "fieldname": "term_deal",
+   "fieldtype": "Data",
+   "label": "Deal Label",
+   "default": "Deal"
+  },
+  {
+   "fieldname": "term_product",
+   "fieldtype": "Data",
+   "label": "Product Label",
+   "default": "Product"
+  },
+  {
+   "fieldname": "term_col_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "term_company",
+   "fieldtype": "Data",
+   "label": "Company Label",
+   "default": "Company"
+  },
+  {
+   "fieldname": "term_agent",
+   "fieldtype": "Data",
+   "label": "Agent Label",
+   "default": "Agent"
+  },
+  {
+   "fieldname": "feature_toggles_section",
+   "fieldtype": "Section Break",
+   "label": "Feature Toggles",
+   "collapsible": 1,
+   "description": "Enable/disable industry-specific features"
+  },
+  {
+   "fieldname": "enable_property_inventory",
+   "fieldtype": "Check",
+   "label": "Enable Property Inventory",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_appointment_booking",
+   "fieldtype": "Check",
+   "label": "Enable Appointment Booking",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_subscription_products",
+   "fieldtype": "Check",
+   "label": "Enable Subscription Products",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_physical_location",
+   "fieldtype": "Check",
+   "label": "Enable Physical Location",
+   "default": "0"
+  },
+  {
+   "fieldname": "feat_col_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enable_compliance_fields",
+   "fieldtype": "Check",
+   "label": "Enable Compliance Fields",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_project_milestones",
+   "fieldtype": "Check",
+   "label": "Enable Project Milestones",
+   "default": "0"
+  },
+  {
+   "fieldname": "enable_rental_management",
+   "fieldtype": "Check",
+   "label": "Enable Rental Management",
+   "default": "0"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-03-21 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "AuraCRM Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0,
+   "email": 1,
+   "print": 1,
+   "share": 1
+  },
+  {
+   "role": "CRM Admin",
+   "read": 1,
+   "write": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

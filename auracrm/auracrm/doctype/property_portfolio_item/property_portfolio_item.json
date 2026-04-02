@@ -1,0 +1,150 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "deal",
+    "property_unit",
+    "column_break_main",
+    "resale_interest",
+    "alert_sent",
+    "alert_sent_at",
+    "pricing_section",
+    "purchase_price",
+    "purchase_date",
+    "current_market_price",
+    "column_break_pricing",
+    "last_price_check",
+    "appreciation_percent",
+    "alert_threshold_percent"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead"
+    },
+    {
+      "fieldname": "deal",
+      "fieldtype": "Link",
+      "label": "Deal",
+      "options": "Opportunity"
+    },
+    {
+      "fieldname": "property_unit",
+      "fieldtype": "Data",
+      "label": "Property Unit"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "resale_interest",
+      "fieldtype": "Select",
+      "label": "Resale Interest",
+      "options": "Not Contacted\nInterested\nNot Interested\nSold via Us",
+      "default": "Not Contacted"
+    },
+    {
+      "fieldname": "alert_sent",
+      "fieldtype": "Check",
+      "label": "Alert Sent",
+      "default": "0"
+    },
+    {
+      "fieldname": "alert_sent_at",
+      "fieldtype": "Datetime",
+      "label": "Alert Sent At"
+    },
+    {
+      "fieldname": "pricing_section",
+      "fieldtype": "Section Break",
+      "label": "Pricing"
+    },
+    {
+      "fieldname": "purchase_price",
+      "fieldtype": "Currency",
+      "label": "Purchase Price"
+    },
+    {
+      "fieldname": "purchase_date",
+      "fieldtype": "Date",
+      "label": "Purchase Date"
+    },
+    {
+      "fieldname": "current_market_price",
+      "fieldtype": "Currency",
+      "label": "Current Market Price"
+    },
+    {
+      "fieldname": "column_break_pricing",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "last_price_check",
+      "fieldtype": "Datetime",
+      "label": "Last Price Check"
+    },
+    {
+      "fieldname": "appreciation_percent",
+      "fieldtype": "Float",
+      "label": "Appreciation Percent",
+      "read_only": 1
+    },
+    {
+      "fieldname": "alert_threshold_percent",
+      "fieldtype": "Float",
+      "label": "Alert Threshold Percent",
+      "default": "20.0"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Property Portfolio Item",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

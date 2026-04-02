@@ -1,0 +1,166 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "deal",
+    "room_url_key",
+    "room_title",
+    "column_break_main",
+    "property_unit",
+    "is_active",
+    "expiry_date",
+    "access_password",
+    "assets_section",
+    "selected_assets",
+    "contract_draft_url",
+    "analytics_section",
+    "total_views",
+    "total_time_seconds",
+    "last_viewed_at",
+    "view_log"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead"
+    },
+    {
+      "fieldname": "deal",
+      "fieldtype": "Link",
+      "label": "Deal",
+      "options": "Opportunity"
+    },
+    {
+      "fieldname": "room_url_key",
+      "fieldtype": "Data",
+      "label": "Room Url Key",
+      "unique": 1
+    },
+    {
+      "fieldname": "room_title",
+      "fieldtype": "Data",
+      "label": "Room Title"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "property_unit",
+      "fieldtype": "Data",
+      "label": "Property Unit"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "expiry_date",
+      "fieldtype": "Date",
+      "label": "Expiry Date"
+    },
+    {
+      "fieldname": "access_password",
+      "fieldtype": "Password",
+      "label": "Access Password"
+    },
+    {
+      "fieldname": "assets_section",
+      "fieldtype": "Section Break",
+      "label": "Selected Assets"
+    },
+    {
+      "fieldname": "selected_assets",
+      "fieldtype": "Table",
+      "label": "Selected Assets",
+      "options": "Deal Room Asset"
+    },
+    {
+      "fieldname": "contract_draft_url",
+      "fieldtype": "Data",
+      "label": "Contract Draft Url"
+    },
+    {
+      "fieldname": "analytics_section",
+      "fieldtype": "Section Break",
+      "label": "Analytics"
+    },
+    {
+      "fieldname": "total_views",
+      "fieldtype": "Int",
+      "label": "Total Views",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "total_time_seconds",
+      "fieldtype": "Int",
+      "label": "Total Time (seconds)",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "last_viewed_at",
+      "fieldtype": "Datetime",
+      "label": "Last Viewed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "view_log",
+      "fieldtype": "JSON",
+      "label": "View Log"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Deal Room",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

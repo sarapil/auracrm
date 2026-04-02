@@ -1,0 +1,70 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "step_order",
+    "action",
+    "delay_value",
+    "delay_unit",
+    "content_template",
+    "ai_personalize",
+    "condition"
+  ],
+  "fields": [
+    {
+      "fieldname": "step_order",
+      "fieldtype": "Int",
+      "label": "Step Order",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action",
+      "fieldtype": "Select",
+      "label": "Action",
+      "options": "Send Email\nSend WhatsApp\nSend SMS\nWait\nCheck Condition\nChange Segment\nAssign Agent\nGenerate AI Content\nCreate Deal Room\nNotify Agent"
+    },
+    {
+      "fieldname": "delay_value",
+      "fieldtype": "Int",
+      "label": "Delay Value"
+    },
+    {
+      "fieldname": "delay_unit",
+      "fieldtype": "Select",
+      "label": "Delay Unit",
+      "options": "Minutes\nHours\nDays\nWeeks"
+    },
+    {
+      "fieldname": "content_template",
+      "fieldtype": "Data",
+      "label": "Content Template"
+    },
+    {
+      "fieldname": "ai_personalize",
+      "fieldtype": "Check",
+      "label": "Ai Personalize"
+    },
+    {
+      "fieldname": "condition",
+      "fieldtype": "JSON",
+      "label": "Condition"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 1,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Nurture Step",
+  "naming_rule": "",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

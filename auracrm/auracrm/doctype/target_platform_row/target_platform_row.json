@@ -1,0 +1,44 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "platform",
+    "adapted_content",
+    "adapted_hashtags"
+  ],
+  "fields": [
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Facebook\nInstagram\nLinkedIn\nTwitter\nTikTok\nYouTube\nTelegram\nPinterest\nSnapchat\nThreads"
+    },
+    {
+      "fieldname": "adapted_content",
+      "fieldtype": "Long Text",
+      "label": "Adapted Content"
+    },
+    {
+      "fieldname": "adapted_hashtags",
+      "fieldtype": "Text",
+      "label": "Adapted Hashtags"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 1,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Target Platform Row",
+  "naming_rule": "",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

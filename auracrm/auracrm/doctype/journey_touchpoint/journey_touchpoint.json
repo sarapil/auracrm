@@ -1,0 +1,72 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "touchpoint_type",
+    "platform",
+    "campaign",
+    "content_piece",
+    "occurred_at",
+    "attribution_weight",
+    "attributed_revenue"
+  ],
+  "fields": [
+    {
+      "fieldname": "touchpoint_type",
+      "fieldtype": "Select",
+      "label": "Touchpoint Type",
+      "options": "Ad Click\nOrganic Social\nEmail Open\nWhatsApp Reply\nWebsite Visit\nOSINT Outreach\nReferral\nPhone Call\nDeal Room View"
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Data",
+      "label": "Platform"
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Campaign"
+    },
+    {
+      "fieldname": "content_piece",
+      "fieldtype": "Link",
+      "label": "Content Piece",
+      "options": "Content Calendar Entry"
+    },
+    {
+      "fieldname": "occurred_at",
+      "fieldtype": "Datetime",
+      "label": "Occurred At"
+    },
+    {
+      "fieldname": "attribution_weight",
+      "fieldtype": "Float",
+      "label": "Attribution Weight",
+      "read_only": 1
+    },
+    {
+      "fieldname": "attributed_revenue",
+      "fieldtype": "Currency",
+      "label": "Attributed Revenue",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 1,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Journey Touchpoint",
+  "naming_rule": "",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

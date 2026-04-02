@@ -1,0 +1,158 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "provider",
+    "column_break_main",
+    "confidence_score",
+    "is_verified",
+    "verified_at",
+    "contact_section",
+    "email_found",
+    "phone_found",
+    "linkedin_url",
+    "profile_section",
+    "title",
+    "seniority",
+    "company_size",
+    "raw_section",
+    "result_data"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead",
+      "reqd": 1
+    },
+    {
+      "fieldname": "provider",
+      "fieldtype": "Select",
+      "label": "Provider",
+      "options": "Apollo\nLusha\nHunter\nTrueCaller\nManual",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "confidence_score",
+      "fieldtype": "Int",
+      "label": "Confidence Score",
+      "description": "0-100"
+    },
+    {
+      "fieldname": "is_verified",
+      "fieldtype": "Check",
+      "label": "Is Verified",
+      "default": "0"
+    },
+    {
+      "fieldname": "verified_at",
+      "fieldtype": "Datetime",
+      "label": "Verified At"
+    },
+    {
+      "fieldname": "contact_section",
+      "fieldtype": "Section Break",
+      "label": "Contact Information"
+    },
+    {
+      "fieldname": "email_found",
+      "fieldtype": "Data",
+      "label": "Email Found"
+    },
+    {
+      "fieldname": "phone_found",
+      "fieldtype": "Data",
+      "label": "Phone Found"
+    },
+    {
+      "fieldname": "linkedin_url",
+      "fieldtype": "Data",
+      "label": "Linkedin Url"
+    },
+    {
+      "fieldname": "profile_section",
+      "fieldtype": "Section Break",
+      "label": "Professional Profile"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title"
+    },
+    {
+      "fieldname": "seniority",
+      "fieldtype": "Select",
+      "label": "Seniority",
+      "options": "C-Level\nVP\nDirector\nManager\nSenior\nIndividual Contributor"
+    },
+    {
+      "fieldname": "company_size",
+      "fieldtype": "Select",
+      "label": "Company Size",
+      "options": "1-10\n11-50\n51-200\n201-500\n500+"
+    },
+    {
+      "fieldname": "raw_section",
+      "fieldtype": "Section Break",
+      "label": "Raw Data"
+    },
+    {
+      "fieldname": "result_data",
+      "fieldtype": "JSON",
+      "label": "Result Data"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Enrichment Result",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,164 @@
+{
+  "actions": [],
+  "autoname": "format:WAB-{####}",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "broadcast_name",
+    "whatsapp_account",
+    "target_segment",
+    "column_break_main",
+    "message_template",
+    "status",
+    "scheduled_at",
+    "variable_mapping",
+    "stats_section",
+    "recipient_count",
+    "sent_count",
+    "delivered_count",
+    "column_break_stats",
+    "read_count",
+    "reply_count",
+    "opt_out_count"
+  ],
+  "fields": [
+    {
+      "fieldname": "broadcast_name",
+      "fieldtype": "Data",
+      "label": "Broadcast Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "whatsapp_account",
+      "fieldtype": "Data",
+      "label": "WhatsApp Account"
+    },
+    {
+      "fieldname": "target_segment",
+      "fieldtype": "Data",
+      "label": "Target Segment"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "message_template",
+      "fieldtype": "Data",
+      "label": "WhatsApp Template"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nScheduled\nSending\nSent\nFailed",
+      "default": "Draft"
+    },
+    {
+      "fieldname": "scheduled_at",
+      "fieldtype": "Datetime",
+      "label": "Scheduled At"
+    },
+    {
+      "fieldname": "variable_mapping",
+      "fieldtype": "JSON",
+      "label": "Variable Mapping"
+    },
+    {
+      "fieldname": "stats_section",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "recipient_count",
+      "fieldtype": "Int",
+      "label": "Recipient Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "sent_count",
+      "fieldtype": "Int",
+      "label": "Sent Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "delivered_count",
+      "fieldtype": "Int",
+      "label": "Delivered Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "column_break_stats",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "read_count",
+      "fieldtype": "Int",
+      "label": "Read Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "reply_count",
+      "fieldtype": "Int",
+      "label": "Reply Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "opt_out_count",
+      "fieldtype": "Int",
+      "label": "Opt Out Count",
+      "read_only": 1,
+      "default": "0"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "WhatsApp Broadcast",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

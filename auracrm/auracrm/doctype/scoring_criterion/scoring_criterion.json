@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "field_name",
+  "operator",
+  "field_value",
+  "points"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Field Name",
+   "reqd": 1,
+   "description": "Lead field to evaluate (e.g. source, industry, company_name)"
+  },
+  {
+   "default": "equals",
+   "fieldname": "operator",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Operator",
+   "options": "equals\ncontains\ngreater_than\nless_than\nin_list\nis_set\nis_not_set",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_value",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Value",
+   "description": "Value to compare against. For in_list: comma-separated values"
+  },
+  {
+   "default": "10",
+   "fieldname": "points",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Points",
+   "reqd": 1,
+   "description": "Points to add when matched (-100 to 100)"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2025-02-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "Scoring Criterion",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

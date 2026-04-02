@@ -1,0 +1,133 @@
+{
+  "actions": [],
+  "autoname": "field:bot_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "bot_name",
+    "whatsapp_account",
+    "is_active",
+    "column_break_main",
+    "created_leads_count",
+    "conversations_count",
+    "messages_section",
+    "greeting_message",
+    "fallback_message",
+    "human_handoff_keywords",
+    "nodes_section",
+    "nodes"
+  ],
+  "fields": [
+    {
+      "fieldname": "bot_name",
+      "fieldtype": "Data",
+      "label": "Bot Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "whatsapp_account",
+      "fieldtype": "Data",
+      "label": "WhatsApp Account"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "created_leads_count",
+      "fieldtype": "Int",
+      "label": "Created Leads Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "conversations_count",
+      "fieldtype": "Int",
+      "label": "Conversations Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "messages_section",
+      "fieldtype": "Section Break",
+      "label": "Messages"
+    },
+    {
+      "fieldname": "greeting_message",
+      "fieldtype": "Long Text",
+      "label": "Greeting Message"
+    },
+    {
+      "fieldname": "fallback_message",
+      "fieldtype": "Long Text",
+      "label": "Fallback Message"
+    },
+    {
+      "fieldname": "human_handoff_keywords",
+      "fieldtype": "JSON",
+      "label": "Human Handoff Keywords"
+    },
+    {
+      "fieldname": "nodes_section",
+      "fieldtype": "Section Break",
+      "label": "Chatbot Flow"
+    },
+    {
+      "fieldname": "nodes",
+      "fieldtype": "Table",
+      "label": "Nodes",
+      "options": "Chatbot Node"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "WhatsApp Chatbot",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

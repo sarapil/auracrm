@@ -1,0 +1,100 @@
+{
+  "actions": [],
+  "autoname": "field:model_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "model_name",
+    "model_type",
+    "column_break_main",
+    "lookback_window_days",
+    "is_default",
+    "weights_section",
+    "touchpoint_weights"
+  ],
+  "fields": [
+    {
+      "fieldname": "model_name",
+      "fieldtype": "Data",
+      "label": "Model Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "model_type",
+      "fieldtype": "Select",
+      "label": "Model Type",
+      "options": "First Touch\nLast Touch\nLinear\nTime Decay\nPosition Based\nData Driven",
+      "reqd": 1
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "lookback_window_days",
+      "fieldtype": "Int",
+      "label": "Lookback Window Days",
+      "default": "30"
+    },
+    {
+      "fieldname": "is_default",
+      "fieldtype": "Check",
+      "label": "Is Default"
+    },
+    {
+      "fieldname": "weights_section",
+      "fieldtype": "Section Break",
+      "label": "Custom Weights"
+    },
+    {
+      "fieldname": "touchpoint_weights",
+      "fieldtype": "JSON",
+      "label": "Touchpoint Weights"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Attribution Model",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

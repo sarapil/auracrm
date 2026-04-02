@@ -1,0 +1,173 @@
+{
+  "name": "CRM Automation Rule",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "rule_name",
+    "enabled",
+    "cb1",
+    "priority",
+    "sb_trigger",
+    "trigger_doctype",
+    "trigger_event",
+    "cb2",
+    "trigger_field",
+    "trigger_value",
+    "sb_condition",
+    "condition_field",
+    "condition_operator",
+    "cb3",
+    "condition_value",
+    "sb_action",
+    "action_type",
+    "action_field",
+    "cb4",
+    "action_value",
+    "email_template"
+  ],
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "default": "10"
+    },
+    {
+      "fieldname": "sb_trigger",
+      "fieldtype": "Section Break",
+      "label": "Trigger"
+    },
+    {
+      "fieldname": "trigger_doctype",
+      "fieldtype": "Link",
+      "label": "Trigger DocType",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trigger_event",
+      "fieldtype": "Select",
+      "label": "Trigger Event",
+      "options": "\nNew Document\nValue Changed\nStatus Changed\nAssignment Changed",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "trigger_field",
+      "fieldtype": "Data",
+      "label": "Trigger Field",
+      "depends_on": "eval:doc.trigger_event=='Value Changed'"
+    },
+    {
+      "fieldname": "trigger_value",
+      "fieldtype": "Data",
+      "label": "Trigger Value"
+    },
+    {
+      "fieldname": "sb_condition",
+      "fieldtype": "Section Break",
+      "label": "Condition"
+    },
+    {
+      "fieldname": "condition_field",
+      "fieldtype": "Data",
+      "label": "Condition Field"
+    },
+    {
+      "fieldname": "condition_operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "\nequals\nnot_equals\ncontains\ngreater_than\nless_than\nis_set\nis_not_set"
+    },
+    {
+      "fieldname": "cb3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "condition_value",
+      "fieldtype": "Data",
+      "label": "Condition Value"
+    },
+    {
+      "fieldname": "sb_action",
+      "fieldtype": "Section Break",
+      "label": "Action"
+    },
+    {
+      "fieldname": "action_type",
+      "fieldtype": "Select",
+      "label": "Action Type",
+      "options": "\nSet Field Value\nSend Email\nSend Notification\nAssign To\nCreate Task\nRun Script",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action_field",
+      "fieldtype": "Data",
+      "label": "Action Field"
+    },
+    {
+      "fieldname": "cb4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "action_value",
+      "fieldtype": "Small Text",
+      "label": "Action Value"
+    },
+    {
+      "fieldname": "email_template",
+      "fieldtype": "Link",
+      "label": "Email Template",
+      "options": "Communication Template",
+      "depends_on": "eval:doc.action_type=='Send Email'"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:AUTO-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "rule_name",
+  "show_title_field_in_link": 1
+}

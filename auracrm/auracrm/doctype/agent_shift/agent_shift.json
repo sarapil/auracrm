@@ -1,0 +1,118 @@
+{
+  "name": "Agent Shift",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "agent",
+    "shift_name",
+    "cb1",
+    "day_of_week",
+    "sb_time",
+    "start_time",
+    "cb2",
+    "end_time",
+    "sb_status",
+    "enabled",
+    "cb3",
+    "timezone"
+  ],
+  "fields": [
+    {
+      "fieldname": "agent",
+      "fieldtype": "Link",
+      "options": "User",
+      "label": "Agent",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "shift_name",
+      "fieldtype": "Data",
+      "label": "Shift Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "day_of_week",
+      "fieldtype": "Select",
+      "label": "Day of Week",
+      "options": "\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday\nSunday",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_time",
+      "fieldtype": "Section Break",
+      "label": "Shift Timing"
+    },
+    {
+      "fieldname": "start_time",
+      "fieldtype": "Time",
+      "label": "Start Time",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "end_time",
+      "fieldtype": "Time",
+      "label": "End Time",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_status",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "cb3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "timezone",
+      "fieldtype": "Select",
+      "label": "Timezone",
+      "options": "\nAsia/Riyadh\nAsia/Dubai\nEurope/London\nAmerica/New_York\nUTC",
+      "default": "Asia/Riyadh"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:SHIFT-{agent}-{day_of_week}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

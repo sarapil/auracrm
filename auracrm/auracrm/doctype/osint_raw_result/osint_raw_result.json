@@ -1,0 +1,152 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "hunt_config",
+    "source",
+    "title",
+    "column_break_main",
+    "processed",
+    "disqualified",
+    "enrichment_status",
+    "details_section",
+    "url",
+    "snippet",
+    "raw_data",
+    "result_section",
+    "disqualification_reason",
+    "lead_created",
+    "processing_date"
+  ],
+  "fields": [
+    {
+      "fieldname": "hunt_config",
+      "fieldtype": "Link",
+      "label": "Hunt Config",
+      "options": "OSINT Hunt Configuration",
+      "reqd": 1
+    },
+    {
+      "fieldname": "source",
+      "fieldtype": "Select",
+      "label": "Source",
+      "options": "Google Search\nRSS\nLinkedIn\nGoogle Maps\nManual"
+    },
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "processed",
+      "fieldtype": "Check",
+      "label": "Processed",
+      "default": "0"
+    },
+    {
+      "fieldname": "disqualified",
+      "fieldtype": "Check",
+      "label": "Disqualified",
+      "default": "0"
+    },
+    {
+      "fieldname": "enrichment_status",
+      "fieldtype": "Select",
+      "label": "Enrichment Status",
+      "options": "Pending\nIn Progress\nComplete\nFailed",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "details_section",
+      "fieldtype": "Section Break",
+      "label": "Details"
+    },
+    {
+      "fieldname": "url",
+      "fieldtype": "Data",
+      "label": "Url"
+    },
+    {
+      "fieldname": "snippet",
+      "fieldtype": "Long Text",
+      "label": "Snippet"
+    },
+    {
+      "fieldname": "raw_data",
+      "fieldtype": "JSON",
+      "label": "Raw Data"
+    },
+    {
+      "fieldname": "result_section",
+      "fieldtype": "Section Break",
+      "label": "Result"
+    },
+    {
+      "fieldname": "disqualification_reason",
+      "fieldtype": "Data",
+      "label": "Disqualification Reason"
+    },
+    {
+      "fieldname": "lead_created",
+      "fieldtype": "Link",
+      "label": "Lead Created",
+      "options": "Lead"
+    },
+    {
+      "fieldname": "processing_date",
+      "fieldtype": "Datetime",
+      "label": "Processing Date"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "OSINT Raw Result",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,139 @@
+{
+  "actions": [],
+  "autoname": "field:hunt_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "hunt_name",
+    "segment",
+    "is_active",
+    "column_break_main",
+    "target_day",
+    "max_results_per_run",
+    "queries_section",
+    "search_queries",
+    "rss_feeds",
+    "target_countries",
+    "api_section",
+    "google_cse_id",
+    "linkedin_search_url",
+    "notes_section",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "hunt_name",
+      "fieldtype": "Data",
+      "label": "Hunt Name",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "segment",
+      "fieldtype": "Select",
+      "label": "Segment",
+      "options": "Expats\nFamily Office\nTech Founders\nCrypto Whales\nInflation Hedgers\nTax Refugees\nCompetitor Complaint\nCustom"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "target_day",
+      "fieldtype": "Select",
+      "label": "Target Day",
+      "options": "Sunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+    },
+    {
+      "fieldname": "max_results_per_run",
+      "fieldtype": "Int",
+      "label": "Max Results Per Run",
+      "default": "50"
+    },
+    {
+      "fieldname": "queries_section",
+      "fieldtype": "Section Break",
+      "label": "Search Configuration"
+    },
+    {
+      "fieldname": "search_queries",
+      "fieldtype": "JSON",
+      "label": "Google CSE Queries"
+    },
+    {
+      "fieldname": "rss_feeds",
+      "fieldtype": "JSON",
+      "label": "RSS Feed URLs"
+    },
+    {
+      "fieldname": "target_countries",
+      "fieldtype": "JSON",
+      "label": "Target Countries (ISO codes)"
+    },
+    {
+      "fieldname": "api_section",
+      "fieldtype": "Section Break",
+      "label": "API Configuration"
+    },
+    {
+      "fieldname": "google_cse_id",
+      "fieldtype": "Data",
+      "label": "Google CSE ID"
+    },
+    {
+      "fieldname": "linkedin_search_url",
+      "fieldtype": "Data",
+      "label": "LinkedIn Sales Nav URL"
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Text",
+      "label": "Notes"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "OSINT Hunt Configuration",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    }
+  ],
+  "sort_field": "hunt_name",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

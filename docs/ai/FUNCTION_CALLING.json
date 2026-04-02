@@ -1,0 +1,250 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AuraCRM Function Calling Schema",
+  "description": "OpenAI/Claude function definitions for AuraCRM API integration",
+  "api_base": "/api/method/auracrm.api",
+  "authentication": {
+    "type": "api_key",
+    "header": "Authorization",
+    "format": "token {api_key}:{api_secret}"
+  },
+  "functions": [
+    {
+      "name": "get_dashboard_kpis",
+      "description": "Get CRM dashboard KPIs including lead/opportunity counts, conversion rates, and revenue",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "enum": ["today", "week", "month", "quarter", "year"],
+            "default": "month",
+            "description": "Time period for KPI calculation"
+          }
+        }
+      },
+      "endpoint": "auracrm.api.analytics.get_dashboard_kpis"
+    },
+    {
+      "name": "get_agent_performance",
+      "description": "Get performance metrics for sales agents",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "enum": ["today", "week", "month", "quarter"],
+            "default": "month"
+          },
+          "agent": {
+            "type": "string",
+            "description": "Specific agent email (optional, returns all if omitted)"
+          }
+        }
+      },
+      "endpoint": "auracrm.api.analytics.get_agent_performance"
+    },
+    {
+      "name": "get_pipeline_board",
+      "description": "Get kanban pipeline board with opportunities grouped by stage",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "object",
+            "description": "Optional filters (owner, source, date range)"
+          }
+        }
+      },
+      "endpoint": "auracrm.api.pipeline.get_pipeline_board"
+    },
+    {
+      "name": "move_opportunity",
+      "description": "Move an opportunity to a new pipeline stage",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "opportunity": {
+            "type": "string",
+            "description": "Opportunity document name"
+          },
+          "new_stage": {
+            "type": "string",
+            "description": "Target pipeline stage"
+          }
+        },
+        "required": ["opportunity", "new_stage"]
+      },
+      "endpoint": "auracrm.api.pipeline.move_opportunity"
+    },
+    {
+      "name": "get_lead_scores",
+      "description": "Get scored leads with optional filters",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "filters": {
+            "type": "object",
+            "description": "Filters to apply"
+          },
+          "limit": {
+            "type": "integer",
+            "default": 50,
+            "description": "Maximum results to return"
+          }
+        }
+      },
+      "endpoint": "auracrm.api.scoring.get_lead_scores"
+    },
+    {
+      "name": "recalculate_all_scores",
+      "description": "Recalculate all lead scores (admin operation)",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "endpoint": "auracrm.api.scoring.recalculate_all_scores"
+    },
+    {
+      "name": "manually_assign",
+      "description": "Manually assign a lead or opportunity to a specific agent",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "doctype": {
+            "type": "string",
+            "enum": ["Lead", "Opportunity"]
+          },
+          "name": {
+            "type": "string",
+            "description": "Document name"
+          },
+          "agent": {
+            "type": "string",
+            "description": "Agent email to assign to"
+          }
+        },
+        "required": ["doctype", "name", "agent"]
+      },
+      "endpoint": "auracrm.api.distribution.manually_assign"
+    },
+    {
+      "name": "record_gamification_event",
+      "description": "Record a gamification event for an agent (awards points)",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "event_key": {
+            "type": "string",
+            "description": "Event type key"
+          },
+          "user": {
+            "type": "string",
+            "description": "Agent email"
+          },
+          "reference_doctype": {
+            "type": "string",
+            "description": "Related DocType"
+          },
+          "reference_name": {
+            "type": "string",
+            "description": "Related document name"
+          }
+        },
+        "required": ["event_key"]
+      },
+      "endpoint": "auracrm.api.gamification.record_event"
+    },
+    {
+      "name": "get_leaderboard",
+      "description": "Get gamification leaderboard",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "period": {
+            "type": "string",
+            "enum": ["week", "month", "quarter", "all_time"],
+            "default": "month"
+          },
+          "limit": {
+            "type": "integer",
+            "default": 10
+          }
+        }
+      },
+      "endpoint": "auracrm.api.gamification.get_leaderboard"
+    },
+    {
+      "name": "start_dialer_campaign",
+      "description": "Start an auto-dialer campaign",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "campaign": {
+            "type": "string",
+            "description": "Auto Dialer Campaign name"
+          }
+        },
+        "required": ["campaign"]
+      },
+      "endpoint": "auracrm.api.dialer.start_campaign"
+    },
+    {
+      "name": "activate_sequence",
+      "description": "Activate a campaign sequence for sending",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "sequence_name": {
+            "type": "string",
+            "description": "Campaign Sequence name"
+          }
+        },
+        "required": ["sequence_name"]
+      },
+      "endpoint": "auracrm.api.campaigns.activate_sequence"
+    },
+    {
+      "name": "get_marketing_lists",
+      "description": "Get all marketing lists with member counts",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "endpoint": "auracrm.api.marketing.get_marketing_lists"
+    },
+    {
+      "name": "get_team_overview",
+      "description": "Get team overview with agent stats, workload, and conversion rates",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "endpoint": "auracrm.api.team.get_team_overview"
+    },
+    {
+      "name": "get_license_status",
+      "description": "Get current license status and enabled features",
+      "parameters": {
+        "type": "object",
+        "properties": {}
+      },
+      "endpoint": "auracrm.utils.license.get_license_status"
+    },
+    {
+      "name": "check_feature",
+      "description": "Check if a specific premium feature is enabled",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "feature_key": {
+            "type": "string",
+            "description": "Feature key from the feature registry"
+          }
+        },
+        "required": ["feature_key"]
+      },
+      "endpoint": "auracrm.utils.feature_flags.check_feature"
+    }
+  ]
+}

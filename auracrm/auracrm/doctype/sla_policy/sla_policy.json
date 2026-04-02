@@ -1,0 +1,111 @@
+{
+ "actions": [],
+ "autoname": "field:policy_name",
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "policy_name",
+  "enabled",
+  "column_break_1",
+  "applies_to",
+  "status_filter",
+  "response_time_section",
+  "response_time_minutes",
+  "column_break_2",
+  "escalate_to"
+ ],
+ "fields": [
+  {
+   "fieldname": "policy_name",
+   "fieldtype": "Data",
+   "label": "Policy Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Lead",
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "Lead\nOpportunity",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status_filter",
+   "fieldtype": "Data",
+   "label": "Status Filter",
+   "description": "Only check items with this status"
+  },
+  {
+   "fieldname": "response_time_section",
+   "fieldtype": "Section Break",
+   "label": "Response Time"
+  },
+  {
+   "default": "60",
+   "fieldname": "response_time_minutes",
+   "fieldtype": "Int",
+   "label": "Response Time (Minutes)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "escalate_to",
+   "fieldtype": "Link",
+   "label": "Escalate To",
+   "options": "User",
+   "description": "User to notify on SLA breach"
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "SLA Policy",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "CRM Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Sales User",
+   "read": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

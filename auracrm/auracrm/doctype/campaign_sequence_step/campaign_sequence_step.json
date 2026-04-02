@@ -1,0 +1,63 @@
+{
+  "name": "Campaign Sequence Step",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "step_name",
+    "channel",
+    "template",
+    "delay_days",
+    "delay_hours",
+    "condition"
+  ],
+  "fields": [
+    {
+      "fieldname": "step_name",
+      "fieldtype": "Data",
+      "label": "Step Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Select",
+      "label": "Channel",
+      "options": "\nEmail\nWhatsApp\nSMS\nCall",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "template",
+      "fieldtype": "Link",
+      "label": "Template",
+      "options": "Communication Template"
+    },
+    {
+      "fieldname": "delay_days",
+      "fieldtype": "Int",
+      "label": "Delay (Days)",
+      "default": "1",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "delay_hours",
+      "fieldtype": "Int",
+      "label": "Delay (Hours)",
+      "default": "0"
+    },
+    {
+      "fieldname": "condition",
+      "fieldtype": "Small Text",
+      "label": "Condition (Jinja)",
+      "description": "Only execute if this evaluates to true. E.g.: {{ not responded }}"
+    }
+  ],
+  "permissions": [],
+  "naming_rule": "",
+  "autoname": "",
+  "is_submittable": 0,
+  "istable": 1,
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

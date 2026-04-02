@@ -1,0 +1,23 @@
+{
+ "creation": "2026-03-03 10:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Page",
+ "icon": "chart-line",
+ "idx": 0,
+ "modified": "2026-03-03 10:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "auracrm-analytics",
+ "owner": "Administrator",
+ "page_name": "auracrm-analytics",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Sales Manager"},
+  {"role": "CRM Admin"},
+  {"role": "Quality Analyst"},
+  {"role": "Marketing Manager"}
+ ],
+ "standard": "Yes",
+ "system_page": 0,
+ "title": "CRM Analytics"
+}

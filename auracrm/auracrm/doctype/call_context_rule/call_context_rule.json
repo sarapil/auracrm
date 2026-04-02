@@ -1,0 +1,200 @@
+{
+  "actions": [],
+  "autoname": "format:CTX-{####}",
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "rule_name",
+    "enabled",
+    "priority",
+    "column_break_main",
+    "applies_to_campaign",
+    "applies_to_segment",
+    "applies_to_classification",
+    "script_section",
+    "call_script",
+    "script_notes",
+    "context_section",
+    "show_contact_history",
+    "show_last_call_summary",
+    "show_campaign_info",
+    "column_break_ctx",
+    "show_score",
+    "show_sla_status",
+    "max_history_items",
+    "fields_section",
+    "visible_fields_json",
+    "highlight_fields_json",
+    "notes_section",
+    "pre_call_briefing",
+    "post_call_checklist"
+  ],
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "in_list_view": 1
+    },
+    {
+      "default": "0",
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "in_list_view": 1,
+      "description": "Higher priority rules override lower ones. First matching rule wins."
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "applies_to_campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Auto Dialer Campaign",
+      "description": "Apply when calling from this campaign"
+    },
+    {
+      "fieldname": "applies_to_segment",
+      "fieldtype": "Link",
+      "label": "Audience Segment",
+      "options": "Audience Segment",
+      "description": "Apply when contact belongs to this segment"
+    },
+    {
+      "fieldname": "applies_to_classification",
+      "fieldtype": "Link",
+      "label": "Classification",
+      "options": "Contact Classification",
+      "description": "Apply when contact has this classification"
+    },
+    {
+      "fieldname": "script_section",
+      "fieldtype": "Section Break",
+      "label": "Call Script"
+    },
+    {
+      "fieldname": "call_script",
+      "fieldtype": "Link",
+      "label": "Call Script Template",
+      "options": "Communication Template",
+      "description": "Script template shown to agent. Supports Jinja with contact fields."
+    },
+    {
+      "fieldname": "script_notes",
+      "fieldtype": "Text Editor",
+      "label": "Additional Script Notes",
+      "description": "Free-form notes appended to the script"
+    },
+    {
+      "fieldname": "context_section",
+      "fieldtype": "Section Break",
+      "label": "Context Panel Configuration"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_contact_history",
+      "fieldtype": "Check",
+      "label": "Show Contact History"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_last_call_summary",
+      "fieldtype": "Check",
+      "label": "Show Last Call Summary"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_campaign_info",
+      "fieldtype": "Check",
+      "label": "Show Campaign Information"
+    },
+    {
+      "fieldname": "column_break_ctx",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_score",
+      "fieldtype": "Check",
+      "label": "Show Lead Score"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_sla_status",
+      "fieldtype": "Check",
+      "label": "Show SLA Status"
+    },
+    {
+      "default": "5",
+      "fieldname": "max_history_items",
+      "fieldtype": "Int",
+      "label": "Max History Items"
+    },
+    {
+      "fieldname": "fields_section",
+      "fieldtype": "Section Break",
+      "label": "Field Visibility",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "visible_fields_json",
+      "fieldtype": "Code",
+      "label": "Visible Fields",
+      "options": "JSON",
+      "description": "JSON array of contact field names to display, e.g. [\"company_name\",\"territory\",\"annual_revenue\"]"
+    },
+    {
+      "fieldname": "highlight_fields_json",
+      "fieldtype": "Code",
+      "label": "Highlight Fields",
+      "options": "JSON",
+      "description": "JSON array of field names to highlight prominently"
+    },
+    {
+      "fieldname": "notes_section",
+      "fieldtype": "Section Break",
+      "label": "Agent Briefing"
+    },
+    {
+      "fieldname": "pre_call_briefing",
+      "fieldtype": "Text Editor",
+      "label": "Pre-Call Briefing",
+      "description": "Instructions shown before the call connects"
+    },
+    {
+      "fieldname": "post_call_checklist",
+      "fieldtype": "Code",
+      "label": "Post-Call Checklist",
+      "options": "JSON",
+      "description": "JSON array of checklist items, e.g. [\"Confirm email\",\"Schedule follow-up\",\"Update status\"]"
+    }
+  ],
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Call Context Rule",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "CRM Admin", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Marketing Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Sales Manager", "read": 1, "write": 1, "create": 1 },
+    { "role": "Sales User", "read": 1 }
+  ],
+  "sort_field": "priority",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,26 @@
+<div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto;">
+  <div style="background: linear-gradient(135deg, #4338ca 0%, #6366f1 100%); padding: 24px; border-radius: 12px 12px 0 0;">
+    <h2 style="color: #fff; margin: 0; font-size: 20px;">📊 Lead Score Updated</h2>
+    <p style="color: #c7d2fe; margin: 8px 0 0; font-size: 14px;">AuraCRM — Scoring Engine</p>
+  </div>
+  <div style="background: #fff; padding: 24px; border: 1px solid #e5e7eb; border-top: none; border-radius: 0 0 12px 12px;">
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <td style="padding: 8px 0; color: #6b7280; font-size: 13px;">Lead</td>
+        <td style="padding: 8px 0; font-weight: 600; font-size: 14px;">
+          <a href="{{ frappe.utils.get_url() }}/desk/lead/{{ lead_name }}" style="color: #6366f1;">{{ lead_title }}</a>
+        </td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0; color: #6b7280; font-size: 13px;">Previous Score</td>
+        <td style="padding: 8px 0; font-size: 14px;">{{ old_score }}</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0; color: #6b7280; font-size: 13px;">New Score</td>
+        <td style="padding: 8px 0; font-size: 14px; font-weight: 700; color: {% if new_score > old_score %}#16a34a{% else %}#dc2626{% endif %};">
+          {{ new_score }} ({% if new_score > old_score %}▲{% else %}▼{% endif %} {{ (new_score - old_score)|abs }})
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

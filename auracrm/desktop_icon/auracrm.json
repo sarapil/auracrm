@@ -1,0 +1,21 @@
+{
+ "app": "auracrm",
+ "bg_color": "blue",
+ "creation": "2026-03-03 11:23:13.964418",
+ "docstatus": 0,
+ "doctype": "Desktop Icon",
+ "hidden": 0,
+ "icon_type": "App",
+ "idx": 0,
+ "label": "AuraCRM",
+ "link": "/desk/auracrm",
+ "link_type": "External",
+ "logo_url": "/assets/auracrm/images/auracrm-logo.svg",
+ "modified": "2026-03-03 11:24:12.314083",
+ "modified_by": "Administrator",
+ "name": "AuraCRM",
+ "owner": "Administrator",
+ "restrict_removal": 0,
+ "roles": [],
+ "standard": 1
+}

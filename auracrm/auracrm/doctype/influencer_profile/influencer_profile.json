@@ -1,0 +1,212 @@
+{
+  "actions": [],
+  "autoname": "format:INF-{####}",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "full_name",
+    "username",
+    "platform",
+    "column_break_main",
+    "niche",
+    "status",
+    "discovery_source",
+    "metrics_section",
+    "followers_count",
+    "engagement_rate",
+    "avg_views",
+    "avg_likes",
+    "column_break_metrics",
+    "fake_follower_score",
+    "brand_safety_score",
+    "contact_section",
+    "contact_email",
+    "contact_phone",
+    "profile_url",
+    "audience_section",
+    "audience_countries",
+    "audience_demographics",
+    "partnerships_section",
+    "past_brand_partnerships",
+    "lead"
+  ],
+  "fields": [
+    {
+      "fieldname": "full_name",
+      "fieldtype": "Data",
+      "label": "Full Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "username",
+      "fieldtype": "Data",
+      "label": "Username"
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Instagram\nTikTok\nYouTube\nTwitter\nLinkedIn\nSnapchat"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "niche",
+      "fieldtype": "Select",
+      "label": "Niche",
+      "options": "Real Estate\nLuxury\nBusiness\nFinance\nLifestyle\nTech\nTravel\nFamily\nCustom"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Discovered\nContacted\nNegotiating\nActive Partner\nInactive\nBlacklisted",
+      "default": "Discovered"
+    },
+    {
+      "fieldname": "discovery_source",
+      "fieldtype": "Select",
+      "label": "Discovery Source",
+      "options": "OSINT\nManual\nReferral\nPlatform Search"
+    },
+    {
+      "fieldname": "metrics_section",
+      "fieldtype": "Section Break",
+      "label": "Metrics"
+    },
+    {
+      "fieldname": "followers_count",
+      "fieldtype": "Int",
+      "label": "Followers Count"
+    },
+    {
+      "fieldname": "engagement_rate",
+      "fieldtype": "Float",
+      "label": "Engagement Rate"
+    },
+    {
+      "fieldname": "avg_views",
+      "fieldtype": "Int",
+      "label": "Avg Views"
+    },
+    {
+      "fieldname": "avg_likes",
+      "fieldtype": "Int",
+      "label": "Avg Likes"
+    },
+    {
+      "fieldname": "column_break_metrics",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "fake_follower_score",
+      "fieldtype": "Int",
+      "label": "Fake Follower Score",
+      "description": "0-100 (higher = more fake)"
+    },
+    {
+      "fieldname": "brand_safety_score",
+      "fieldtype": "Int",
+      "label": "Brand Safety Score",
+      "description": "0-100 (higher = safer)"
+    },
+    {
+      "fieldname": "contact_section",
+      "fieldtype": "Section Break",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "contact_email",
+      "fieldtype": "Data",
+      "label": "Contact Email"
+    },
+    {
+      "fieldname": "contact_phone",
+      "fieldtype": "Data",
+      "label": "Contact Phone"
+    },
+    {
+      "fieldname": "profile_url",
+      "fieldtype": "Data",
+      "label": "Profile Url"
+    },
+    {
+      "fieldname": "audience_section",
+      "fieldtype": "Section Break",
+      "label": "Audience"
+    },
+    {
+      "fieldname": "audience_countries",
+      "fieldtype": "JSON",
+      "label": "Audience Countries"
+    },
+    {
+      "fieldname": "audience_demographics",
+      "fieldtype": "JSON",
+      "label": "Audience Demographics"
+    },
+    {
+      "fieldname": "partnerships_section",
+      "fieldtype": "Section Break",
+      "label": "Partnerships"
+    },
+    {
+      "fieldname": "past_brand_partnerships",
+      "fieldtype": "JSON",
+      "label": "Past Brand Partnerships"
+    },
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Influencer Profile",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

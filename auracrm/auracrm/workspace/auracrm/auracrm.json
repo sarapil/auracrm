@@ -1,0 +1,1030 @@
+{
+ "app": "auracrm",
+ "charts": [],
+ "content": "[{\"id\": \"aura_header\", \"type\": \"header\", \"data\": {\"text\": \"<span class='text-lg'>AuraCRM \\u2014 Visual CRM Platform</span>\", \"col\": 12}}, {\"id\": \"sc1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"AuraCRM Hub\", \"col\": 3}}, {\"id\": \"sc2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pipeline Board\", \"col\": 3}}, {\"id\": \"sc3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Team Dashboard\", \"col\": 3}}, {\"id\": \"sc4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Analytics\", \"col\": 3}}, {\"id\": \"sp1\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leads\", \"col\": 3}}, {\"id\": \"sc6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Opportunities\", \"col\": 3}}, {\"id\": \"sc7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"AuraCRM Settings\", \"col\": 3}}, {\"id\": \"sc8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"SLA Breaches\", \"col\": 3}}, {\"id\": \"sp2\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc9\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Dialer Campaigns\", \"col\": 3}}, {\"id\": \"sc10\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Marketing Lists\", \"col\": 3}}, {\"id\": \"sc11\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Audience Segments\", \"col\": 3}}, {\"id\": \"sc12\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Classifications\", \"col\": 3}}, {\"id\": \"sp3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc13\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Gamification Settings\", \"col\": 3}}, {\"id\": \"sc14\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Badges\", \"col\": 3}}, {\"id\": \"sc15\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Challenges\", \"col\": 3}}, {\"id\": \"sc16\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Agent Scorecards\", \"col\": 3}}, {\"id\": \"sp4\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"card0\", \"type\": \"card\", \"data\": {\"card_name\": \"CRM Core\", \"col\": 4}}, {\"id\": \"card1\", \"type\": \"card\", \"data\": {\"card_name\": \"Visual Dashboards\", \"col\": 4}}, {\"id\": \"card2\", \"type\": \"card\", \"data\": {\"card_name\": \"Lead Management\", \"col\": 4}}, {\"id\": \"card3\", \"type\": \"card\", \"data\": {\"card_name\": \"SLA & Quality\", \"col\": 4}}, {\"id\": \"card4\", \"type\": \"card\", \"data\": {\"card_name\": \"Campaigns & Marketing\", \"col\": 4}}, {\"id\": \"card5\", \"type\": \"card\", \"data\": {\"card_name\": \"Dialer\", \"col\": 4}}, {\"id\": \"card6\", \"type\": \"card\", \"data\": {\"card_name\": \"Automation & Sequences\", \"col\": 4}}, {\"id\": \"card7\", \"type\": \"card\", \"data\": {\"card_name\": \"Gamification\", \"col\": 4}}, {\"id\": \"card8\", \"type\": \"card\", \"data\": {\"card_name\": \"Settings\", \"col\": 4}}, {\"id\": \"sp5\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc17\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"OSINT Hunts\", \"col\": 3}}, {\"id\": \"sc18\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"AI Lead Profiles\", \"col\": 3}}, {\"id\": \"sc19\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Content Calendar\", \"col\": 3}}, {\"id\": \"sc20\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Deal Rooms\", \"col\": 3}}, {\"id\": \"sp6\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"sc21\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Nurture Journeys\", \"col\": 3}}, {\"id\": \"sc22\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Influencer Profiles\", \"col\": 3}}, {\"id\": \"sc23\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"WhatsApp Chatbots\", \"col\": 3}}, {\"id\": \"sc24\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Attribution Models\", \"col\": 3}}, {\"id\": \"card9\", \"type\": \"card\", \"data\": {\"card_name\": \"OSINT Intelligence\", \"col\": 4}}, {\"id\": \"card10\", \"type\": \"card\", \"data\": {\"card_name\": \"Enrichment & AI\", \"col\": 4}}, {\"id\": \"card11\", \"type\": \"card\", \"data\": {\"card_name\": \"Advertising\", \"col\": 4}}, {\"id\": \"card12\", \"type\": \"card\", \"data\": {\"card_name\": \"Deal Rooms & Resale\", \"col\": 4}}, {\"id\": \"card13\", \"type\": \"card\", \"data\": {\"card_name\": \"Social & Content\", \"col\": 4}}, {\"id\": \"card14\", \"type\": \"card\", \"data\": {\"card_name\": \"Interactions\", \"col\": 4}}, {\"id\": \"card15\", \"type\": \"card\", \"data\": {\"card_name\": \"Influencer Marketing\", \"col\": 4}}, {\"id\": \"card16\", \"type\": \"card\", \"data\": {\"card_name\": \"Nurture Engine\", \"col\": 4}}, {\"id\": \"card17\", \"type\": \"card\", \"data\": {\"card_name\": \"Competitive Intel\", \"col\": 4}}, {\"id\": \"card18\", \"type\": \"card\", \"data\": {\"card_name\": \"Reputation\", \"col\": 4}}, {\"id\": \"card19\", \"type\": \"card\", \"data\": {\"card_name\": \"WhatsApp Advanced\", \"col\": 4}}, {\"id\": \"card20\", \"type\": \"card\", \"data\": {\"card_name\": \"Revenue Attribution\", \"col\": 4}}]",
+ "creation": "2026-03-03 00:00:00",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "crm",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "AuraCRM",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Core",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Opportunity",
+   "link_count": 0,
+   "link_to": "Opportunity",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contact",
+   "link_count": 0,
+   "link_to": "Contact",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Visual Dashboards",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AuraCRM Home",
+   "link_count": 0,
+   "link_to": "auracrm",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AuraCRM Hub",
+   "link_count": 0,
+   "link_to": "auracrm-hub",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pipeline Board",
+   "link_count": 0,
+   "link_to": "auracrm-pipeline",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Team Dashboard",
+   "link_count": 0,
+   "link_to": "auracrm-team",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Analytics",
+   "link_count": 0,
+   "link_to": "auracrm-analytics",
+   "link_type": "Page",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead Management",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead Distribution Rule",
+   "link_count": 0,
+   "link_to": "Lead Distribution Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead Scoring Rule",
+   "link_count": 0,
+   "link_to": "Lead Scoring Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead Score Log",
+   "link_count": 0,
+   "link_to": "Lead Score Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Scoring Criterion",
+   "link_count": 0,
+   "link_to": "Scoring Criterion",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contact Classification",
+   "link_count": 0,
+   "link_to": "Contact Classification",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Duplicate Rule",
+   "link_count": 0,
+   "link_to": "Duplicate Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SLA & Quality",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SLA Policy",
+   "link_count": 0,
+   "link_to": "SLA Policy",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "SLA Breach Log",
+   "link_count": 0,
+   "link_to": "SLA Breach Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agent Scorecard",
+   "link_count": 0,
+   "link_to": "Agent Scorecard",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agent Shift",
+   "link_count": 0,
+   "link_to": "Agent Shift",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campaigns & Marketing",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing List",
+   "link_count": 0,
+   "link_to": "Marketing List",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Marketing List Member",
+   "link_count": 0,
+   "link_to": "Marketing List Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Audience Segment",
+   "link_count": 0,
+   "link_to": "Audience Segment",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campaign Sequence",
+   "link_count": 0,
+   "link_to": "Campaign Sequence",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Communication Template",
+   "link_count": 0,
+   "link_to": "Communication Template",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Sequence Enrollment",
+   "link_count": 0,
+   "link_to": "Sequence Enrollment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Dialer",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Auto Dialer Campaign",
+   "link_count": 0,
+   "link_to": "Auto Dialer Campaign",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Auto Dialer Entry",
+   "link_count": 0,
+   "link_to": "Auto Dialer Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Call Context Rule",
+   "link_count": 0,
+   "link_to": "Call Context Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Automation & Sequences",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Automation Rule",
+   "link_count": 0,
+   "link_to": "CRM Automation Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Campaign Sequence Step",
+   "link_count": 0,
+   "link_to": "Campaign Sequence Step",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification Settings",
+   "link_count": 0,
+   "link_to": "Gamification Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification Event",
+   "link_count": 0,
+   "link_to": "Gamification Event",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification Badge",
+   "link_count": 0,
+   "link_to": "Gamification Badge",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification Level",
+   "link_count": 0,
+   "link_to": "Gamification Level",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gamification Challenge",
+   "link_count": 0,
+   "link_to": "Gamification Challenge",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Agent Points Log",
+   "link_count": 0,
+   "link_to": "Agent Points Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AuraCRM Settings",
+   "link_count": 0,
+   "link_to": "AuraCRM Settings",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "OSINT Intelligence",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "OSINT Hunt Configuration",
+   "link_count": 0,
+   "link_to": "OSINT Hunt Configuration",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "OSINT Raw Result",
+   "link_count": 0,
+   "link_to": "OSINT Raw Result",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "OSINT Hunt Log",
+   "link_count": 0,
+   "link_to": "OSINT Hunt Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enrichment & AI",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enrichment Job",
+   "link_count": 0,
+   "link_to": "Enrichment Job",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Enrichment Result",
+   "link_count": 0,
+   "link_to": "Enrichment Result",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AI Lead Profile",
+   "link_count": 0,
+   "link_to": "AI Lead Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Advertising",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Ad Inventory Link",
+   "link_count": 0,
+   "link_to": "Ad Inventory Link",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "CRM Campaign ROI Link",
+   "link_count": 0,
+   "link_to": "CRM Campaign ROI Link",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deal Rooms & Resale",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deal Room",
+   "link_count": 0,
+   "link_to": "Deal Room",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Property Portfolio Item",
+   "link_count": 0,
+   "link_to": "Property Portfolio Item",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Social & Content",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Content Calendar Entry",
+   "link_count": 0,
+   "link_to": "Content Calendar Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Publishing Queue",
+   "link_count": 0,
+   "link_to": "Publishing Queue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Optimal Time Rule",
+   "link_count": 0,
+   "link_to": "Optimal Time Rule",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "AI Content Request",
+   "link_count": 0,
+   "link_to": "AI Content Request",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interactions",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interaction Automation Rule",
+   "link_count": 0,
+   "link_to": "Interaction Automation Rule",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Interaction Queue",
+   "link_count": 0,
+   "link_to": "Interaction Queue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Influencer Marketing",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Influencer Profile",
+   "link_count": 0,
+   "link_to": "Influencer Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Influencer Campaign",
+   "link_count": 0,
+   "link_to": "Influencer Campaign",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nurture Engine",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nurture Journey",
+   "link_count": 0,
+   "link_to": "Nurture Journey",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nurture Lead Instance",
+   "link_count": 0,
+   "link_to": "Nurture Lead Instance",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Competitive Intel",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Competitor Profile",
+   "link_count": 0,
+   "link_to": "Competitor Profile",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Competitor Intel Entry",
+   "link_count": 0,
+   "link_to": "Competitor Intel Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reputation",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Review Entry",
+   "link_count": 0,
+   "link_to": "Review Entry",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "WhatsApp Advanced",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "WhatsApp Chatbot",
+   "link_count": 0,
+   "link_to": "WhatsApp Chatbot",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "WhatsApp Broadcast",
+   "link_count": 0,
+   "link_to": "WhatsApp Broadcast",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Revenue Attribution",
+   "link_count": 0,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Attribution Model",
+   "link_count": 0,
+   "link_to": "Attribution Model",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Customer Journey",
+   "link_count": 0,
+   "link_to": "Customer Journey",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-03-20 04:40:58.901245",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "AuraCRM",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 30.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "",
+   "label": "AuraCRM Hub",
+   "link_to": "auracrm-hub",
+   "type": "Page"
+  },
+  {
+   "color": "Green",
+   "doc_view": "",
+   "label": "Pipeline Board",
+   "link_to": "auracrm-pipeline",
+   "type": "Page"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "Team Dashboard",
+   "link_to": "auracrm-team",
+   "type": "Page"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "",
+   "label": "Analytics",
+   "link_to": "auracrm-analytics",
+   "type": "Page"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Leads",
+   "link_to": "Lead",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Opportunities",
+   "link_to": "Opportunity",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "",
+   "label": "AuraCRM Settings",
+   "link_to": "AuraCRM Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "SLA Breaches",
+   "link_to": "SLA Breach Log",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "Dialer Campaigns",
+   "link_to": "Auto Dialer Campaign",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "Marketing Lists",
+   "link_to": "Marketing List",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Audience Segments",
+   "link_to": "Audience Segment",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Classifications",
+   "link_to": "Contact Classification",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Gamification Settings",
+   "link_to": "Gamification Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Yellow",
+   "doc_view": "List",
+   "label": "Badges",
+   "link_to": "Gamification Badge",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Challenges",
+   "link_to": "Gamification Challenge",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Agent Scorecards",
+   "link_to": "Agent Scorecard",
+   "type": "DocType"
+  },
+  {
+   "color": "Cyan",
+   "doc_view": "List",
+   "label": "OSINT Hunts",
+   "link_to": "OSINT Hunt Configuration",
+   "type": "DocType"
+  },
+  {
+   "color": "Purple",
+   "doc_view": "List",
+   "label": "AI Lead Profiles",
+   "link_to": "AI Lead Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Content Calendar",
+   "link_to": "Content Calendar Entry",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Deal Rooms",
+   "link_to": "Deal Room",
+   "type": "DocType"
+  },
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Nurture Journeys",
+   "link_to": "Nurture Journey",
+   "type": "DocType"
+  },
+  {
+   "color": "Pink",
+   "doc_view": "List",
+   "label": "Influencer Profiles",
+   "link_to": "Influencer Profile",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "WhatsApp Chatbots",
+   "link_to": "WhatsApp Chatbot",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Attribution Models",
+   "link_to": "Attribution Model",
+   "type": "DocType"
+  }
+ ],
+ "title": "AuraCRM",
+ "type": "Workspace"
+}

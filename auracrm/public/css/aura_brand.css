@@ -1,0 +1,113 @@
+/*
+ * AuraCRM — Brand Variables & Theme
+ * ═══════════════════════════════════
+ * Brand color: #6366F1 (Indigo)
+ * Org: moatazarkan6-lab
+ */
+:root {
+  /* ── Primary Brand ─────────────────────────────────────── */
+  --ac-brand: #6366F1;
+  --ac-brand-dark: #4f46e5;
+  --ac-brand-darker: #4338ca;
+  --ac-brand-light: #818cf8;
+  --ac-brand-lighter: #a5b4fc;
+  --ac-brand-bg: #eef2ff;
+  --ac-brand-bg-subtle: #f5f3ff;
+
+  /* ── Semantic Colors ───────────────────────────────────── */
+  --ac-success: #22c55e;
+  --ac-warning: #f59e0b;
+  --ac-danger: #ef4444;
+  --ac-info: #3b82f6;
+
+  /* ── Map to frappe_visual vars ─────────────────────────── */
+  --fv-accent: #6366F1;
+  --fv-accent-dark: #4f46e5;
+  --fv-accent-light: #818cf8;
+}
+
+[data-theme="dark"] {
+  --ac-brand-bg: #312e81;
+  --ac-brand-bg-subtle: #3730a3;
+}
+
+/* ── Utility Classes ─────────────────────────────────────── */
+.ac-accent { color: var(--ac-brand) !important; }
+.ac-bg { background: var(--ac-brand) !important; color: #fff !important; }
+.ac-bg-subtle { background: var(--ac-brand-bg) !important; }
+.ac-border { border-color: var(--ac-brand) !important; }
+
+/* ── Badge / Pill ────────────────────────────────────────── */
+.ac-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  background: var(--ac-brand-bg);
+  color: var(--ac-brand-dark);
+  border: 1px solid var(--ac-brand-lighter);
+}
+.ac-badge.hot { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+.ac-badge.warm { background: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.ac-badge.cold { background: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+.ac-badge.won { background: #dcfce7; color: #166534; border-color: #86efac; }
+.ac-badge.lost { background: #f3f4f6; color: #6b7280; border-color: #d1d5db; }
+
+/* ── Stat Card ───────────────────────────────────────────── */
+.ac-stat-card {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.ac-stat-card:hover {
+  box-shadow: 0 4px 16px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+.ac-stat-card .stat-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--ac-brand);
+  line-height: 1.2;
+}
+.ac-stat-card .stat-label {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* ── Graph Section ───────────────────────────────────────── */
+.ac-graph-section {
+  background: var(--card-bg, #fff);
+  border: 1px solid var(--border-color, #e2e8f0);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+/* ── Welcome Banner ──────────────────────────────────────── */
+.ac-welcome {
+  background: linear-gradient(135deg, var(--ac-brand-bg) 0%, var(--ac-brand-bg-subtle) 100%);
+  border: 1px solid var(--ac-brand-lighter);
+  border-radius: 16px;
+  padding: 24px 32px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+/* ── Pipeline Stage Colors ───────────────────────────────── */
+.ac-stage-new { border-left: 4px solid #6366F1; }
+.ac-stage-qualified { border-left: 4px solid #3b82f6; }
+.ac-stage-proposal { border-left: 4px solid #f59e0b; }
+.ac-stage-negotiation { border-left: 4px solid #f97316; }
+.ac-stage-won { border-left: 4px solid #22c55e; }
+.ac-stage-lost { border-left: 4px solid #ef4444; }

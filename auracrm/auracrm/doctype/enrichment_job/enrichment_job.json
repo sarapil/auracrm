@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "osint_result",
+    "status",
+    "column_break_main",
+    "is_broker_detected",
+    "broker_detection_reason",
+    "providers_section",
+    "providers_attempted",
+    "apollo_result",
+    "truecaller_result",
+    "timestamps_section",
+    "created_at",
+    "completed_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead"
+    },
+    {
+      "fieldname": "osint_result",
+      "fieldtype": "Link",
+      "label": "Osint Result",
+      "options": "OSINT Raw Result"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nProcessing\nComplete\nFailed\nSkipped",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "is_broker_detected",
+      "fieldtype": "Check",
+      "label": "Is Broker Detected",
+      "default": "0"
+    },
+    {
+      "fieldname": "broker_detection_reason",
+      "fieldtype": "Data",
+      "label": "Broker Detection Reason"
+    },
+    {
+      "fieldname": "providers_section",
+      "fieldtype": "Section Break",
+      "label": "Provider Results"
+    },
+    {
+      "fieldname": "providers_attempted",
+      "fieldtype": "JSON",
+      "label": "Providers Attempted"
+    },
+    {
+      "fieldname": "apollo_result",
+      "fieldtype": "JSON",
+      "label": "Apollo Result"
+    },
+    {
+      "fieldname": "truecaller_result",
+      "fieldtype": "JSON",
+      "label": "Truecaller Result"
+    },
+    {
+      "fieldname": "timestamps_section",
+      "fieldtype": "Section Break",
+      "label": "Timestamps"
+    },
+    {
+      "fieldname": "created_at",
+      "fieldtype": "Datetime",
+      "label": "Created At"
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Enrichment Job",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

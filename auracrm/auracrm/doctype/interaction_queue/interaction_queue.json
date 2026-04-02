@@ -1,0 +1,199 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "platform",
+    "social_account",
+    "interaction_type",
+    "column_break_main",
+    "status",
+    "matched_rule",
+    "assigned_to",
+    "commenter_section",
+    "commenter_name",
+    "commenter_username",
+    "commenter_profile_url",
+    "commenter_followers",
+    "content_section",
+    "post_id",
+    "content",
+    "sentiment",
+    "response_section",
+    "ai_suggested_response",
+    "final_response",
+    "lead_created",
+    "timestamps_section",
+    "received_at",
+    "replied_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "platform",
+      "fieldtype": "Data",
+      "label": "Platform"
+    },
+    {
+      "fieldname": "social_account",
+      "fieldtype": "Data",
+      "label": "Social Account"
+    },
+    {
+      "fieldname": "interaction_type",
+      "fieldtype": "Select",
+      "label": "Interaction Type",
+      "options": "Comment\nDM\nMention\nReview\nStory Reply"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Pending\nApproved\nReplied\nEscalated\nIgnored\nSpam",
+      "default": "Pending"
+    },
+    {
+      "fieldname": "matched_rule",
+      "fieldtype": "Link",
+      "label": "Matched Rule",
+      "options": "Interaction Automation Rule"
+    },
+    {
+      "fieldname": "assigned_to",
+      "fieldtype": "Link",
+      "label": "Assigned To",
+      "options": "User"
+    },
+    {
+      "fieldname": "commenter_section",
+      "fieldtype": "Section Break",
+      "label": "Commenter Info"
+    },
+    {
+      "fieldname": "commenter_name",
+      "fieldtype": "Data",
+      "label": "Commenter Name"
+    },
+    {
+      "fieldname": "commenter_username",
+      "fieldtype": "Data",
+      "label": "Commenter Username"
+    },
+    {
+      "fieldname": "commenter_profile_url",
+      "fieldtype": "Data",
+      "label": "Commenter Profile Url"
+    },
+    {
+      "fieldname": "commenter_followers",
+      "fieldtype": "Int",
+      "label": "Commenter Followers"
+    },
+    {
+      "fieldname": "content_section",
+      "fieldtype": "Section Break",
+      "label": "Content"
+    },
+    {
+      "fieldname": "post_id",
+      "fieldtype": "Data",
+      "label": "Post Id"
+    },
+    {
+      "fieldname": "content",
+      "fieldtype": "Long Text",
+      "label": "Content"
+    },
+    {
+      "fieldname": "sentiment",
+      "fieldtype": "Select",
+      "label": "Sentiment",
+      "options": "Positive\nNegative\nNeutral\nQuestion\nSpam"
+    },
+    {
+      "fieldname": "response_section",
+      "fieldtype": "Section Break",
+      "label": "Response"
+    },
+    {
+      "fieldname": "ai_suggested_response",
+      "fieldtype": "Long Text",
+      "label": "Ai Suggested Response"
+    },
+    {
+      "fieldname": "final_response",
+      "fieldtype": "Long Text",
+      "label": "Final Response"
+    },
+    {
+      "fieldname": "lead_created",
+      "fieldtype": "Link",
+      "label": "Lead Created",
+      "options": "Lead"
+    },
+    {
+      "fieldname": "timestamps_section",
+      "fieldtype": "Section Break",
+      "label": "Timestamps"
+    },
+    {
+      "fieldname": "received_at",
+      "fieldtype": "Datetime",
+      "label": "Received At"
+    },
+    {
+      "fieldname": "replied_at",
+      "fieldtype": "Datetime",
+      "label": "Replied At"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Interaction Queue",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,169 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "platform",
+    "brand",
+    "rating",
+    "column_break_main",
+    "reviewer_name",
+    "review_date",
+    "sentiment",
+    "response_status",
+    "content_section",
+    "review_text",
+    "platform_review_id",
+    "response_section",
+    "ai_suggested_response",
+    "final_response",
+    "responded_at",
+    "competitor_section",
+    "is_competitor_review",
+    "opportunity_lead"
+  ],
+  "fields": [
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Google\nFacebook\nTripAdvisor\nTrustpilot\nBayut\nProperty Finder\nDubizzle\nManual",
+      "reqd": 1
+    },
+    {
+      "fieldname": "brand",
+      "fieldtype": "Data",
+      "label": "Brand"
+    },
+    {
+      "fieldname": "rating",
+      "fieldtype": "Select",
+      "label": "Rating",
+      "options": "1\n2\n3\n4\n5"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "reviewer_name",
+      "fieldtype": "Data",
+      "label": "Reviewer Name"
+    },
+    {
+      "fieldname": "review_date",
+      "fieldtype": "Date",
+      "label": "Review Date"
+    },
+    {
+      "fieldname": "sentiment",
+      "fieldtype": "Select",
+      "label": "Sentiment",
+      "options": "Positive\nNegative\nNeutral\nMixed"
+    },
+    {
+      "fieldname": "response_status",
+      "fieldtype": "Select",
+      "label": "Response Status",
+      "options": "Not Responded\nResponded\nPending Approval\nEscalated",
+      "default": "Not Responded"
+    },
+    {
+      "fieldname": "content_section",
+      "fieldtype": "Section Break",
+      "label": "Review Content"
+    },
+    {
+      "fieldname": "review_text",
+      "fieldtype": "Long Text",
+      "label": "Review Text"
+    },
+    {
+      "fieldname": "platform_review_id",
+      "fieldtype": "Data",
+      "label": "Platform Review Id"
+    },
+    {
+      "fieldname": "response_section",
+      "fieldtype": "Section Break",
+      "label": "Response"
+    },
+    {
+      "fieldname": "ai_suggested_response",
+      "fieldtype": "Long Text",
+      "label": "Ai Suggested Response"
+    },
+    {
+      "fieldname": "final_response",
+      "fieldtype": "Long Text",
+      "label": "Final Response"
+    },
+    {
+      "fieldname": "responded_at",
+      "fieldtype": "Datetime",
+      "label": "Responded At"
+    },
+    {
+      "fieldname": "competitor_section",
+      "fieldtype": "Section Break",
+      "label": "Competitor Tracking"
+    },
+    {
+      "fieldname": "is_competitor_review",
+      "fieldtype": "Check",
+      "label": "Is Competitor Review"
+    },
+    {
+      "fieldname": "opportunity_lead",
+      "fieldtype": "Link",
+      "label": "Opportunity Lead",
+      "options": "Lead"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Review Entry",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

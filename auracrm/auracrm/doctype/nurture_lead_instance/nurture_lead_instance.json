@@ -1,0 +1,127 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "journey",
+    "lead",
+    "current_step",
+    "column_break_main",
+    "status",
+    "next_action_at",
+    "timestamps_section",
+    "entered_at",
+    "completed_at",
+    "history_section",
+    "step_history"
+  ],
+  "fields": [
+    {
+      "fieldname": "journey",
+      "fieldtype": "Link",
+      "label": "Journey",
+      "options": "Nurture Journey",
+      "reqd": 1
+    },
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead",
+      "reqd": 1
+    },
+    {
+      "fieldname": "current_step",
+      "fieldtype": "Int",
+      "label": "Current Step",
+      "default": "0"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Active\nCompleted\nExited\nPaused\nError",
+      "default": "Active"
+    },
+    {
+      "fieldname": "next_action_at",
+      "fieldtype": "Datetime",
+      "label": "Next Action At"
+    },
+    {
+      "fieldname": "timestamps_section",
+      "fieldtype": "Section Break",
+      "label": "Timestamps"
+    },
+    {
+      "fieldname": "entered_at",
+      "fieldtype": "Datetime",
+      "label": "Entered At"
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At"
+    },
+    {
+      "fieldname": "history_section",
+      "fieldtype": "Section Break",
+      "label": "Step History"
+    },
+    {
+      "fieldname": "step_history",
+      "fieldtype": "JSON",
+      "label": "Step History"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Nurture Lead Instance",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

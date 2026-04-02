@@ -1,0 +1,168 @@
+{
+  "actions": [],
+  "autoname": "field:classification_name",
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "classification_name",
+    "description",
+    "color",
+    "column_break_main",
+    "priority",
+    "icon",
+    "auto_classify",
+    "rules_section",
+    "target_doctype",
+    "filter_field",
+    "filter_operator",
+    "filter_value",
+    "column_break_rules",
+    "secondary_field",
+    "secondary_operator",
+    "secondary_value",
+    "context_section",
+    "default_script",
+    "agent_notes",
+    "visible_fields_json"
+  ],
+  "fields": [
+    {
+      "fieldname": "classification_name",
+      "fieldtype": "Data",
+      "label": "Classification Name",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "color",
+      "fieldtype": "Color",
+      "label": "Color"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "in_list_view": 1,
+      "description": "Higher = more important (used for rule precedence)"
+    },
+    {
+      "fieldname": "icon",
+      "fieldtype": "Data",
+      "label": "Icon",
+      "description": "Emoji or icon class"
+    },
+    {
+      "default": "0",
+      "fieldname": "auto_classify",
+      "fieldtype": "Check",
+      "label": "Auto-Classify",
+      "description": "Automatically tag matching contacts with this classification"
+    },
+    {
+      "fieldname": "rules_section",
+      "fieldtype": "Section Break",
+      "label": "Auto-Classification Rules",
+      "depends_on": "auto_classify",
+      "description": "Conditions for automatically applying this classification"
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Select",
+      "label": "Target DocType",
+      "options": "Lead\nContact\nCustomer\nOpportunity",
+      "default": "Lead"
+    },
+    {
+      "fieldname": "filter_field",
+      "fieldtype": "Data",
+      "label": "Field",
+      "description": "e.g. source, territory, industry"
+    },
+    {
+      "fieldname": "filter_operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "equals\ncontains\ngreater_than\nless_than\nin_list\nis_set"
+    },
+    {
+      "fieldname": "filter_value",
+      "fieldtype": "Data",
+      "label": "Value"
+    },
+    {
+      "fieldname": "column_break_rules",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "secondary_field",
+      "fieldtype": "Data",
+      "label": "Secondary Field"
+    },
+    {
+      "fieldname": "secondary_operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "\nequals\ncontains\ngreater_than\nless_than\nin_list\nis_set"
+    },
+    {
+      "fieldname": "secondary_value",
+      "fieldtype": "Data",
+      "label": "Value"
+    },
+    {
+      "fieldname": "context_section",
+      "fieldtype": "Section Break",
+      "label": "Agent Call Context",
+      "description": "What the agent sees when calling a contact in this classification"
+    },
+    {
+      "fieldname": "default_script",
+      "fieldtype": "Link",
+      "label": "Default Call Script",
+      "options": "Communication Template",
+      "description": "Script shown to agent during calls with contacts in this classification"
+    },
+    {
+      "fieldname": "agent_notes",
+      "fieldtype": "Text Editor",
+      "label": "Agent Briefing Notes",
+      "description": "Instructions/tips shown to agent before calling"
+    },
+    {
+      "fieldname": "visible_fields_json",
+      "fieldtype": "Code",
+      "label": "Visible Contact Fields",
+      "options": "JSON",
+      "description": "JSON array of field names to show during call, e.g. [\"company_name\",\"territory\",\"annual_revenue\"]"
+    }
+  ],
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Contact Classification",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "CRM Admin", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Marketing Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Sales Manager", "read": 1 },
+    { "role": "Sales User", "read": 1 }
+  ],
+  "sort_field": "priority",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

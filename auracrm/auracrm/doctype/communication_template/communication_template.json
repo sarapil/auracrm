@@ -1,0 +1,108 @@
+{
+  "name": "Communication Template",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "template_name",
+    "channel",
+    "cb1",
+    "enabled",
+    "category",
+    "sb_content",
+    "subject",
+    "message",
+    "sb_vars",
+    "available_variables"
+  ],
+  "fields": [
+    {
+      "fieldname": "template_name",
+      "fieldtype": "Data",
+      "label": "Template Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "channel",
+      "fieldtype": "Select",
+      "label": "Channel",
+      "options": "\nEmail\nWhatsApp\nSMS\nAll",
+      "default": "Email",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "label": "Category",
+      "options": "\nFollow Up\nWelcome\nPromotion\nReminder\nEscalation\nGeneral"
+    },
+    {
+      "fieldname": "sb_content",
+      "fieldtype": "Section Break",
+      "label": "Content"
+    },
+    {
+      "fieldname": "subject",
+      "fieldtype": "Data",
+      "label": "Subject",
+      "mandatory_depends_on": "eval:doc.channel=='Email'"
+    },
+    {
+      "fieldname": "message",
+      "fieldtype": "Text Editor",
+      "label": "Message",
+      "reqd": 1
+    },
+    {
+      "fieldname": "sb_vars",
+      "fieldtype": "Section Break",
+      "label": "Variables",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "available_variables",
+      "fieldtype": "Small Text",
+      "label": "Available Variables",
+      "description": "Jinja variables: {{ lead_name }}, {{ company }}, {{ agent_name }}, {{ phone }}"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:TMPL-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "template_name",
+  "show_title_field_in_link": 1
+}

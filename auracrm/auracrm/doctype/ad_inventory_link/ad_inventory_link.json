@@ -1,0 +1,124 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "property_type",
+    "unit_type",
+    "platform",
+    "column_break_main",
+    "platform_adset_id",
+    "campaign_name",
+    "status_section",
+    "current_status",
+    "is_active",
+    "paused_reason",
+    "paused_at"
+  ],
+  "fields": [
+    {
+      "fieldname": "property_type",
+      "fieldtype": "Data",
+      "label": "Property Type"
+    },
+    {
+      "fieldname": "unit_type",
+      "fieldtype": "Data",
+      "label": "Unit Type"
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Meta\nGoogle\nTikTok\nLinkedIn"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "platform_adset_id",
+      "fieldtype": "Data",
+      "label": "Platform AdSet ID"
+    },
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name"
+    },
+    {
+      "fieldname": "status_section",
+      "fieldtype": "Section Break",
+      "label": "Status"
+    },
+    {
+      "fieldname": "current_status",
+      "fieldtype": "Select",
+      "label": "Current Status",
+      "options": "Active\nPaused\nArchived",
+      "default": "Active"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "paused_reason",
+      "fieldtype": "Data",
+      "label": "Paused Reason"
+    },
+    {
+      "fieldname": "paused_at",
+      "fieldtype": "Datetime",
+      "label": "Paused At"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Ad Inventory Link",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,180 @@
+{
+  "actions": [],
+  "autoname": "field:badge_name",
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "badge_name",
+    "description",
+    "tier",
+    "column_break_main",
+    "enabled",
+    "badge_type",
+    "icon",
+    "image",
+    "criteria_section",
+    "criteria_type",
+    "criteria_event",
+    "column_break_criteria",
+    "criteria_value",
+    "criteria_period",
+    "reward_section",
+    "points_reward",
+    "column_break_reward",
+    "secret_badge",
+    "display_section",
+    "congratulations_message",
+    "display_order"
+  ],
+  "fields": [
+    {
+      "fieldname": "badge_name",
+      "fieldtype": "Data",
+      "label": "Badge Name",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "tier",
+      "fieldtype": "Select",
+      "label": "Tier",
+      "reqd": 1,
+      "in_list_view": 1,
+      "options": "Bronze\nSilver\nGold\nPlatinum\nDiamond",
+      "default": "Bronze"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "badge_type",
+      "fieldtype": "Select",
+      "label": "Badge Type",
+      "options": "Milestone\nStreak\nChallenge\nSpecial\nTarget",
+      "default": "Milestone"
+    },
+    {
+      "fieldname": "icon",
+      "fieldtype": "Data",
+      "label": "Icon",
+      "description": "Emoji (e.g. 🏆, 🔥, ⭐, 💎)"
+    },
+    {
+      "fieldname": "image",
+      "fieldtype": "Attach Image",
+      "label": "Badge Image"
+    },
+    {
+      "fieldname": "criteria_section",
+      "fieldtype": "Section Break",
+      "label": "Earning Criteria"
+    },
+    {
+      "fieldname": "criteria_type",
+      "fieldtype": "Select",
+      "label": "Criteria Type",
+      "reqd": 1,
+      "options": "Event Count\nTotal Points\nStreak Days\nConversion Rate\nRevenue Threshold\nCustom",
+      "default": "Event Count",
+      "description": "What must the agent achieve to earn this badge?"
+    },
+    {
+      "fieldname": "criteria_event",
+      "fieldtype": "Link",
+      "label": "Related Event",
+      "options": "Gamification Event",
+      "depends_on": "eval:doc.criteria_type=='Event Count'"
+    },
+    {
+      "fieldname": "column_break_criteria",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "criteria_value",
+      "fieldtype": "Int",
+      "label": "Target Value",
+      "reqd": 1,
+      "description": "e.g. 100 calls, 1000 points, 30 streak days"
+    },
+    {
+      "fieldname": "criteria_period",
+      "fieldtype": "Select",
+      "label": "Time Period",
+      "options": "All Time\nMonthly\nWeekly\nQuarterly",
+      "default": "All Time",
+      "description": "All Time = cumulative, else resets each period"
+    },
+    {
+      "fieldname": "reward_section",
+      "fieldtype": "Section Break",
+      "label": "Reward"
+    },
+    {
+      "default": "0",
+      "fieldname": "points_reward",
+      "fieldtype": "Int",
+      "label": "Bonus Points on Earn",
+      "description": "Extra points awarded when this badge is earned"
+    },
+    {
+      "fieldname": "column_break_reward",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "secret_badge",
+      "fieldtype": "Check",
+      "label": "Secret Badge",
+      "description": "Hidden until earned — adds surprise element"
+    },
+    {
+      "fieldname": "display_section",
+      "fieldtype": "Section Break",
+      "label": "Display"
+    },
+    {
+      "fieldname": "congratulations_message",
+      "fieldtype": "Small Text",
+      "label": "Congratulations Message",
+      "description": "Shown when badge is earned. Supports {{ agent_name }}"
+    },
+    {
+      "default": "0",
+      "fieldname": "display_order",
+      "fieldtype": "Int",
+      "label": "Display Order"
+    }
+  ],
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Gamification Badge",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "CRM Admin", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Sales Manager", "read": 1, "write": 1, "create": 1 },
+    { "role": "Sales User", "read": 1 }
+  ],
+  "sort_field": "tier",
+  "sort_order": "ASC",
+  "track_changes": 1
+}

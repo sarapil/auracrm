@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- ═══ GRADIENTS ═══ -->
+    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#0f0a2e"/>
+    </radialGradient>
+
+    <radialGradient id="aura" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity=".4">
+        <animate attributeName="stop-opacity" values=".4;.65;.4" dur="3s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="60%" stop-color="#6366f1" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="core" cx="38%" cy="32%" r="62%">
+      <stop offset="0%" stop-color="#c7d2fe"/>
+      <stop offset="40%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </radialGradient>
+
+    <linearGradient id="ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a5b4fc"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <linearGradient id="gAcc1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="gAcc2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="gAcc3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="gAcc4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f472b6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <linearGradient id="gAcc5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- ═══ FILTERS ═══ -->
+    <filter id="glo" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="coreGlo" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="14" result="b"/>
+      <feColorMatrix in="b" type="matrix" values=".3 0 0 0 .15  0 .3 0 0 .1  0 0 .9 0 .4  0 0 0 .5 0"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- ═══ ANIMATIONS ═══ -->
+    <style>
+      @keyframes spin{to{stroke-dashoffset:-60}}
+      @keyframes spinR{to{stroke-dashoffset:80}}
+      @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.05)}}
+      @keyframes f1{0%,100%{transform:translate(0,0)}50%{transform:translate(3px,-4px)}}
+      @keyframes f2{0%,100%{transform:translate(0,0)}50%{transform:translate(-3px,3px)}}
+      @keyframes f3{0%,100%{transform:translate(0,0)}50%{transform:translate(2px,4px)}}
+      @keyframes waveA{0%,100%{opacity:.8}50%{opacity:.2}}
+      @keyframes waveB{0%,100%{opacity:.5}50%{opacity:.1}}
+      .o1{animation:spin 4s linear infinite}
+      .o2{animation:spinR 6s linear infinite}
+      .o3{animation:spin 9s linear infinite}
+      .cp{animation:pulse 3s ease-in-out infinite;transform-origin:256px 256px}
+      .n1{animation:f1 4s ease-in-out infinite}
+      .n2{animation:f2 5s ease-in-out infinite}
+      .n3{animation:f3 4.5s ease-in-out infinite}
+      .wa{animation:waveA 2s ease-in-out infinite}
+      .wb{animation:waveB 2s ease-in-out .3s infinite}
+      .wc{animation:waveB 2s ease-in-out .6s infinite}
+    </style>
+  </defs>
+
+  <!-- ═══ BACKGROUND ═══ -->
+  <rect width="512" height="512" rx="96" fill="url(#bg)"/>
+
+  <!-- ═══ AURA GLOW ═══ -->
+  <circle cx="256" cy="256" r="220" fill="url(#aura)" opacity=".7"/>
+
+  <!-- ═══ ORBITAL RINGS ═══ -->
+  <circle cx="256" cy="256" r="185" fill="none" stroke="#6366f1" stroke-opacity=".1" stroke-width="1.2"/>
+  <circle cx="256" cy="256" r="185" fill="none" stroke="url(#ring)" stroke-opacity=".45" stroke-width="1.8" stroke-dasharray="12 8" class="o3"/>
+
+  <circle cx="256" cy="256" r="138" fill="none" stroke="#6366f1" stroke-opacity=".13" stroke-width="1.2"/>
+  <circle cx="256" cy="256" r="138" fill="none" stroke="url(#ring)" stroke-opacity=".55" stroke-width="1.8" stroke-dasharray="8 12" class="o2"/>
+
+  <circle cx="256" cy="256" r="90" fill="none" stroke="#6366f1" stroke-opacity=".16" stroke-width="1"/>
+  <circle cx="256" cy="256" r="90" fill="none" stroke="url(#ring)" stroke-opacity=".65" stroke-width="1.4" stroke-dasharray="6 10" class="o1"/>
+
+  <!-- ═══ CONNECTION LINES ═══ -->
+  <g opacity=".3" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="256" y1="256" x2="365" y2="105" stroke="#fbbf24">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2s" repeatCount="indefinite"/></line>
+    <line x1="256" y1="256" x2="115" y2="165" stroke="#34d399">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2.5s" repeatCount="indefinite"/></line>
+    <line x1="256" y1="256" x2="395" y2="320" stroke="#38bdf8">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="1.8s" repeatCount="indefinite"/></line>
+    <line x1="256" y1="256" x2="135" y2="375" stroke="#f472b6">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="2.2s" repeatCount="indefinite"/></line>
+    <line x1="256" y1="256" x2="345" y2="415" stroke="#c084fc">
+      <animate attributeName="stroke-dashoffset" from="0" to="-16" dur="3s" repeatCount="indefinite"/></line>
+  </g>
+
+  <!-- ═══ CORE — PERSON + CRM ═══ -->
+  <g class="cp" filter="url(#coreGlo)">
+    <circle cx="256" cy="256" r="62" fill="url(#core)" opacity=".95"/>
+    <circle cx="256" cy="256" r="62" fill="none" stroke="#c7d2fe" stroke-width="1.5" stroke-opacity=".4"/>
+
+    <!-- Person Head -->
+    <circle cx="256" cy="234" r="14" fill="#eef2ff" opacity=".95"/>
+    <!-- Person Shoulders -->
+    <path d="M232,260 Q232,248 244,244 L256,242 L268,244 Q280,248 280,260 L280,278 Q280,284 274,284 L238,284 Q232,284 232,278 Z" fill="#e0e7ff" opacity=".9"/>
+
+    <!-- Signal waves (communication aura) -->
+    <g transform="translate(282,230)" fill="none" stroke="#a5b4fc" stroke-width="1.8" stroke-linecap="round">
+      <path d="M2,-2 Q8,-8 5,-16" class="wa"/>
+      <path d="M5,0 Q13,-10 9,-22" class="wb"/>
+      <path d="M8,2 Q18,-12 13,-28" class="wc"/>
+    </g>
+  </g>
+
+  <!-- ═══ NODE 1: Phone (Call) — top right ═══ -->
+  <g class="n1" filter="url(#glo)">
+    <circle cx="365" cy="105" r="26" fill="#1e1b4b" stroke="url(#gAcc1)" stroke-width="2.5"/>
+    <!-- Phone icon -->
+    <g transform="translate(365,105)" fill="none" stroke="#fbbf24" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-8,-10 L-4,-10 Q-2,-10 -2,-8 L-2,8 Q-2,10 -4,10 L-8,10 Q-10,10 -10,8 L-10,-8 Q-10,-10 -8,-10 Z"/>
+      <line x1="-6" y1="7" x2="-6" y2="7.01"/>
+      <path d="M3,-6 Q10,-6 10,0 Q10,6 3,6" opacity=".6"/>
+      <path d="M5,-10 Q14,-10 14,0 Q14,10 5,10" opacity=".35"/>
+    </g>
+    <!-- Ring pulse -->
+    <circle cx="365" cy="105" r="30" fill="none" stroke="#fbbf24" stroke-width=".8">
+      <animate attributeName="r" values="30;44" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".5;0" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- ═══ NODE 2: Chat Bubble — top left ═══ -->
+  <g class="n2" filter="url(#glo)">
+    <circle cx="115" cy="165" r="24" fill="#1e1b4b" stroke="url(#gAcc2)" stroke-width="2.5"/>
+    <g transform="translate(115,163)" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M-10,-8 L10,-8 Q12,-8 12,-6 L12,4 Q12,6 10,6 L2,6 L-2,10 L-4,6 L-10,6 Q-12,6 -12,4 L-12,-6 Q-12,-8 -10,-8 Z"/>
+      <line x1="-6" y1="-2" x2="6" y2="-2"/>
+      <line x1="-6" y1="2" x2="2" y2="2"/>
+    </g>
+  </g>
+
+  <!-- ═══ NODE 3: Chart (Analytics) — right ═══ -->
+  <g class="n3" filter="url(#glo)">
+    <circle cx="395" cy="320" r="24" fill="#1e1b4b" stroke="url(#gAcc3)" stroke-width="2.5"/>
+    <g transform="translate(395,320)" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round">
+      <line x1="-9" y1="9" x2="9" y2="9"/>
+      <rect x="-8" y="2" width="4" height="7" rx="1" fill="#38bdf8" opacity=".6"/>
+      <rect x="-2" y="-3" width="4" height="12" rx="1" fill="#38bdf8" opacity=".75"/>
+      <rect x="4" y="-7" width="4" height="16" rx="1" fill="#38bdf8" opacity=".9"/>
+    </g>
+  </g>
+
+  <!-- ═══ NODE 4: Target (Pipeline) — bottom left ═══ -->
+  <g class="n1" filter="url(#glo)">
+    <circle cx="135" cy="375" r="22" fill="#1e1b4b" stroke="url(#gAcc4)" stroke-width="2.5"/>
+    <g transform="translate(135,375)" fill="none" stroke="#f472b6" stroke-width="1.8">
+      <circle r="9"/>
+      <circle r="5"/>
+      <circle r="1.5" fill="#f472b6"/>
+      <line x1="6" y1="-6" x2="12" y2="-12" stroke-width="2"/>
+      <line x1="8" y1="-12" x2="12" y2="-12"/>
+      <line x1="12" y1="-8" x2="12" y2="-12"/>
+    </g>
+  </g>
+
+  <!-- ═══ NODE 5: People (Team) — bottom right ═══ -->
+  <g class="n2" filter="url(#glo)">
+    <circle cx="345" cy="415" r="22" fill="#1e1b4b" stroke="url(#gAcc5)" stroke-width="2.5"/>
+    <g transform="translate(345,415)" fill="#c084fc" opacity=".9">
+      <circle cx="-5" cy="-5" r="4"/>
+      <path d="M-12,4 Q-12,0 -5,-2 Q2,0 2,4 L2,6 Q2,7 1,7 L-11,7 Q-12,7 -12,6 Z"/>
+      <circle cx="6" cy="-4" r="3.5" opacity=".65"/>
+      <path d="M0,5 Q0,1 6,-1 Q12,1 12,5 L12,6.5 Q12,7.5 11,7.5 L1,7.5 Q0,7.5 0,6.5 Z" opacity=".55"/>
+    </g>
+  </g>
+
+  <!-- ═══ DATA PARTICLES ═══ -->
+  <g opacity=".65">
+    <circle r="2.8" fill="#fbbf24">
+      <animateMotion dur="3s" repeatCount="indefinite" path="M256,256 L365,105"/></circle>
+    <circle r="2.8" fill="#fbbf24">
+      <animateMotion dur="3s" repeatCount="indefinite" begin="1.5s" path="M365,105 L256,256"/></circle>
+    <circle r="2.5" fill="#34d399">
+      <animateMotion dur="3.5s" repeatCount="indefinite" path="M256,256 L115,165"/></circle>
+    <circle r="2.5" fill="#34d399">
+      <animateMotion dur="3.5s" repeatCount="indefinite" begin="1.75s" path="M115,165 L256,256"/></circle>
+    <circle r="2.3" fill="#38bdf8">
+      <animateMotion dur="2.8s" repeatCount="indefinite" path="M256,256 L395,320"/></circle>
+    <circle r="2" fill="#f472b6">
+      <animateMotion dur="4s" repeatCount="indefinite" path="M256,256 L135,375"/></circle>
+    <circle r="2" fill="#c084fc">
+      <animateMotion dur="3.2s" repeatCount="indefinite" path="M256,256 L345,415"/></circle>
+  </g>
+
+  <!-- ═══ SPARKLE DOTS ═══ -->
+  <g>
+    <circle cx="442" cy="168" r="2.5" fill="#a5b4fc">
+      <animate attributeName="opacity" values=".2;.8;.2" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="68" cy="108" r="2" fill="#34d399">
+      <animate attributeName="opacity" values=".15;.7;.15" dur="3s" begin="1s" repeatCount="indefinite"/></circle>
+    <circle cx="425" cy="440" r="2" fill="#fbbf24">
+      <animate attributeName="opacity" values=".2;.6;.2" dur="5s" repeatCount="indefinite"/></circle>
+    <circle cx="82" cy="425" r="1.8" fill="#f472b6">
+      <animate attributeName="opacity" values=".2;.65;.2" dur="3.5s" begin=".5s" repeatCount="indefinite"/></circle>
+    <circle cx="256" cy="52" r="2" fill="#c7d2fe">
+      <animate attributeName="opacity" values=".1;.5;.1" dur="6s" begin="2s" repeatCount="indefinite"/></circle>
+    <circle cx="256" cy="462" r="1.5" fill="#818cf8">
+      <animate attributeName="opacity" values=".15;.55;.15" dur="4.5s" begin="1.5s" repeatCount="indefinite"/></circle>
+  </g>
+</svg>

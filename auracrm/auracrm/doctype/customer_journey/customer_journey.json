@@ -1,0 +1,122 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "deal",
+    "model_used",
+    "column_break_main",
+    "total_revenue",
+    "first_touch_date",
+    "deal_close_date",
+    "journey_days",
+    "touchpoints_section",
+    "touchpoints"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead",
+      "reqd": 1
+    },
+    {
+      "fieldname": "deal",
+      "fieldtype": "Link",
+      "label": "Deal",
+      "options": "Opportunity"
+    },
+    {
+      "fieldname": "model_used",
+      "fieldtype": "Link",
+      "label": "Model Used",
+      "options": "Attribution Model"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "total_revenue",
+      "fieldtype": "Currency",
+      "label": "Total Revenue"
+    },
+    {
+      "fieldname": "first_touch_date",
+      "fieldtype": "Date",
+      "label": "First Touch Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "deal_close_date",
+      "fieldtype": "Date",
+      "label": "Deal Close Date",
+      "read_only": 1
+    },
+    {
+      "fieldname": "journey_days",
+      "fieldtype": "Int",
+      "label": "Journey Days",
+      "read_only": 1
+    },
+    {
+      "fieldname": "touchpoints_section",
+      "fieldtype": "Section Break",
+      "label": "Touchpoints"
+    },
+    {
+      "fieldname": "touchpoints",
+      "fieldtype": "Table",
+      "label": "Touchpoints",
+      "options": "Journey Touchpoint"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Customer Journey",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,80 @@
+{
+  "name": "AuraCRM",
+  "title": "AuraCRM — Open Source CRM for Frappe & ERPNext",
+  "description": "Comprehensive CRM with Lead Scoring, Pipeline Management, AI Intelligence, Team Gamification, and Marketing Automation. Built natively on Frappe Framework with full Arabic/RTL support.",
+  "long_description": "AuraCRM is the most complete open-source CRM built for Frappe/ERPNext. It provides everything a sales team needs: visual pipeline boards, intelligent lead scoring, automated distribution, SLA tracking, AI-powered intelligence (OSINT, enrichment, content generation), team gamification with leaderboards, and multi-channel marketing automation including WhatsApp and social media.\n\nDesigned Arabic-first with full RTL support, AuraCRM serves businesses worldwide with seamless ERPNext integration — no more data silos between your CRM and ERP.\n\nFree tier: 13 core features. Premium tier: 25 advanced features including AI and automation.",
+  "category": "CRM",
+  "publisher": "Arkan Lab",
+  "publisher_email": "moatazsarapil@gmail.com",
+  "publisher_website": "https://arkan.it.com",
+  "repository_url": "https://github.com/ArkanLab/auracrm",
+  "documentation_url": "https://github.com/ArkanLab/auracrm/tree/main/docs",
+  "license": "MIT",
+  "version": "1.0.0",
+  "frappe_version": ">=16.0.0",
+  "required_apps": ["frappe", "erpnext"],
+  "optional_apps": ["frappe_visual", "arrowz", "frappe_whatsapp"],
+  "tags": [
+    "crm",
+    "sales",
+    "lead-management",
+    "pipeline",
+    "lead-scoring",
+    "gamification",
+    "ai",
+    "osint",
+    "marketing-automation",
+    "whatsapp",
+    "arabic",
+    "rtl",
+    "erpnext"
+  ],
+  "features": [
+    "65 DocTypes for complete CRM coverage",
+    "9 specialized engines (Scoring, Distribution, Content, OSINT, Enrichment, Nurture, Reputation, Resale, Advertising)",
+    "Visual Pipeline Board with drag-and-drop",
+    "AI-powered lead scoring and content generation",
+    "Team gamification with points, badges, and leaderboards",
+    "SLA tracking with breach alerts",
+    "Multi-channel marketing (Email, WhatsApp, Social)",
+    "Complete Arabic translation (1,570+ strings)",
+    "RTL-first responsive design",
+    "ERPNext native integration",
+    "Open Core model — generous free tier",
+    "321 automated tests"
+  ],
+  "screenshots": [
+    {
+      "file": "pipeline_board.png",
+      "caption": "Visual Pipeline Board"
+    },
+    {
+      "file": "team_dashboard.png",
+      "caption": "Team Dashboard with Gamification"
+    },
+    {
+      "file": "lead_scoring.png",
+      "caption": "AI Lead Scoring"
+    },
+    {
+      "file": "auracrm_settings.png",
+      "caption": "Comprehensive Settings"
+    }
+  ],
+  "pricing": {
+    "model": "open-core",
+    "free_tier": {
+      "features_count": 13,
+      "includes": "Lead Management, Pipeline Board, Basic Scoring, SLA Tracking, Basic Gamification"
+    },
+    "premium_tier": {
+      "price": "$49/month/site",
+      "features_count": 25,
+      "includes": "AI Intelligence, OSINT, Enrichment, Advanced Automation, Deal Rooms, Advanced Gamification"
+    },
+    "enterprise_tier": {
+      "price": "$99/month/site",
+      "includes": "All Premium + White Labeling, Priority Support, Custom Integrations"
+    }
+  }
+}

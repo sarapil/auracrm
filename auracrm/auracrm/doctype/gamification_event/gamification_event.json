@@ -1,0 +1,197 @@
+{
+  "actions": [],
+  "autoname": "field:event_key",
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "event_key",
+    "event_name",
+    "category",
+    "column_break_main",
+    "enabled",
+    "icon",
+    "description",
+    "points_section",
+    "base_points",
+    "column_break_points",
+    "max_points_per_occurrence",
+    "anti_gaming_section",
+    "cooldown_minutes",
+    "column_break_anti",
+    "daily_cap",
+    "multiplier_section",
+    "multiplier_field",
+    "multiplier_operator",
+    "multiplier_value",
+    "column_break_multiplier",
+    "multiplier_factor",
+    "multiplier_description"
+  ],
+  "fields": [
+    {
+      "fieldname": "event_key",
+      "fieldtype": "Data",
+      "label": "Event Key",
+      "reqd": 1,
+      "unique": 1,
+      "in_list_view": 1,
+      "description": "Unique identifier, e.g. call_completed, deal_won"
+    },
+    {
+      "fieldname": "event_name",
+      "fieldtype": "Data",
+      "label": "Display Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "category",
+      "fieldtype": "Select",
+      "label": "Category",
+      "reqd": 1,
+      "in_list_view": 1,
+      "options": "Sales Activity\nPipeline Progress\nQuality & Compliance\nConsistency & Streaks\nTeam Collaboration"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "in_list_view": 1,
+      "bold": 1
+    },
+    {
+      "fieldname": "icon",
+      "fieldtype": "Data",
+      "label": "Icon",
+      "description": "Emoji or icon class (e.g. 📞, 🏆, ⭐)"
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "points_section",
+      "fieldtype": "Section Break",
+      "label": "Points Configuration"
+    },
+    {
+      "default": "10",
+      "fieldname": "base_points",
+      "fieldtype": "Int",
+      "label": "Base Points",
+      "reqd": 1,
+      "in_list_view": 1,
+      "description": "Default points awarded per occurrence"
+    },
+    {
+      "fieldname": "column_break_points",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "max_points_per_occurrence",
+      "fieldtype": "Int",
+      "label": "Max Points Per Occurrence",
+      "description": "0 = no cap. Used when multipliers can inflate points."
+    },
+    {
+      "fieldname": "anti_gaming_section",
+      "fieldtype": "Section Break",
+      "label": "Anti-Gaming Controls"
+    },
+    {
+      "default": "0",
+      "fieldname": "cooldown_minutes",
+      "fieldtype": "Int",
+      "label": "Cooldown (Minutes)",
+      "description": "Minimum minutes between earning points from this event. 0 = no cooldown."
+    },
+    {
+      "fieldname": "column_break_anti",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "0",
+      "fieldname": "daily_cap",
+      "fieldtype": "Int",
+      "label": "Daily Cap",
+      "description": "Maximum times this event can earn points per day. 0 = unlimited."
+    },
+    {
+      "fieldname": "multiplier_section",
+      "fieldtype": "Section Break",
+      "label": "Bonus Multiplier Condition",
+      "collapsible": 1,
+      "description": "Optional condition that multiplies base points when met"
+    },
+    {
+      "fieldname": "multiplier_field",
+      "fieldtype": "Data",
+      "label": "Field to Check",
+      "description": "Field name on the reference document (e.g. grand_total, duration)"
+    },
+    {
+      "fieldname": "multiplier_operator",
+      "fieldtype": "Select",
+      "label": "Operator",
+      "options": "\ngreater_than\nless_than\nequals\nis_set"
+    },
+    {
+      "fieldname": "multiplier_value",
+      "fieldtype": "Data",
+      "label": "Comparison Value"
+    },
+    {
+      "fieldname": "column_break_multiplier",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1.5",
+      "fieldname": "multiplier_factor",
+      "fieldtype": "Float",
+      "label": "Multiplier Factor",
+      "description": "e.g. 1.5 = 50% bonus, 2.0 = double points"
+    },
+    {
+      "fieldname": "multiplier_description",
+      "fieldtype": "Data",
+      "label": "Multiplier Description",
+      "description": "Shown to agents, e.g. 'Calls over 3 minutes earn 1.5× points'"
+    }
+  ],
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Gamification Event",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1, "write": 1, "create": 1, "delete": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1, "write": 1, "create": 1, "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1, "write": 1, "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "category",
+  "sort_order": "ASC",
+  "track_changes": 1
+}

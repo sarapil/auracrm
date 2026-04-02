@@ -1,0 +1,174 @@
+{
+  "actions": [],
+  "autoname": "format:IC-{####}",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "campaign_name",
+    "campaign",
+    "total_budget",
+    "column_break_main",
+    "start_date",
+    "end_date",
+    "influencers_section",
+    "influencers",
+    "brief_section",
+    "brief",
+    "tracking_link",
+    "utm_params",
+    "results_section",
+    "total_reach",
+    "total_impressions",
+    "total_clicks",
+    "total_leads",
+    "roi"
+  ],
+  "fields": [
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Campaign"
+    },
+    {
+      "fieldname": "total_budget",
+      "fieldtype": "Currency",
+      "label": "Total Budget"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date"
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date"
+    },
+    {
+      "fieldname": "influencers_section",
+      "fieldtype": "Section Break",
+      "label": "Influencers"
+    },
+    {
+      "fieldname": "influencers",
+      "fieldtype": "Table",
+      "label": "Influencers",
+      "options": "Influencer Campaign Row"
+    },
+    {
+      "fieldname": "brief_section",
+      "fieldtype": "Section Break",
+      "label": "Campaign Brief"
+    },
+    {
+      "fieldname": "brief",
+      "fieldtype": "Long Text",
+      "label": "Brief"
+    },
+    {
+      "fieldname": "tracking_link",
+      "fieldtype": "Data",
+      "label": "Tracking Link"
+    },
+    {
+      "fieldname": "utm_params",
+      "fieldtype": "JSON",
+      "label": "UTM Parameters"
+    },
+    {
+      "fieldname": "results_section",
+      "fieldtype": "Section Break",
+      "label": "Results"
+    },
+    {
+      "fieldname": "total_reach",
+      "fieldtype": "Int",
+      "label": "Total Reach",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "total_impressions",
+      "fieldtype": "Int",
+      "label": "Total Impressions",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "total_clicks",
+      "fieldtype": "Int",
+      "label": "Total Clicks",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "total_leads",
+      "fieldtype": "Int",
+      "label": "Total Leads",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "roi",
+      "fieldtype": "Float",
+      "label": "ROI",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Influencer Campaign",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

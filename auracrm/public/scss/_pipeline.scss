@@ -1,0 +1,9 @@
+/* Pipeline Board Styles */
+.aura-pipeline { display: flex; gap: 16px; overflow-x: auto; padding: 16px 0; }
+.aura-pipeline-column {
+	min-width: 280px;
+	max-width: 320px;
+	background: var(--fv-bg-secondary, #f8fafc);
+	border-radius: var(--fv-radius-lg, 16px);
+	padding: 12px;
+}

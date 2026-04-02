@@ -1,0 +1,339 @@
+{
+  "actions": [],
+  "allow_rename": 0,
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "master_section",
+    "gamification_enabled",
+    "points_enabled",
+    "badges_enabled",
+    "levels_enabled",
+    "column_break_master",
+    "challenges_enabled",
+    "leaderboard_enabled",
+    "streaks_enabled",
+    "celebrations_enabled",
+    "streak_section",
+    "streak_reset_after_days",
+    "streak_multiplier_per_day",
+    "column_break_streak",
+    "max_streak_multiplier",
+    "streak_start_hour",
+    "leaderboard_section",
+    "leaderboard_period",
+    "leaderboard_visible_to_all",
+    "column_break_leaderboard",
+    "leaderboard_top_n",
+    "show_rank_change",
+    "notification_section",
+    "notify_on_points",
+    "notify_on_badge",
+    "column_break_notify",
+    "notify_on_level_up",
+    "notify_on_challenge_complete",
+    "anti_gaming_section",
+    "enable_cooldowns",
+    "enable_daily_caps",
+    "column_break_anti_gaming",
+    "suspicious_activity_threshold",
+    "auto_flag_suspicious",
+    "target_section",
+    "daily_calls_target",
+    "daily_emails_target",
+    "column_break_targets",
+    "weekly_deals_target",
+    "monthly_revenue_target",
+    "deal_value_threshold"
+  ],
+  "fields": [
+    {
+      "fieldname": "master_section",
+      "fieldtype": "Section Break",
+      "label": "Gamification Master Controls"
+    },
+    {
+      "default": "1",
+      "fieldname": "gamification_enabled",
+      "fieldtype": "Check",
+      "label": "Gamification Enabled",
+      "bold": 1,
+      "description": "Master toggle for the entire gamification system"
+    },
+    {
+      "default": "1",
+      "fieldname": "points_enabled",
+      "fieldtype": "Check",
+      "label": "Points System",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "badges_enabled",
+      "fieldtype": "Check",
+      "label": "Badges & Achievements",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "levels_enabled",
+      "fieldtype": "Check",
+      "label": "Level Progression",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "fieldname": "column_break_master",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "challenges_enabled",
+      "fieldtype": "Check",
+      "label": "Challenges & Competitions",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "leaderboard_enabled",
+      "fieldtype": "Check",
+      "label": "Leaderboard",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "streaks_enabled",
+      "fieldtype": "Check",
+      "label": "Activity Streaks",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "celebrations_enabled",
+      "fieldtype": "Check",
+      "label": "Celebrations & Animations",
+      "depends_on": "gamification_enabled",
+      "description": "Show confetti / toast on milestone achievements"
+    },
+    {
+      "fieldname": "streak_section",
+      "fieldtype": "Section Break",
+      "label": "Streak Configuration",
+      "depends_on": "streaks_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "streak_reset_after_days",
+      "fieldtype": "Int",
+      "label": "Streak Resets After (Missed Days)",
+      "description": "How many consecutive missed days before streak resets to 0"
+    },
+    {
+      "default": "0.1",
+      "fieldname": "streak_multiplier_per_day",
+      "fieldtype": "Float",
+      "label": "Streak Multiplier Per Day",
+      "description": "Additional multiplier per consecutive day (e.g., 0.1 = +10%/day)"
+    },
+    {
+      "fieldname": "column_break_streak",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "3.0",
+      "fieldname": "max_streak_multiplier",
+      "fieldtype": "Float",
+      "label": "Max Streak Multiplier",
+      "description": "Cap for streak multiplier (e.g., 3.0 = max 3× points)"
+    },
+    {
+      "default": "8",
+      "fieldname": "streak_start_hour",
+      "fieldtype": "Int",
+      "label": "Streak Day Starts At (Hour)",
+      "description": "Hour of day when a new streak day begins (0-23)"
+    },
+    {
+      "fieldname": "leaderboard_section",
+      "fieldtype": "Section Break",
+      "label": "Leaderboard Configuration",
+      "depends_on": "leaderboard_enabled"
+    },
+    {
+      "default": "Weekly",
+      "fieldname": "leaderboard_period",
+      "fieldtype": "Select",
+      "label": "Leaderboard Period",
+      "options": "Daily\nWeekly\nMonthly\nQuarterly"
+    },
+    {
+      "default": "1",
+      "fieldname": "leaderboard_visible_to_all",
+      "fieldtype": "Check",
+      "label": "Visible to All Agents",
+      "description": "If unchecked, agents only see their own rank"
+    },
+    {
+      "fieldname": "column_break_leaderboard",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "10",
+      "fieldname": "leaderboard_top_n",
+      "fieldtype": "Int",
+      "label": "Show Top N Agents"
+    },
+    {
+      "default": "1",
+      "fieldname": "show_rank_change",
+      "fieldtype": "Check",
+      "label": "Show Rank Changes",
+      "description": "Display ↑↓ indicators for position changes"
+    },
+    {
+      "fieldname": "notification_section",
+      "fieldtype": "Section Break",
+      "label": "Notification Settings",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "0",
+      "fieldname": "notify_on_points",
+      "fieldtype": "Check",
+      "label": "Notify on Points Earned",
+      "description": "Show realtime toast when points are earned"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_on_badge",
+      "fieldtype": "Check",
+      "label": "Notify on Badge Earned"
+    },
+    {
+      "fieldname": "column_break_notify",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_on_level_up",
+      "fieldtype": "Check",
+      "label": "Notify on Level Up"
+    },
+    {
+      "default": "1",
+      "fieldname": "notify_on_challenge_complete",
+      "fieldtype": "Check",
+      "label": "Notify on Challenge Complete"
+    },
+    {
+      "fieldname": "anti_gaming_section",
+      "fieldtype": "Section Break",
+      "label": "Anti-Gaming Protection",
+      "depends_on": "gamification_enabled"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_cooldowns",
+      "fieldtype": "Check",
+      "label": "Enable Event Cooldowns",
+      "description": "Respect per-event cooldown periods to prevent spam"
+    },
+    {
+      "default": "1",
+      "fieldname": "enable_daily_caps",
+      "fieldtype": "Check",
+      "label": "Enable Daily Point Caps",
+      "description": "Respect per-event daily maximums"
+    },
+    {
+      "fieldname": "column_break_anti_gaming",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "500",
+      "fieldname": "suspicious_activity_threshold",
+      "fieldtype": "Int",
+      "label": "Suspicious Activity Threshold",
+      "description": "Flag if agent earns more than this many points in a single day"
+    },
+    {
+      "default": "1",
+      "fieldname": "auto_flag_suspicious",
+      "fieldtype": "Check",
+      "label": "Auto-Flag Suspicious Activity",
+      "description": "Automatically pause point accrual and notify admin"
+    },
+    {
+      "fieldname": "target_section",
+      "fieldtype": "Section Break",
+      "label": "Performance Targets (for target-based events)"
+    },
+    {
+      "default": "20",
+      "fieldname": "daily_calls_target",
+      "fieldtype": "Int",
+      "label": "Daily Calls Target"
+    },
+    {
+      "default": "10",
+      "fieldname": "daily_emails_target",
+      "fieldtype": "Int",
+      "label": "Daily Emails Target"
+    },
+    {
+      "fieldname": "column_break_targets",
+      "fieldtype": "Column Break"
+    },
+    {
+      "default": "5",
+      "fieldname": "weekly_deals_target",
+      "fieldtype": "Int",
+      "label": "Weekly Deals Target"
+    },
+    {
+      "default": "50000",
+      "fieldname": "monthly_revenue_target",
+      "fieldtype": "Int",
+      "label": "Monthly Revenue Target"
+    },
+    {
+      "default": "10000",
+      "fieldname": "deal_value_threshold",
+      "fieldtype": "Int",
+      "label": "High-Value Deal Threshold",
+      "description": "Deals above this value earn bonus points"
+    }
+  ],
+  "issingle": 1,
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Gamification Settings",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1
+    },
+    {
+      "role": "Marketing Manager",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

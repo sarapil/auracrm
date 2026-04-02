@@ -1,0 +1,63 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "node_id",
+    "node_type",
+    "content",
+    "options",
+    "next_node_id",
+    "condition_map"
+  ],
+  "fields": [
+    {
+      "fieldname": "node_id",
+      "fieldtype": "Data",
+      "label": "Node Id",
+      "reqd": 1
+    },
+    {
+      "fieldname": "node_type",
+      "fieldtype": "Select",
+      "label": "Node Type",
+      "options": "Message\nQuestion\nButton Menu\nAI Response\nLead Capture\nAppointment\nTransfer"
+    },
+    {
+      "fieldname": "content",
+      "fieldtype": "Long Text",
+      "label": "Content"
+    },
+    {
+      "fieldname": "options",
+      "fieldtype": "JSON",
+      "label": "Options"
+    },
+    {
+      "fieldname": "next_node_id",
+      "fieldtype": "Data",
+      "label": "Next Node Id"
+    },
+    {
+      "fieldname": "condition_map",
+      "fieldtype": "JSON",
+      "label": "Condition Map"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 1,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Chatbot Node",
+  "naming_rule": "",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "autoname": "field:rule_name",
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "enabled",
+  "column_break_main",
+  "applies_to",
+  "distribution_method",
+  "priority",
+  "agents_section",
+  "agents"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "default": "1",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_main",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Lead",
+   "fieldname": "applies_to",
+   "fieldtype": "Select",
+   "label": "Applies To",
+   "options": "Lead\nOpportunity",
+   "reqd": 1
+  },
+  {
+   "default": "round_robin",
+   "fieldname": "distribution_method",
+   "fieldtype": "Select",
+   "label": "Distribution Method",
+   "options": "round_robin\nweighted_round_robin\nskill_based\ngeographic\nload_based\nperformance_based\nmanual_pool",
+   "reqd": 1
+  },
+  {
+   "default": "10",
+   "fieldname": "priority",
+   "fieldtype": "Int",
+   "label": "Priority",
+   "description": "Lower number = higher priority"
+  },
+  {
+   "fieldname": "agents_section",
+   "fieldtype": "Section Break",
+   "label": "Agents"
+  },
+  {
+   "fieldname": "agents",
+   "fieldtype": "Table",
+   "label": "Distribution Agents",
+   "options": "Distribution Agent",
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "Lead Distribution Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "report": 1,
+   "share": 1
+  },
+  {
+   "role": "CRM Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Sales User",
+   "read": 1
+  }
+ ],
+ "sort_field": "priority",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

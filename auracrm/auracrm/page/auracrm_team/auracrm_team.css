@@ -1,0 +1,200 @@
+/*
+ * AuraCRM Visual — Shared Styles
+ * ================================
+ * Uses frappe_visual CSS custom properties for dark/light theme support.
+ * All pages share these base classes; page-specific overrides below.
+ */
+
+/* ── Layout Containers ──────────────────────────────────────── */
+.aura-hub-visual,
+.aura-pipeline-visual,
+.aura-team-visual,
+.aura-analytics-visual,
+.aura-landing-visual {
+    padding: 16px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ── KPI Dashboard Strip ────────────────────────────────────── */
+.aura-visual-kpis {
+    margin-bottom: 20px;
+}
+.aura-visual-kpis .fv-dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+}
+.aura-visual-kpis .fv-kpi-card {
+    border-radius: 12px;
+    padding: 14px 16px;
+    background: var(--fv-bg-card, var(--card-bg, #fff));
+    box-shadow: var(--card-shadow, 0 1px 3px rgba(0,0,0,0.08));
+    border: 1px solid var(--fv-border, var(--border-color, #e2e8f0));
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    cursor: pointer;
+}
+.aura-visual-kpis .fv-kpi-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ── Graph Section ──────────────────────────────────────────── */
+.aura-graph-section {
+    background: var(--fv-bg-card, var(--card-bg, #fff));
+    border: 1px solid var(--fv-border, var(--border-color, #e2e8f0));
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+.aura-graph-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.aura-graph-header h5 {
+    margin: 0;
+    font-weight: 600;
+    color: var(--fv-text, var(--text-color, #1e293b));
+}
+.aura-graph-toolbar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+.aura-graph-search {
+    margin-bottom: 10px;
+}
+.aura-command-graph {
+    min-height: 400px;
+    border-radius: 8px;
+    border: 1px solid var(--fv-border, var(--border-color, #e2e8f0));
+    background: var(--fv-bg-canvas, var(--bg-color, #f8fafc));
+    position: relative;
+}
+.aura-graph-controls {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 10px;
+}
+
+/* ── Floating Window Content ────────────────────────────────── */
+.aura-float-summary {
+    padding: 4px 0;
+}
+.aura-float-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+    border-bottom: 1px solid var(--fv-border, #e2e8f0);
+}
+.aura-float-row:last-child {
+    border-bottom: none;
+}
+.aura-float-key {
+    font-size: 11px;
+    color: var(--fv-text-muted, var(--text-muted, #64748b));
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.aura-float-val {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--fv-text, var(--text-color, #1e293b));
+}
+.aura-float-badge {
+    font-size: 12px;
+    text-align: center;
+    margin-top: 4px;
+}
+.aura-float-actions {
+    text-align: center;
+}
+.aura-float-actions .btn {
+    border-radius: 8px;
+}
+
+/* ── Quick Actions Bar ──────────────────────────────────────── */
+.aura-quick-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.aura-quick-actions .btn {
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 6px 16px;
+    font-weight: 500;
+}
+
+/* ── Welcome Banner (Landing) ───────────────────────────────── */
+.aura-welcome-visual {
+    margin-bottom: 20px;
+}
+.aura-welcome-visual h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--fv-text, var(--heading-color, #1e293b));
+    margin-bottom: 4px;
+}
+.aura-welcome-visual p {
+    margin-bottom: 12px;
+}
+
+/* ── Onboarding Storyboard ──────────────────────────────────── */
+.aura-onboarding {
+    background: var(--fv-bg-card, var(--card-bg, #fff));
+    border: 1px solid var(--fv-border, var(--border-color, #e2e8f0));
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 20px;
+}
+
+/* ── Pipeline Kanban ────────────────────────────────────────── */
+.aura-pipeline-kanban {
+    min-height: 300px;
+}
+.aura-pipeline-graph {
+    /* Flow graph view */
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .aura-hub-visual,
+    .aura-pipeline-visual,
+    .aura-team-visual,
+    .aura-analytics-visual,
+    .aura-landing-visual {
+        padding: 10px 12px;
+    }
+    .aura-visual-kpis .fv-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .aura-command-graph {
+        min-height: 300px;
+    }
+    .aura-graph-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ── Dark Theme Overrides ───────────────────────────────────── */
+[data-theme="dark"] .aura-graph-section,
+[data-theme="dark"] .aura-onboarding {
+    background: var(--fv-bg-card, #1e293b);
+    border-color: var(--fv-border, #334155);
+}
+[data-theme="dark"] .aura-command-graph {
+    background: var(--fv-bg-canvas, #0f172a);
+    border-color: var(--fv-border, #334155);
+}
+[data-theme="dark"] .aura-float-row {
+    border-color: #334155;
+}

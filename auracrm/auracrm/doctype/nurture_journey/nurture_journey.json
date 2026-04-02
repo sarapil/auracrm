@@ -1,0 +1,127 @@
+{
+  "actions": [],
+  "autoname": "field:journey_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "journey_name",
+    "trigger_event",
+    "is_active",
+    "column_break_main",
+    "trigger_segment",
+    "max_concurrent_leads",
+    "current_active_leads",
+    "steps_section",
+    "journey_steps",
+    "exit_section",
+    "exit_conditions"
+  ],
+  "fields": [
+    {
+      "fieldname": "journey_name",
+      "fieldtype": "Data",
+      "label": "Journey Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trigger_event",
+      "fieldtype": "Select",
+      "label": "Trigger Event",
+      "options": "Lead Created\nLead Score Changed\nProperty Viewed\nEmail Opened\nWhatsApp Replied\nDeal Room Opened\nSocial Comment\nPrice Alert Triggered"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "trigger_segment",
+      "fieldtype": "Data",
+      "label": "Trigger Segment"
+    },
+    {
+      "fieldname": "max_concurrent_leads",
+      "fieldtype": "Int",
+      "label": "Max Concurrent Leads",
+      "default": "1000"
+    },
+    {
+      "fieldname": "current_active_leads",
+      "fieldtype": "Int",
+      "label": "Current Active Leads",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "steps_section",
+      "fieldtype": "Section Break",
+      "label": "Journey Steps"
+    },
+    {
+      "fieldname": "journey_steps",
+      "fieldtype": "Table",
+      "label": "Journey Steps",
+      "options": "Nurture Step"
+    },
+    {
+      "fieldname": "exit_section",
+      "fieldtype": "Section Break",
+      "label": "Exit Conditions"
+    },
+    {
+      "fieldname": "exit_conditions",
+      "fieldtype": "JSON",
+      "label": "Exit Conditions"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Nurture Journey",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

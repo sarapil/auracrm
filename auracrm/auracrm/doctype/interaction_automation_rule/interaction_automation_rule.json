@@ -1,0 +1,180 @@
+{
+  "actions": [],
+  "autoname": "field:rule_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "rule_name",
+    "trigger_type",
+    "platform",
+    "column_break_main",
+    "response_type",
+    "is_active",
+    "priority",
+    "daily_limit",
+    "daily_count",
+    "keywords_section",
+    "trigger_keywords",
+    "exclude_keywords",
+    "sentiment_filter",
+    "response_section",
+    "response_template",
+    "ai_response_persona",
+    "actions_section",
+    "create_lead",
+    "add_to_segment"
+  ],
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "trigger_type",
+      "fieldtype": "Select",
+      "label": "Trigger Type",
+      "options": "Comment\nDM\nStory Reply\nMention\nReview\nStory Reaction"
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "All\nFacebook\nInstagram\nLinkedIn\nTwitter\nTikTok\nGoogle",
+      "default": "All"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "response_type",
+      "fieldtype": "Select",
+      "label": "Response Type",
+      "options": "AI Generated\nTemplate\nHuman Queue\nIgnore\nAuto-DM\nDelete+Reply"
+    },
+    {
+      "fieldname": "is_active",
+      "fieldtype": "Check",
+      "label": "Is Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "priority",
+      "fieldtype": "Int",
+      "label": "Priority",
+      "default": "50"
+    },
+    {
+      "fieldname": "daily_limit",
+      "fieldtype": "Int",
+      "label": "Daily Limit",
+      "default": "200"
+    },
+    {
+      "fieldname": "daily_count",
+      "fieldtype": "Int",
+      "label": "Daily Count",
+      "read_only": 1,
+      "default": "0"
+    },
+    {
+      "fieldname": "keywords_section",
+      "fieldtype": "Section Break",
+      "label": "Keyword Filters"
+    },
+    {
+      "fieldname": "trigger_keywords",
+      "fieldtype": "JSON",
+      "label": "Trigger Keywords"
+    },
+    {
+      "fieldname": "exclude_keywords",
+      "fieldtype": "JSON",
+      "label": "Exclude Keywords"
+    },
+    {
+      "fieldname": "sentiment_filter",
+      "fieldtype": "Select",
+      "label": "Sentiment Filter",
+      "options": "Any\nPositive\nNegative\nNeutral\nQuestion",
+      "default": "Any"
+    },
+    {
+      "fieldname": "response_section",
+      "fieldtype": "Section Break",
+      "label": "Response Configuration"
+    },
+    {
+      "fieldname": "response_template",
+      "fieldtype": "Long Text",
+      "label": "Response Template"
+    },
+    {
+      "fieldname": "ai_response_persona",
+      "fieldtype": "Long Text",
+      "label": "AI Response Persona"
+    },
+    {
+      "fieldname": "actions_section",
+      "fieldtype": "Section Break",
+      "label": "Lead Actions"
+    },
+    {
+      "fieldname": "create_lead",
+      "fieldtype": "Check",
+      "label": "Create Lead"
+    },
+    {
+      "fieldname": "add_to_segment",
+      "fieldtype": "Data",
+      "label": "Add To Segment"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Interaction Automation Rule",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

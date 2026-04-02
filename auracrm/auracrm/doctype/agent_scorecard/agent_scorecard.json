@@ -1,0 +1,188 @@
+{
+ "actions": [],
+ "autoname": "format:SC-{agent_email}-{date}",
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "agent_email",
+  "agent_name",
+  "date",
+  "column_break_1",
+  "period",
+  "leads_section",
+  "leads_assigned",
+  "leads_contacted",
+  "leads_converted",
+  "column_break_leads",
+  "opportunities_won",
+  "opportunities_lost",
+  "total_revenue",
+  "performance_section",
+  "avg_response_time_minutes",
+  "calls_made",
+  "column_break_perf",
+  "messages_sent",
+  "conversion_rate",
+  "overall_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "agent_email",
+   "fieldtype": "Link",
+   "label": "Agent",
+   "options": "User",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fetch_from": "agent_email.full_name",
+   "fieldname": "agent_name",
+   "fieldtype": "Data",
+   "label": "Agent Name",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "daily",
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "daily\nweekly\nmonthly"
+  },
+  {
+   "fieldname": "leads_section",
+   "fieldtype": "Section Break",
+   "label": "Lead Metrics"
+  },
+  {
+   "default": "0",
+   "fieldname": "leads_assigned",
+   "fieldtype": "Int",
+   "label": "Leads Assigned"
+  },
+  {
+   "default": "0",
+   "fieldname": "leads_contacted",
+   "fieldtype": "Int",
+   "label": "Leads Contacted"
+  },
+  {
+   "default": "0",
+   "fieldname": "leads_converted",
+   "fieldtype": "Int",
+   "label": "Leads Converted"
+  },
+  {
+   "fieldname": "column_break_leads",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "opportunities_won",
+   "fieldtype": "Int",
+   "label": "Opportunities Won"
+  },
+  {
+   "default": "0",
+   "fieldname": "opportunities_lost",
+   "fieldtype": "Int",
+   "label": "Opportunities Lost"
+  },
+  {
+   "default": "0",
+   "fieldname": "total_revenue",
+   "fieldtype": "Currency",
+   "label": "Total Revenue"
+  },
+  {
+   "fieldname": "performance_section",
+   "fieldtype": "Section Break",
+   "label": "Performance Metrics"
+  },
+  {
+   "default": "0",
+   "fieldname": "avg_response_time_minutes",
+   "fieldtype": "Float",
+   "label": "Avg Response Time (min)"
+  },
+  {
+   "default": "0",
+   "fieldname": "calls_made",
+   "fieldtype": "Int",
+   "label": "Calls Made"
+  },
+  {
+   "fieldname": "column_break_perf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "messages_sent",
+   "fieldtype": "Int",
+   "label": "Messages Sent"
+  },
+  {
+   "default": "0",
+   "fieldname": "conversion_rate",
+   "fieldtype": "Percent",
+   "label": "Conversion Rate"
+  },
+  {
+   "default": "0",
+   "fieldname": "overall_score",
+   "fieldtype": "Float",
+   "label": "Overall Score",
+   "description": "Composite performance score 0-100"
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "Agent Scorecard",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "CRM Admin",
+   "read": 1,
+   "write": 1,
+   "create": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1
+  },
+  {
+   "role": "Quality Analyst",
+   "read": 1
+  },
+  {
+   "role": "Sales User",
+   "read": 1,
+   "if_owner": 1
+  }
+ ],
+ "sort_field": "date",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

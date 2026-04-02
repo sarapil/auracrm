@@ -1,0 +1,112 @@
+{
+  "name": "Audience Segment",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "segment_name",
+    "target_doctype",
+    "cb1",
+    "enabled",
+    "dynamic",
+    "sb_filters",
+    "filter_json",
+    "sb_stats",
+    "member_count",
+    "cb2",
+    "last_calculated"
+  ],
+  "fields": [
+    {
+      "fieldname": "segment_name",
+      "fieldtype": "Data",
+      "label": "Segment Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Select",
+      "label": "Target DocType",
+      "options": "\nLead\nOpportunity\nCustomer",
+      "default": "Lead",
+      "reqd": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "dynamic",
+      "fieldtype": "Check",
+      "label": "Dynamic",
+      "default": "1",
+      "description": "If checked, segment members are recalculated dynamically from filters"
+    },
+    {
+      "fieldname": "sb_filters",
+      "fieldtype": "Section Break",
+      "label": "Filters"
+    },
+    {
+      "fieldname": "filter_json",
+      "fieldtype": "Code",
+      "label": "Filter JSON",
+      "options": "JSON",
+      "description": "Frappe filter format: [[doctype, field, operator, value], ...]"
+    },
+    {
+      "fieldname": "sb_stats",
+      "fieldtype": "Section Break"
+    },
+    {
+      "fieldname": "member_count",
+      "fieldtype": "Int",
+      "label": "Member Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "last_calculated",
+      "fieldtype": "Datetime",
+      "label": "Last Calculated",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:SEG-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "segment_name",
+  "show_title_field_in_link": 1
+}

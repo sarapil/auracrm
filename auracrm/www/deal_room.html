@@ -1,0 +1,54 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ room.title or "Deal Room" }}{% endblock %}
+
+{% block page_content %}
+<div class="deal-room-container" style="max-width: 900px; margin: 0 auto; padding: 2rem;">
+    <div class="deal-room-header" style="text-align: center; margin-bottom: 2rem;">
+        <h1>{{ room.title }}</h1>
+        <p class="text-muted">Prepared by {{ room.created_by }}</p>
+    </div>
+
+    {% if assets %}
+    <div class="deal-room-assets">
+        <h3>Materials</h3>
+        <div class="row">
+            {% for asset in assets %}
+            <div class="col-md-6 mb-3">
+                <div class="card" style="padding: 1rem; border: 1px solid #eee; border-radius: 8px;">
+                    <div class="d-flex align-items-center mb-2">
+                        {% if asset.asset_type == "Document" %}
+                            <span class="mr-2">📄</span>
+                        {% elif asset.asset_type == "Image" %}
+                            <span class="mr-2">🖼️</span>
+                        {% elif asset.asset_type == "Video" %}
+                            <span class="mr-2">🎬</span>
+                        {% elif asset.asset_type == "Property" %}
+                            <span class="mr-2">🏡</span>
+                        {% else %}
+                            <span class="mr-2">📎</span>
+                        {% endif %}
+                        <strong>{{ asset.label }}</strong>
+                    </div>
+                    {% if asset.description %}
+                    <p class="text-muted small mb-2">{{ asset.description }}</p>
+                    {% endif %}
+                    {% if asset.url %}
+                    <a href="{{ asset.url }}" target="_blank" class="btn btn-sm btn-primary">
+                        View {{ asset.asset_type }}
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% else %}
+    <p class="text-muted text-center">No materials added yet.</p>
+    {% endif %}
+
+    <div class="deal-room-footer text-center mt-4" style="color: #aaa; font-size: 0.85rem;">
+        <p>Powered by AuraCRM</p>
+    </div>
+</div>
+{% endblock %}

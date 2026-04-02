@@ -1,0 +1,137 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "calendar_entry",
+    "platform",
+    "social_account",
+    "column_break_main",
+    "status",
+    "attempts",
+    "last_attempt",
+    "content_section",
+    "adapted_content",
+    "result_section",
+    "platform_post_id",
+    "platform_post_url",
+    "error_message"
+  ],
+  "fields": [
+    {
+      "fieldname": "calendar_entry",
+      "fieldtype": "Link",
+      "label": "Calendar Entry",
+      "options": "Content Calendar Entry",
+      "reqd": 1
+    },
+    {
+      "fieldname": "platform",
+      "fieldtype": "Data",
+      "label": "Platform"
+    },
+    {
+      "fieldname": "social_account",
+      "fieldtype": "Data",
+      "label": "Social Account"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Queued\nSending\nSent\nFailed",
+      "default": "Queued"
+    },
+    {
+      "fieldname": "attempts",
+      "fieldtype": "Int",
+      "label": "Attempts",
+      "default": "0"
+    },
+    {
+      "fieldname": "last_attempt",
+      "fieldtype": "Datetime",
+      "label": "Last Attempt"
+    },
+    {
+      "fieldname": "content_section",
+      "fieldtype": "Section Break",
+      "label": "Content"
+    },
+    {
+      "fieldname": "adapted_content",
+      "fieldtype": "Long Text",
+      "label": "Adapted Content"
+    },
+    {
+      "fieldname": "result_section",
+      "fieldtype": "Section Break",
+      "label": "Result"
+    },
+    {
+      "fieldname": "platform_post_id",
+      "fieldtype": "Data",
+      "label": "Platform Post Id"
+    },
+    {
+      "fieldname": "platform_post_url",
+      "fieldtype": "Data",
+      "label": "Platform Post Url"
+    },
+    {
+      "fieldname": "error_message",
+      "fieldtype": "Text",
+      "label": "Error Message"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Publishing Queue",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

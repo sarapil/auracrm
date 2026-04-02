@@ -1,0 +1,51 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "influencer",
+    "fee",
+    "deliverables",
+    "status"
+  ],
+  "fields": [
+    {
+      "fieldname": "influencer",
+      "fieldtype": "Link",
+      "label": "Influencer",
+      "options": "Influencer Profile"
+    },
+    {
+      "fieldname": "fee",
+      "fieldtype": "Currency",
+      "label": "Fee"
+    },
+    {
+      "fieldname": "deliverables",
+      "fieldtype": "JSON",
+      "label": "Deliverables"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Invited\nAccepted\nContent Created\nPublished\nCompleted\nRejected"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 1,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Influencer Campaign Row",
+  "naming_rule": "",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 0
+}

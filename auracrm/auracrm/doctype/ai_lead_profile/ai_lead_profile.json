@@ -1,0 +1,162 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "lead",
+    "disc_profile",
+    "priority_score",
+    "column_break_main",
+    "lead_segment",
+    "model_used",
+    "last_profiled_at",
+    "summary_section",
+    "executive_summary",
+    "psychological_driver",
+    "disc_guidance",
+    "script_section",
+    "suggested_opening_line",
+    "full_call_script",
+    "call_guidance",
+    "sources_section",
+    "data_sources"
+  ],
+  "fields": [
+    {
+      "fieldname": "lead",
+      "fieldtype": "Link",
+      "label": "Lead",
+      "options": "Lead",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "fieldname": "disc_profile",
+      "fieldtype": "Select",
+      "label": "Disc Profile",
+      "options": "D\nI\nS\nC"
+    },
+    {
+      "fieldname": "priority_score",
+      "fieldtype": "Int",
+      "label": "Priority Score",
+      "description": "1-100"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "lead_segment",
+      "fieldtype": "Select",
+      "label": "Lead Segment",
+      "options": "Expat\nFamily Office\nTech Founder\nCrypto Whale\nInflation Hedger\nTax Refugee\nCompetitor Complaint\nUnknown"
+    },
+    {
+      "fieldname": "model_used",
+      "fieldtype": "Data",
+      "label": "Model Used"
+    },
+    {
+      "fieldname": "last_profiled_at",
+      "fieldtype": "Datetime",
+      "label": "Last Profiled At"
+    },
+    {
+      "fieldname": "summary_section",
+      "fieldtype": "Section Break",
+      "label": "Executive Summary"
+    },
+    {
+      "fieldname": "executive_summary",
+      "fieldtype": "Long Text",
+      "label": "Executive Summary"
+    },
+    {
+      "fieldname": "psychological_driver",
+      "fieldtype": "Data",
+      "label": "Psychological Driver"
+    },
+    {
+      "fieldname": "disc_guidance",
+      "fieldtype": "Long Text",
+      "label": "Disc Guidance"
+    },
+    {
+      "fieldname": "script_section",
+      "fieldtype": "Section Break",
+      "label": "Call Script"
+    },
+    {
+      "fieldname": "suggested_opening_line",
+      "fieldtype": "Data",
+      "label": "Suggested Opening Line"
+    },
+    {
+      "fieldname": "full_call_script",
+      "fieldtype": "Long Text",
+      "label": "Full Call Script"
+    },
+    {
+      "fieldname": "call_guidance",
+      "fieldtype": "JSON",
+      "label": "Call Guidance"
+    },
+    {
+      "fieldname": "sources_section",
+      "fieldtype": "Section Break",
+      "label": "Data Sources"
+    },
+    {
+      "fieldname": "data_sources",
+      "fieldtype": "JSON",
+      "label": "Data Sources"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "AI Lead Profile",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

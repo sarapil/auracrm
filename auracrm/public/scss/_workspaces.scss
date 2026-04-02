@@ -1,0 +1,274 @@
+/* AuraCRM Workspace Layouts */
+.aura-workspace {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background: var(--fv-bg-primary, #ffffff);
+	padding: 24px;
+}
+
+.aura-workspace-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 16px 24px;
+	background: var(--fv-bg-surface, #ffffff);
+	border-bottom: 1px solid var(--fv-border-primary, #e2e8f0);
+}
+
+.aura-workspace-body {
+	flex: 1;
+	overflow: auto;
+	padding: 24px;
+}
+
+.aura-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	gap: 16px;
+}
+
+/* ── KPI Row ─────────────────────────────────────────────── */
+.aura-kpi-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+	gap: 16px;
+	margin-bottom: 24px;
+}
+
+.aura-kpi-card {
+	background: var(--fv-bg-surface, #fff);
+	border: 1px solid var(--fv-border-primary, #e2e8f0);
+	border-radius: 12px;
+	padding: 20px;
+	text-align: center;
+	transition: box-shadow .2s, transform .15s;
+
+	.kpi-value {
+		font-size: 2rem;
+		font-weight: 700;
+		color: var(--fv-text-primary, #1e293b);
+	}
+	.kpi-label {
+		font-size: .85rem;
+		color: var(--fv-text-secondary, #64748b);
+		margin-top: 4px;
+	}
+
+	&.clickable {
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 4px 12px rgba(99, 102, 241, .12);
+			transform: translateY(-2px);
+		}
+	}
+}
+
+/* ── Section ─────────────────────────────────────────────── */
+.aura-section {
+	background: var(--fv-bg-surface, #fff);
+	border: 1px solid var(--fv-border-primary, #e2e8f0);
+	border-radius: 12px;
+	padding: 20px;
+	margin-bottom: 20px;
+
+	h3 {
+		font-size: 1rem;
+		font-weight: 600;
+		margin-bottom: 16px;
+		color: var(--fv-text-primary, #1e293b);
+	}
+}
+
+/* ── Quality Workspace ───────────────────────────────────── */
+.compliance-bar-container {
+	background: #f1f5f9;
+	border-radius: 8px;
+	overflow: hidden;
+	height: 32px;
+}
+
+.compliance-bar {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-weight: 600;
+	font-size: .85rem;
+	border-radius: 8px;
+	transition: width .6s ease;
+	min-width: 40px;
+}
+
+.rankings-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.ranking-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 8px 12px;
+	border-radius: 8px;
+	transition: background .15s;
+
+	&:hover { background: #f8fafc; }
+
+	.rank { font-size: 1.1rem; min-width: 32px; }
+	.agent-name { flex: 1; font-weight: 500; }
+	.score-bar-mini {
+		width: 100px;
+		height: 6px;
+		background: #e2e8f0;
+		border-radius: 3px;
+		overflow: hidden;
+		.score-fill {
+			height: 100%;
+			background: linear-gradient(90deg, #6366f1, #a855f7);
+			border-radius: 3px;
+		}
+	}
+	.score-val { font-weight: 600; font-size: .85rem; min-width: 30px; text-align: right; }
+}
+
+.breach-item {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background .15s;
+
+	&:hover { background: #fef2f2; }
+
+	.breach-icon { font-size: 1.2rem; }
+	.breach-info {
+		display: flex;
+		flex-direction: column;
+		small { color: var(--fv-text-secondary, #64748b); }
+	}
+}
+
+/* ── Marketing Workspace ─────────────────────────────────── */
+.campaign-row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background .15s;
+
+	&:hover { background: #f8fafc; }
+
+	.campaign-info {
+		display: flex;
+		flex-direction: column;
+		small { color: var(--fv-text-secondary, #64748b); }
+	}
+}
+
+.segment-chips {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.segment-chip {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 8px 16px;
+	border: 1px solid #e2e8f0;
+	border-radius: 999px;
+	cursor: pointer;
+	font-size: .9rem;
+	transition: all .15s;
+
+	&:hover {
+		border-color: #6366f1;
+		background: #eef2ff;
+	}
+
+	.chip-name { font-weight: 500; }
+	.chip-count {
+		background: #6366f1;
+		color: #fff;
+		font-size: .75rem;
+		padding: 2px 8px;
+		border-radius: 999px;
+		font-weight: 600;
+	}
+}
+
+.template-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background .15s;
+
+	&:hover { background: #f8fafc; }
+
+	.template-icon { font-size: 1.2rem; }
+	.template-name { flex: 1; font-weight: 500; }
+	.template-channel {
+		font-size: .8rem;
+		color: var(--fv-text-secondary, #64748b);
+		background: #f1f5f9;
+		padding: 2px 10px;
+		border-radius: 4px;
+	}
+}
+
+/* ── Settings Hub Workspace ──────────────────────────────── */
+.settings-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	gap: 12px;
+}
+
+.settings-card {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	padding: 16px 20px;
+	border: 1px solid #e2e8f0;
+	border-radius: 12px;
+	cursor: pointer;
+	transition: all .2s;
+
+	&:hover {
+		border-color: #6366f1;
+		box-shadow: 0 2px 8px rgba(99, 102, 241, .1);
+		transform: translateY(-1px);
+	}
+
+	.settings-icon { font-size: 1.6rem; }
+	.settings-info {
+		flex: 1;
+		h4 { margin: 0; font-size: .95rem; font-weight: 600; }
+		p { margin: 2px 0 0; font-size: .8rem; color: var(--fv-text-secondary, #64748b); }
+	}
+	.settings-arrow { font-size: 1.2rem; color: #cbd5e1; }
+}
+
+.status-checks {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.status-row {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 0;
+	font-size: .9rem;
+}

@@ -1,0 +1,141 @@
+{
+  "name": "Duplicate Rule",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "rule_name",
+    "enabled",
+    "cb1",
+    "target_doctype",
+    "action",
+    "sb_fields",
+    "match_field_1",
+    "match_field_2",
+    "cb2",
+    "match_field_3",
+    "match_type",
+    "sb_settings",
+    "fuzzy_threshold",
+    "cb3",
+    "tag_label"
+  ],
+  "fields": [
+    {
+      "fieldname": "rule_name",
+      "fieldtype": "Data",
+      "label": "Rule Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "enabled",
+      "fieldtype": "Check",
+      "label": "Enabled",
+      "default": "1"
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Link",
+      "label": "Target DocType",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "action",
+      "fieldtype": "Select",
+      "label": "On Duplicate",
+      "options": "\nWarn\nBlock\nMerge\nTag",
+      "default": "Warn",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_fields",
+      "fieldtype": "Section Break",
+      "label": "Match Fields"
+    },
+    {
+      "fieldname": "match_field_1",
+      "fieldtype": "Data",
+      "label": "Match Field 1",
+      "reqd": 1,
+      "description": "Fieldname to check for duplicates (e.g., email_id, phone, company_name)"
+    },
+    {
+      "fieldname": "match_field_2",
+      "fieldtype": "Data",
+      "label": "Match Field 2"
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "match_field_3",
+      "fieldtype": "Data",
+      "label": "Match Field 3"
+    },
+    {
+      "fieldname": "match_type",
+      "fieldtype": "Select",
+      "label": "Match Type",
+      "options": "\nExact\nFuzzy\nPhonetic",
+      "default": "Exact"
+    },
+    {
+      "fieldname": "sb_settings",
+      "fieldtype": "Section Break",
+      "label": "Settings",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "fuzzy_threshold",
+      "fieldtype": "Percent",
+      "label": "Fuzzy Threshold (%)",
+      "default": "85",
+      "depends_on": "eval:doc.match_type=='Fuzzy'"
+    },
+    {
+      "fieldname": "cb3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "tag_label",
+      "fieldtype": "Data",
+      "label": "Tag Label",
+      "default": "Possible Duplicate",
+      "depends_on": "eval:doc.action=='Tag'"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:DUP-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "rule_name",
+  "show_title_field_in_link": 1
+}

@@ -1,0 +1,12 @@
+/* Auto-Dialer Panel */
+.aura-dialer-panel {
+	position: fixed;
+	bottom: 24px;
+	right: 24px;
+	width: 360px;
+	background: var(--fv-bg-surface, white);
+	border: 1px solid var(--fv-border-primary, #e2e8f0);
+	border-radius: var(--fv-radius-lg, 16px);
+	box-shadow: var(--fv-shadow-lg);
+	z-index: 10000;
+}

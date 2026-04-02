@@ -1,0 +1,194 @@
+{
+  "actions": [],
+  "autoname": "format:CCE-{####}",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "title",
+    "content_type",
+    "status",
+    "column_break_main",
+    "campaign",
+    "brand",
+    "audience_segment",
+    "schedule_section",
+    "scheduled_datetime",
+    "optimal_time_override",
+    "optimal_time_calculated",
+    "column_break_schedule",
+    "published_at",
+    "content_section",
+    "content_body",
+    "media_section",
+    "media_assets",
+    "platforms_section",
+    "target_platforms",
+    "results_section",
+    "publish_results",
+    "performance_snapshot"
+  ],
+  "fields": [
+    {
+      "fieldname": "title",
+      "fieldtype": "Data",
+      "label": "Title",
+      "reqd": 1
+    },
+    {
+      "fieldname": "content_type",
+      "fieldtype": "Select",
+      "label": "Content Type",
+      "options": "Post\nStory\nReel\nShort\nArticle\nThread\nCarousel\nPoll"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nScheduled\nPublishing\nPublished\nFailed\nCancelled",
+      "default": "Draft"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "campaign",
+      "fieldtype": "Link",
+      "label": "Campaign",
+      "options": "Campaign"
+    },
+    {
+      "fieldname": "brand",
+      "fieldtype": "Data",
+      "label": "Brand"
+    },
+    {
+      "fieldname": "audience_segment",
+      "fieldtype": "Data",
+      "label": "Audience Segment"
+    },
+    {
+      "fieldname": "schedule_section",
+      "fieldtype": "Section Break",
+      "label": "Schedule"
+    },
+    {
+      "fieldname": "scheduled_datetime",
+      "fieldtype": "Datetime",
+      "label": "Scheduled Datetime"
+    },
+    {
+      "fieldname": "optimal_time_override",
+      "fieldtype": "Check",
+      "label": "Optimal Time Override"
+    },
+    {
+      "fieldname": "optimal_time_calculated",
+      "fieldtype": "Datetime",
+      "label": "Optimal Time Calculated",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_schedule",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "published_at",
+      "fieldtype": "Datetime",
+      "label": "Published At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "content_section",
+      "fieldtype": "Section Break",
+      "label": "Content"
+    },
+    {
+      "fieldname": "content_body",
+      "fieldtype": "Long Text",
+      "label": "Content Body"
+    },
+    {
+      "fieldname": "media_section",
+      "fieldtype": "Section Break",
+      "label": "Media Assets"
+    },
+    {
+      "fieldname": "media_assets",
+      "fieldtype": "Table",
+      "label": "Media Assets",
+      "options": "Content Asset Row"
+    },
+    {
+      "fieldname": "platforms_section",
+      "fieldtype": "Section Break",
+      "label": "Target Platforms"
+    },
+    {
+      "fieldname": "target_platforms",
+      "fieldtype": "Table",
+      "label": "Target Platforms",
+      "options": "Target Platform Row"
+    },
+    {
+      "fieldname": "results_section",
+      "fieldtype": "Section Break",
+      "label": "Publishing Results"
+    },
+    {
+      "fieldname": "publish_results",
+      "fieldtype": "JSON",
+      "label": "Publish Results"
+    },
+    {
+      "fieldname": "performance_snapshot",
+      "fieldtype": "JSON",
+      "label": "Performance Snapshot"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Content Calendar Entry",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

@@ -1,0 +1,133 @@
+{
+  "actions": [],
+  "autoname": "hash",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "platform",
+    "audience_segment",
+    "content_type",
+    "column_break_main",
+    "best_day",
+    "best_hour_start",
+    "best_hour_end",
+    "meta_section",
+    "timezone",
+    "data_source",
+    "last_updated",
+    "confidence_score"
+  ],
+  "fields": [
+    {
+      "fieldname": "platform",
+      "fieldtype": "Select",
+      "label": "Platform",
+      "options": "Facebook\nInstagram\nLinkedIn\nTwitter\nTikTok\nYouTube"
+    },
+    {
+      "fieldname": "audience_segment",
+      "fieldtype": "Data",
+      "label": "Audience Segment"
+    },
+    {
+      "fieldname": "content_type",
+      "fieldtype": "Select",
+      "label": "Content Type",
+      "options": "Post\nStory\nReel"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "best_day",
+      "fieldtype": "Select",
+      "label": "Best Day",
+      "options": "Sunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+    },
+    {
+      "fieldname": "best_hour_start",
+      "fieldtype": "Int",
+      "label": "Best Hour Start",
+      "description": "0-23"
+    },
+    {
+      "fieldname": "best_hour_end",
+      "fieldtype": "Int",
+      "label": "Best Hour End",
+      "description": "0-23"
+    },
+    {
+      "fieldname": "meta_section",
+      "fieldtype": "Section Break",
+      "label": "Metadata"
+    },
+    {
+      "fieldname": "timezone",
+      "fieldtype": "Data",
+      "label": "Timezone"
+    },
+    {
+      "fieldname": "data_source",
+      "fieldtype": "Select",
+      "label": "Data Source",
+      "options": "Manual\nAI Calculated\nPlatform Insights"
+    },
+    {
+      "fieldname": "last_updated",
+      "fieldtype": "Date",
+      "label": "Last Updated"
+    },
+    {
+      "fieldname": "confidence_score",
+      "fieldtype": "Int",
+      "label": "Confidence Score",
+      "description": "0-100"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Optimal Time Rule",
+  "naming_rule": "Random",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

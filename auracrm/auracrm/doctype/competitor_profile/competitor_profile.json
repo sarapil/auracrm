@@ -1,0 +1,136 @@
+{
+  "actions": [],
+  "autoname": "field:competitor_name",
+  "creation": "2025-02-06 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "competitor_name",
+    "website",
+    "industry",
+    "column_break_main",
+    "monitoring_active",
+    "alert_on_new_ad",
+    "alert_on_negative_review",
+    "last_checked",
+    "social_section",
+    "facebook_page",
+    "instagram_handle",
+    "google_my_business_url",
+    "ad_library_search_url"
+  ],
+  "fields": [
+    {
+      "fieldname": "competitor_name",
+      "fieldtype": "Data",
+      "label": "Competitor Name",
+      "reqd": 1
+    },
+    {
+      "fieldname": "website",
+      "fieldtype": "Data",
+      "label": "Website"
+    },
+    {
+      "fieldname": "industry",
+      "fieldtype": "Data",
+      "label": "Industry"
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "monitoring_active",
+      "fieldtype": "Check",
+      "label": "Monitoring Active",
+      "default": "1"
+    },
+    {
+      "fieldname": "alert_on_new_ad",
+      "fieldtype": "Check",
+      "label": "Alert On New Ad",
+      "default": "1"
+    },
+    {
+      "fieldname": "alert_on_negative_review",
+      "fieldtype": "Check",
+      "label": "Alert On Negative Review",
+      "default": "1"
+    },
+    {
+      "fieldname": "last_checked",
+      "fieldtype": "Datetime",
+      "label": "Last Checked"
+    },
+    {
+      "fieldname": "social_section",
+      "fieldtype": "Section Break",
+      "label": "Social Profiles"
+    },
+    {
+      "fieldname": "facebook_page",
+      "fieldtype": "Data",
+      "label": "Facebook Page"
+    },
+    {
+      "fieldname": "instagram_handle",
+      "fieldtype": "Data",
+      "label": "Instagram Handle"
+    },
+    {
+      "fieldname": "google_my_business_url",
+      "fieldtype": "Data",
+      "label": "Google Business URL"
+    },
+    {
+      "fieldname": "ad_library_search_url",
+      "fieldtype": "Data",
+      "label": "Ad Library Search Url"
+    }
+  ],
+  "index_web_pages_for_search": 0,
+  "istable": 0,
+  "issingle": 0,
+  "links": [],
+  "modified": "2025-02-06 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Competitor Profile",
+  "naming_rule": "By fieldname",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1,
+      "export": 1,
+      "print": 1,
+      "email": 1,
+      "report": 1,
+      "share": 1
+    },
+    {
+      "role": "CRM Admin",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

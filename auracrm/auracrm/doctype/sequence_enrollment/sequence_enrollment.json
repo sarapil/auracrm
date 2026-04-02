@@ -1,0 +1,192 @@
+{
+  "name": "Sequence Enrollment",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "sequence",
+    "cb_top",
+    "status",
+    "sb_contact",
+    "contact_doctype",
+    "contact_name",
+    "cb_contact",
+    "contact_email",
+    "contact_phone",
+    "sb_progress",
+    "current_step_idx",
+    "total_steps",
+    "cb_progress",
+    "enrolled_at",
+    "next_step_due",
+    "sb_result",
+    "last_step_executed",
+    "last_step_at",
+    "cb_result2",
+    "completed_at",
+    "opt_out_reason",
+    "sb_log",
+    "execution_log"
+  ],
+  "fields": [
+    {
+      "fieldname": "sequence",
+      "fieldtype": "Link",
+      "label": "Campaign Sequence",
+      "options": "Campaign Sequence",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb_top",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nActive\nPaused\nCompleted\nOpted Out\nFailed\nSkipped",
+      "default": "Active",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_contact",
+      "fieldtype": "Section Break",
+      "label": "Contact"
+    },
+    {
+      "fieldname": "contact_doctype",
+      "fieldtype": "Link",
+      "label": "Contact DocType",
+      "options": "DocType",
+      "reqd": 1
+    },
+    {
+      "fieldname": "contact_name",
+      "fieldtype": "Dynamic Link",
+      "label": "Contact",
+      "options": "contact_doctype",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb_contact",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "contact_email",
+      "fieldtype": "Data",
+      "label": "Email",
+      "options": "Email"
+    },
+    {
+      "fieldname": "contact_phone",
+      "fieldtype": "Data",
+      "label": "Phone",
+      "options": "Phone"
+    },
+    {
+      "fieldname": "sb_progress",
+      "fieldtype": "Section Break",
+      "label": "Progress"
+    },
+    {
+      "fieldname": "current_step_idx",
+      "fieldtype": "Int",
+      "label": "Current Step",
+      "default": "0",
+      "description": "0 = not started, 1 = first step done, etc."
+    },
+    {
+      "fieldname": "total_steps",
+      "fieldtype": "Int",
+      "label": "Total Steps",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb_progress",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "enrolled_at",
+      "fieldtype": "Datetime",
+      "label": "Enrolled At"
+    },
+    {
+      "fieldname": "next_step_due",
+      "fieldtype": "Datetime",
+      "label": "Next Step Due",
+      "description": "When the next step should be executed"
+    },
+    {
+      "fieldname": "sb_result",
+      "fieldtype": "Section Break",
+      "label": "Result"
+    },
+    {
+      "fieldname": "last_step_executed",
+      "fieldtype": "Data",
+      "label": "Last Step Name",
+      "read_only": 1
+    },
+    {
+      "fieldname": "last_step_at",
+      "fieldtype": "Datetime",
+      "label": "Last Step At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb_result2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "completed_at",
+      "fieldtype": "Datetime",
+      "label": "Completed At",
+      "read_only": 1
+    },
+    {
+      "fieldname": "opt_out_reason",
+      "fieldtype": "Small Text",
+      "label": "Opt-Out Reason"
+    },
+    {
+      "fieldname": "sb_log",
+      "fieldtype": "Section Break",
+      "label": "Execution Log",
+      "collapsible": 1
+    },
+    {
+      "fieldname": "execution_log",
+      "fieldtype": "Code",
+      "label": "Execution Log",
+      "options": "JSON",
+      "description": "JSON log of each step execution: [{step_idx, step_name, channel, status, sent_at, error}]"
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:ENR-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC"
+}

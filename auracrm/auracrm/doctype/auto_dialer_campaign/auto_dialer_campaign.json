@@ -1,0 +1,240 @@
+{
+  "name": "Auto Dialer Campaign",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "campaign_name",
+    "cb1",
+    "status",
+    "sb_source",
+    "audience_segment",
+    "target_doctype",
+    "cb_source",
+    "call_script",
+    "sb_config",
+    "call_type",
+    "max_concurrent_calls",
+    "cb2",
+    "retry_attempts",
+    "retry_interval_minutes",
+    "sb_schedule",
+    "start_date",
+    "end_date",
+    "cb3",
+    "call_start_time",
+    "call_end_time",
+    "sb_agents",
+    "agents",
+    "sb_stats",
+    "total_entries",
+    "completed_entries",
+    "cb4",
+    "success_count",
+    "failed_count",
+    "cb5",
+    "in_progress_count",
+    "pending_count"
+  ],
+  "fields": [
+    {
+      "fieldname": "campaign_name",
+      "fieldtype": "Data",
+      "label": "Campaign Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nDraft\nActive\nPaused\nCompleted\nCancelled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "sb_source",
+      "fieldtype": "Section Break",
+      "label": "Contact Source"
+    },
+    {
+      "fieldname": "audience_segment",
+      "fieldtype": "Link",
+      "label": "Audience Segment",
+      "options": "Audience Segment",
+      "description": "Auto-populate entries from this segment"
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Select",
+      "label": "Target DocType",
+      "options": "\nLead\nOpportunity\nCustomer",
+      "default": "Lead"
+    },
+    {
+      "fieldname": "cb_source",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "call_script",
+      "fieldtype": "Link",
+      "label": "Call Script",
+      "options": "Communication Template",
+      "description": "Script/template to display to agent during call"
+    },
+    {
+      "fieldname": "sb_config",
+      "fieldtype": "Section Break",
+      "label": "Configuration"
+    },
+    {
+      "fieldname": "call_type",
+      "fieldtype": "Select",
+      "label": "Call Type",
+      "options": "\nOutbound\nPower Dialer\nPredictive",
+      "default": "Outbound"
+    },
+    {
+      "fieldname": "max_concurrent_calls",
+      "fieldtype": "Int",
+      "label": "Max Concurrent Calls",
+      "default": "1"
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "retry_attempts",
+      "fieldtype": "Int",
+      "label": "Retry Attempts",
+      "default": "2"
+    },
+    {
+      "fieldname": "retry_interval_minutes",
+      "fieldtype": "Int",
+      "label": "Retry Interval (min)",
+      "default": "30"
+    },
+    {
+      "fieldname": "sb_schedule",
+      "fieldtype": "Section Break",
+      "label": "Schedule"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Date",
+      "label": "Start Date"
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Date",
+      "label": "End Date"
+    },
+    {
+      "fieldname": "cb3",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "call_start_time",
+      "fieldtype": "Time",
+      "label": "Call Window Start"
+    },
+    {
+      "fieldname": "call_end_time",
+      "fieldtype": "Time",
+      "label": "Call Window End"
+    },
+    {
+      "fieldname": "sb_agents",
+      "fieldtype": "Section Break",
+      "label": "Assigned Agents"
+    },
+    {
+      "fieldname": "agents",
+      "fieldtype": "Table MultiSelect",
+      "label": "Agents",
+      "options": "Distribution Agent"
+    },
+    {
+      "fieldname": "sb_stats",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "total_entries",
+      "fieldtype": "Int",
+      "label": "Total Entries",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_entries",
+      "fieldtype": "Int",
+      "label": "Completed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb4",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "success_count",
+      "fieldtype": "Int",
+      "label": "Successful",
+      "read_only": 1
+    },
+    {
+      "fieldname": "failed_count",
+      "fieldtype": "Int",
+      "label": "Failed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb5",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "in_progress_count",
+      "fieldtype": "Int",
+      "label": "In Progress",
+      "read_only": 1
+    },
+    {
+      "fieldname": "pending_count",
+      "fieldtype": "Int",
+      "label": "Pending",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:ADC-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "campaign_name",
+  "show_title_field_in_link": 1
+}

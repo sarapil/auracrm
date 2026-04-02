@@ -1,0 +1,166 @@
+{
+  "actions": [],
+  "autoname": "format:CHAL-{####}",
+  "creation": "2026-03-03 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "challenge_name",
+    "description",
+    "challenge_type",
+    "status",
+    "column_break_main",
+    "target_event",
+    "target_value",
+    "start_date",
+    "end_date",
+    "reward_section",
+    "reward_points",
+    "column_break_reward",
+    "reward_badge",
+    "participants_section",
+    "participants",
+    "stats_section",
+    "total_participants",
+    "completed_count",
+    "column_break_stats",
+    "completion_rate"
+  ],
+  "fields": [
+    {
+      "fieldname": "challenge_name",
+      "fieldtype": "Data",
+      "label": "Challenge Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "description",
+      "fieldtype": "Small Text",
+      "label": "Description"
+    },
+    {
+      "fieldname": "challenge_type",
+      "fieldtype": "Select",
+      "label": "Type",
+      "options": "Individual\nTeam\nCompany-Wide",
+      "default": "Individual",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "Draft\nActive\nCompleted\nCancelled",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "column_break_main",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "target_event",
+      "fieldtype": "Link",
+      "label": "Target Event",
+      "options": "Gamification Event",
+      "reqd": 1,
+      "description": "The event participants must accumulate"
+    },
+    {
+      "fieldname": "target_value",
+      "fieldtype": "Int",
+      "label": "Target Count",
+      "reqd": 1,
+      "description": "How many times the event must occur to complete the challenge"
+    },
+    {
+      "fieldname": "start_date",
+      "fieldtype": "Datetime",
+      "label": "Start Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "end_date",
+      "fieldtype": "Datetime",
+      "label": "End Date",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reward_section",
+      "fieldtype": "Section Break",
+      "label": "Rewards"
+    },
+    {
+      "default": "100",
+      "fieldname": "reward_points",
+      "fieldtype": "Int",
+      "label": "Reward Points"
+    },
+    {
+      "fieldname": "column_break_reward",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "reward_badge",
+      "fieldtype": "Link",
+      "label": "Reward Badge",
+      "options": "Gamification Badge",
+      "description": "Optional badge awarded on completion"
+    },
+    {
+      "fieldname": "participants_section",
+      "fieldtype": "Section Break",
+      "label": "Participants"
+    },
+    {
+      "fieldname": "participants",
+      "fieldtype": "Table",
+      "label": "Participants",
+      "options": "Challenge Participant"
+    },
+    {
+      "fieldname": "stats_section",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "total_participants",
+      "fieldtype": "Int",
+      "label": "Total Participants",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_count",
+      "fieldtype": "Int",
+      "label": "Completed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "column_break_stats",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "completion_rate",
+      "fieldtype": "Percent",
+      "label": "Completion Rate",
+      "read_only": 1
+    }
+  ],
+  "links": [],
+  "modified": "2026-03-03 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "AuraCRM",
+  "name": "Gamification Challenge",
+  "naming_rule": "Expression (old style)",
+  "owner": "Administrator",
+  "permissions": [
+    { "role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "CRM Admin", "read": 1, "write": 1, "create": 1, "delete": 1 },
+    { "role": "Sales Manager", "read": 1, "write": 1, "create": 1 },
+    { "role": "Sales User", "read": 1 }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "track_changes": 1
+}

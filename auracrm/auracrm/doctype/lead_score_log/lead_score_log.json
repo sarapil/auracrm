@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "autoname": "hash",
+ "creation": "2025-02-06 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lead",
+  "old_score",
+  "new_score",
+  "reason",
+  "triggered_by"
+ ],
+ "fields": [
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "Lead",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "old_score",
+   "fieldtype": "Int",
+   "label": "Old Score",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "new_score",
+   "fieldtype": "Int",
+   "label": "New Score",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "triggered_by",
+   "fieldtype": "Link",
+   "label": "Triggered By",
+   "options": "User"
+  }
+ ],
+ "links": [],
+ "modified": "2025-02-06 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "AuraCRM",
+ "name": "Lead Score Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1
+  },
+  {
+   "role": "CRM Admin",
+   "read": 1
+  },
+  {
+   "role": "Sales Manager",
+   "read": 1
+  },
+  {
+   "role": "Quality Analyst",
+   "read": 1
+  },
+  {
+   "role": "Sales User",
+   "read": 1,
+   "if_owner": 0
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC"
+}

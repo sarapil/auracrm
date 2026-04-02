@@ -1,0 +1,126 @@
+{
+  "name": "Campaign Sequence",
+  "doctype": "DocType",
+  "module": "AuraCRM",
+  "engine": "InnoDB",
+  "field_order": [
+    "sequence_name",
+    "status",
+    "cb1",
+    "target_doctype",
+    "audience_segment",
+    "sb_steps",
+    "steps",
+    "sb_stats",
+    "total_contacts",
+    "completed_contacts",
+    "cb2",
+    "response_count",
+    "opt_out_count"
+  ],
+  "fields": [
+    {
+      "fieldname": "sequence_name",
+      "fieldtype": "Data",
+      "label": "Sequence Name",
+      "reqd": 1,
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "status",
+      "fieldtype": "Select",
+      "label": "Status",
+      "options": "\nDraft\nActive\nPaused\nCompleted",
+      "default": "Draft",
+      "in_list_view": 1
+    },
+    {
+      "fieldname": "cb1",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "target_doctype",
+      "fieldtype": "Select",
+      "label": "Target DocType",
+      "options": "\nLead\nOpportunity\nCustomer",
+      "default": "Lead"
+    },
+    {
+      "fieldname": "audience_segment",
+      "fieldtype": "Link",
+      "label": "Audience Segment",
+      "options": "Audience Segment"
+    },
+    {
+      "fieldname": "sb_steps",
+      "fieldtype": "Section Break",
+      "label": "Sequence Steps"
+    },
+    {
+      "fieldname": "steps",
+      "fieldtype": "Table",
+      "label": "Steps",
+      "options": "Campaign Sequence Step"
+    },
+    {
+      "fieldname": "sb_stats",
+      "fieldtype": "Section Break",
+      "label": "Statistics"
+    },
+    {
+      "fieldname": "total_contacts",
+      "fieldtype": "Int",
+      "label": "Total Contacts",
+      "read_only": 1
+    },
+    {
+      "fieldname": "completed_contacts",
+      "fieldtype": "Int",
+      "label": "Completed",
+      "read_only": 1
+    },
+    {
+      "fieldname": "cb2",
+      "fieldtype": "Column Break"
+    },
+    {
+      "fieldname": "response_count",
+      "fieldtype": "Int",
+      "label": "Responses",
+      "read_only": 1
+    },
+    {
+      "fieldname": "opt_out_count",
+      "fieldtype": "Int",
+      "label": "Opt Outs",
+      "read_only": 1
+    }
+  ],
+  "permissions": [
+    {
+      "role": "System Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1,
+      "delete": 1
+    },
+    {
+      "role": "Sales Manager",
+      "read": 1,
+      "write": 1,
+      "create": 1
+    },
+    {
+      "role": "Sales User",
+      "read": 1
+    }
+  ],
+  "naming_rule": "Expression (old style)",
+  "autoname": "format:SEQ-{####}",
+  "is_submittable": 0,
+  "istable": 0,
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "title_field": "sequence_name",
+  "show_title_field_in_link": 1
+}
