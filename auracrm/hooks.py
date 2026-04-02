@@ -32,6 +32,7 @@ app_include_js = [
         "/assets/auracrm/js/aura_contextual_help.js",
 ]
 app_include_css = [
+    "/assets/auracrm/css/auracrm-theme.css",
         "auracrm.bundle.css",
         "/assets/auracrm/css/aura_brand.css",
         "/assets/auracrm/css/aura_sidebar.css",
