@@ -43,7 +43,7 @@ def get_data(filters):
         conditions += " AND l.source = %(source)s"
         values["source"] = filters["source"]
 
-    data = frappe.db.sql(f"""
+    query = """
         SELECT
             l.status AS stage,
             COUNT(*) AS count,
@@ -56,7 +56,8 @@ def get_data(filters):
         {conditions}
         GROUP BY l.status
         ORDER BY count DESC
-    """, values=values, as_dict=True)
+    """.format(conditions=conditions)
+    data = frappe.db.sql(query, values=values, as_dict=True)
 
     # Calculate conversion rate (leads that moved to next stage)
     total_leads = sum(d["count"] for d in data) if data else 1

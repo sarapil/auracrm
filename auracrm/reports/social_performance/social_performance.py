@@ -49,7 +49,7 @@ def get_data(filters):
         values["platform"] = filters["platform"]
 
     try:
-        data = frappe.db.sql(f"""
+        query = """
             SELECT
                 sp.platform,
                 COUNT(*) AS posts_published,
@@ -63,7 +63,8 @@ def get_data(filters):
             {conditions}
             GROUP BY sp.platform
             ORDER BY total_engagement DESC
-        """, values=values, as_dict=True)
+        """.format(conditions=conditions)
+        data = frappe.db.sql(query, values=values, as_dict=True)
     except Exception:
         return _get_fallback_data()
 

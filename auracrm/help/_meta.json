@@ -1,0 +1,12 @@
+{
+  "app": "auracrm",
+  "name": "AuraCRM",
+  "icon": "users",
+  "color": "#3498DB",
+  "languages": [
+    "en",
+    "ar"
+  ],
+  "default_language": "en",
+  "fallback_language": "en"
+}

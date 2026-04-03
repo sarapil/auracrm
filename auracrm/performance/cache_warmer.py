@@ -145,7 +145,10 @@ def create_indexes():
                 continue
 
             if not _index_exists(table, index_name):
-                frappe.db.sql(f"CREATE INDEX `{index_name}` ON `{table}` ({columns})")
+                # Safely quote individual column names to avoid injection via the columns string
+                cols = ", ".join(f"`{c.strip()}`" for c in columns.split(","))
+                query = f"CREATE INDEX `{index_name}` ON `{table}` ({cols})"
+                frappe.db.sql_ddl(query)
                 created += 1
             else:
                 skipped += 1

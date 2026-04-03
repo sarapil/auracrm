@@ -543,7 +543,7 @@ def get_leaderboard(period=None, limit=None):
             where_clause = "AND timestamp >= %s"
             params.append(ts_val[1])
 
-    results = frappe.db.sql(f"""
+    query = """
         SELECT
             user,
             SUM(final_points) as total_points,
@@ -554,7 +554,8 @@ def get_leaderboard(period=None, limit=None):
         GROUP BY user
         ORDER BY total_points DESC
         LIMIT %s
-    """, params + [limit], as_dict=True)
+    """.format(where_clause=where_clause)
+    results = frappe.db.sql(query, params + [limit], as_dict=True)
 
     # Enrich with user info
     for i, row in enumerate(results):

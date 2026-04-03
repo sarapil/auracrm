@@ -42,8 +42,6 @@ def resolve_call_context(contact_doctype, contact_name, campaign_name=None):
     Returns:
         Call Context Rule name or None
     """
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
 
     rules = frappe.get_all(
@@ -190,8 +188,6 @@ def get_agent_call_panel(contact_doctype, contact_name, campaign_name=None):
       - post_call_checklist: Post-call action items
       - classification: Contact's classification(s)
     """
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
 
     # Get the matching context rule

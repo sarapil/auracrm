@@ -25,8 +25,6 @@ def create_deal_room(opportunity=None, lead=None, title=None, assets=None):
     Returns:
         dict with room name, url_key, and full_url.
     """
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     frappe.only_for(["AuraCRM Manager", "System Manager"])
 
     url_key = _generate_url_key()

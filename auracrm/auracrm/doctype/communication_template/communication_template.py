@@ -44,7 +44,6 @@ def render_preview(template_name, doctype=None, name=None):
         dict with rendered subject and message
     """
     frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
-    frappe.only_for(["System Manager", "CRM Manager", "CRM User"])
     frappe.has_permission("Communication Template", "read", throw=True)
 
     tmpl = frappe.get_doc("Communication Template", template_name)

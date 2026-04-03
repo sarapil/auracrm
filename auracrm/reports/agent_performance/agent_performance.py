@@ -41,7 +41,7 @@ def get_data(filters):
         conditions += " AND l.creation <= %(to_date)s"
         values["to_date"] = filters["to_date"]
 
-    data = frappe.db.sql(f"""
+    query = """
         SELECT
             l.lead_owner AS agent,
             u.full_name AS agent_name,
@@ -57,7 +57,8 @@ def get_data(filters):
         {conditions}
         GROUP BY l.lead_owner
         ORDER BY leads_converted DESC, leads_assigned DESC
-    """, values=values, as_dict=True)
+    """.format(conditions=conditions)
+    data = frappe.db.sql(query, values=values, as_dict=True)
 
     for row in data:
         row["conversion_rate"] = round(
