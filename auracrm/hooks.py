@@ -46,7 +46,7 @@ doctype_js = {
 
 after_install = "auracrm.install.after_install"
 
-after_migrate = ["auracrm.auracrm.seed.seed_data"]
+after_migrate = ["auracrm.seed.seed_data"]
 before_uninstall = "auracrm.install.before_uninstall"
 
 fixtures = [
@@ -269,6 +269,10 @@ fixtures = [
     {
         "dt": "Role",
         "filters": [["name", "in", ["AC Sales Manager", "AC Sales Agent", "AC Marketing Manager", "AC Admin"]]],
+    },
+    {
+        "dt": "Desktop Icon",
+        "filters": [["app", "=", "auracrm"]],
     },
 ]
 

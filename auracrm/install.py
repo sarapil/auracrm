@@ -90,7 +90,15 @@ def after_install():
     _ensure_roles()
     _create_default_settings()
     _seed_gamification_data()
-    _create_desktop_icon()
+    # ── Desktop Icon injection (Frappe v16 /desk) ──
+    from auracrm.desktop_utils import inject_app_desktop_icon
+    inject_app_desktop_icon(
+        app="auracrm",
+        label="AuraCRM",
+        route="/desk/auracrm",
+        logo_url="/assets/auracrm/images/auracrm-logo.svg",
+        bg_color="#6366F1",
+    )
     _register_caps_data()
     frappe.db.commit()
     frappe.msgprint("✅ AuraCRM installed successfully!", alert=True)
@@ -195,57 +203,6 @@ def _seed_gamification_data():
         frappe.logger().info("AuraCRM: Gamification defaults seeded successfully")
     except Exception as e:
         frappe.logger().warning(f"AuraCRM: Could not seed gamification data: {e}")
-
-
-def _create_desktop_icon():
-    """Create Desktop Icon and add to all users' saved Desktop Layouts."""
-    app_details = frappe.get_hooks("add_to_apps_screen", app_name="auracrm")
-    if not app_details:
-        return
-
-    detail = app_details[0]
-    icon_label = detail.get("title", "AuraCRM")
-
-    # 1. Create the Desktop Icon record
-    if not frappe.db.exists("Desktop Icon", {"app": "auracrm", "icon_type": "App"}):
-        icon = frappe.new_doc("Desktop Icon")
-        icon.label = icon_label
-        icon.link_type = "External"
-        icon.icon_type = "App"
-        icon.app = "auracrm"
-        icon.link = detail.get("route", "/desk/auracrm")
-        icon.logo_url = detail.get("logo", "/assets/auracrm/images/auracrm-logo.svg")
-        icon.standard = 1
-        if not frappe.db.exists("Desktop Icon", {"label": icon.label, "icon_type": "App"}):
-            icon.insert(ignore_permissions=True)
-
-    # 2. Inject into all saved Desktop Layouts so it appears immediately
-    import json as _json
-    for layout in frappe.get_all("Desktop Layout", fields=["name"]):
-        doc = frappe.get_doc("Desktop Layout", layout.name)
-        items = _json.loads(doc.layout or "[]")
-        if any(isinstance(it, dict) and it.get("label") == icon_label for it in items):
-            continue  # already present
-        items.append({
-            "label": icon_label,
-            "bg_color": "",
-            "link": detail.get("route", "/desk/auracrm"),
-            "link_type": "External",
-            "app": "auracrm",
-            "icon_type": "App",
-            "parent_icon": "",
-            "icon": "",
-            "link_to": "",
-            "idx": len(items),
-            "standard": 1,
-            "logo_url": detail.get("logo", "/assets/auracrm/images/auracrm-logo.svg"),
-            "hidden": 0,
-            "name": icon_label,
-            "restrict_removal": 0,
-            "icon_image": "",
-        })
-        doc.layout = _json.dumps(items)
-        doc.save(ignore_permissions=True)
 
 
 def _register_caps_data():
