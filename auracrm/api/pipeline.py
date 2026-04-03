@@ -43,6 +43,14 @@ def get_pipeline_stages():
 
 
 @frappe.whitelist()
+# Allowed filter columns for pipeline board — prevents SQL injection via column names
+_PIPELINE_FILTER_COLUMNS = {
+    "sales_stage", "opportunity_from", "party_name", "contact_person",
+    "territory", "source", "campaign", "opportunity_type",
+    "expected_closing", "company", "_assign",
+}
+
+
 def get_pipeline_board(filters=None):
     """Get Kanban board data — single query for all stage opportunities."""
     frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
@@ -60,8 +68,14 @@ def get_pipeline_board(filters=None):
     params = {}
     if filters:
         for key, val in filters.items():
+            # Security: only allow whitelisted column names (prevents SQL injection)
+            if key not in _PIPELINE_FILTER_COLUMNS:
+                frappe.throw(
+                    _("Filter column '{0}' is not allowed").format(key),
+                    title=_("Invalid Filter"),
+                )
             safe_key = key.replace(" ", "_")
-            conditions.append(f"`{key}` = %({safe_key})s")
+            conditions.append("`{col}` = %({param})s".format(col=key, param=safe_key))
             params[safe_key] = val
 
     opps = frappe.db.sql("""

@@ -744,11 +744,15 @@ def get_classification_stats():
 
     for cls in classifications:
         dt = cls.target_doctype or "Lead"
+        # Security: validate doctype exists before using in SQL (prevents table injection)
+        if not frappe.db.exists("DocType", dt):
+            cls["contact_count"] = 0
+            continue
         try:
-            cls["contact_count"] = frappe.db.sql("""
-                SELECT COUNT(*) FROM `tab{dt}`
-                WHERE _user_tags LIKE %s
-            """.format(dt=dt), (f"%{cls.classification_name}%",))[0][0]
+            cls["contact_count"] = frappe.db.sql(
+                "SELECT COUNT(*) FROM `tab{dt}` WHERE _user_tags LIKE %s".format(dt=dt),
+                (f"%{cls.classification_name}%",),
+            )[0][0]
         except Exception:
             cls["contact_count"] = 0
 

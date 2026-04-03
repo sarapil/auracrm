@@ -57,6 +57,10 @@ def classify_contact(doctype, name):
     return auto_classify_contact(doctype, name)
 
 
+# Allowed doctypes for bulk classification — prevents SQL injection
+_CLASSIFIABLE_DOCTYPES = {"Lead", "Contact", "Customer", "Prospect", "Opportunity"}
+
+
 @frappe.whitelist()
 def bulk_classify(doctype, names=None):
     """Bulk auto-classify contacts. names = JSON array or None for all."""
@@ -66,12 +70,22 @@ def bulk_classify(doctype, names=None):
     from auracrm.engines.marketing_engine import auto_classify_contact
     import json as _json
 
+    # Security: validate doctype against allowlist (prevents SQL injection)
+    if doctype not in _CLASSIFIABLE_DOCTYPES:
+        frappe.throw(
+            _("DocType {0} is not allowed for bulk classification. Allowed: {1}").format(
+                doctype, ", ".join(sorted(_CLASSIFIABLE_DOCTYPES))
+            ),
+            title=_("Invalid DocType"),
+        )
+
     if names:
         if isinstance(names, str):
             names = _json.loads(names)
     else:
+        # Safe: doctype validated above against strict allowlist
         names = frappe.db.sql_list(
-            f"SELECT name FROM `tab{doctype}` LIMIT 1000"
+            "SELECT name FROM `tab{dt}` LIMIT 1000".format(dt=doctype)
         )
 
     results = {"classified": 0, "total": len(names), "details": []}
