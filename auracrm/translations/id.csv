@@ -1,0 +1,2053 @@
+source_text,source_text
+0 = no cap. Used when multipliers can inflate points.,0 = no cap. Used when multipliers can inflate points.
+"0 = not started, 1 = first step done, etc.","0 = not started, 1 = first step done, etc."
+0-100,0-100
+0-100 (higher = more fake),0-100 (higher = more fake)
+0-100 (higher = safer),0-100 (higher = safer)
+0-23,0-23
+1-10,1-10
+1-100,1-100
+11-50,11-50
+201-500,201-500
+360° View,360° View
+360° view is not available for {0},360° view is not available for {0}
+500+,500+
+51-200,51-200
+Accepted,Accepted
+Access Password,Access Password
+Action,Action
+Action Field,Action Field
+Action Taken,Action Taken
+Action Type,Action Type
+Action Value,Action Value
+Active,Active
+Active Agents,Active Agents
+Active Breaches,Active Breaches
+Active Campaigns,Active Campaigns
+Active Challenges,Active Challenges
+Active Industry Preset,Active Industry Preset
+Active Leads,Active Leads
+Active Lists,Active Lists
+Active Members,Active Members
+Active Partner,Active Partner
+Active Rules,Active Rules
+Active SLA Breaches,Active SLA Breaches
+Activities,Activities
+Activity,Activity
+Activity Feed,Activity Feed
+Activity Streaks,Activity Streaks
+Ad Click,Ad Click
+Ad Copy,Ad Copy
+Ad Inventory,Ad Inventory
+Ad Inventory Link,Ad Inventory Link
+Ad Library Search Url,Ad Library Search Url
+Ad Stopped,Ad Stopped
+Adapted Content,Adapted Content
+Adapted Hashtags,Adapted Hashtags
+Add at least one step before activating,Add at least one step before activating
+Add To Segment,Add To Segment
+Added On,Added On
+"Additional multiplier per consecutive day (e.g., 0.1 = +10%/day)","Additional multiplier per consecutive day (e.g., 0.1 = +10%/day)"
+Additional Script Notes,Additional Script Notes
+Advertising,Advertising
+Advertising Platforms,Advertising Platforms
+Agent,Agent
+Agent Briefing,Agent Briefing
+Agent Briefing Notes,Agent Briefing Notes
+Agent Call Context,Agent Call Context
+Agent Label,Agent Label
+Agent Name,Agent Name
+Agent Performance,Agent Performance
+Agent Performance (MTD),Agent Performance (MTD)
+Agent Performance Rankings,Agent Performance Rankings
+Agent Points Log,Agent Points Log
+Agent Scorecard,Agent Scorecard
+Agent Scorecards,Agent Scorecards
+Agent Shift,Agent Shift
+Agent Shifts,Agent Shifts
+Agent's streak day count when this was earned,Agent's streak day count when this was earned
+Agents,Agents
+Ai Analysis,Ai Analysis
+AI Analysis,AI Analysis
+AI Calculated,AI Calculated
+AI Content,AI Content
+AI Content Model,AI Content Model
+AI Content Request,AI Content Request
+AI Fast Model,AI Fast Model
+AI Generated,AI Generated
+AI Lead Profile,AI Lead Profile
+AI Metadata,AI Metadata
+Ai Personalize,Ai Personalize
+AI Profiles,AI Profiles
+AI Profiling,AI Profiling
+AI Provider,AI Provider
+AI Provider Configuration,AI Provider Configuration
+AI Response,AI Response
+AI Response Persona,AI Response Persona
+Ai Suggested Response,Ai Suggested Response
+Alert On Negative Review,Alert On Negative Review
+Alert On New Ad,Alert On New Ad
+Alert Sent,Alert Sent
+Alert Sent At,Alert Sent At
+Alert Threshold Percent,Alert Threshold Percent
+All,All
+All Time,All Time
+"All Time = cumulative, else resets each period","All Time = cumulative, else resets each period"
+Already at final stage,Already at final stage
+America/New_York,America/New_York
+Amount,Amount
+Analytics,Analytics
+Answered,Answered
+anthropic,anthropic
+Anthropic API Key,Anthropic API Key
+Anti-Gaming Controls,Anti-Gaming Controls
+Anti-Gaming Protection,Anti-Gaming Protection
+Any,Any
+Api Calls Made,Api Calls Made
+API Configuration,API Configuration
+Apollo,Apollo
+Apollo API Key,Apollo API Key
+Apollo Result,Apollo Result
+Applies To,Applies To
+Apply when calling from this campaign,Apply when calling from this campaign
+Apply when contact belongs to this segment,Apply when contact belongs to this segment
+Apply when contact has this classification,Apply when contact has this classification
+Appointment,Appointment
+Appreciation Percent,Appreciation Percent
+Approved,Approved
+ar,ar
+Arabic,Arabic
+Archived,Archived
+Article,Article
+Asia/Dubai,Asia/Dubai
+Asia/Riyadh,Asia/Riyadh
+Asset Type,Asset Type
+Assign Agent,Assign Agent
+Assign To,Assign To
+Assigned,Assigned
+Assigned Agent,Assigned Agent
+Assigned Agents,Assigned Agents
+Assigned To,Assigned To
+Assignment Changed,Assignment Changed
+At least one agent must be assigned before activating,At least one agent must be assigned before activating
+At least one sequence step is required,At least one sequence step is required
+Attempts,Attempts
+Attributed Revenue,Attributed Revenue
+Attribution,Attribution
+Attribution Model,Attribution Model
+Attribution Weight,Attribution Weight
+Audience,Audience
+Audience Countries,Audience Countries
+Audience Demographics,Audience Demographics
+Audience Segment,Audience Segment
+Audience Segment has no filters,Audience Segment has no filters
+Audience Segment has no filters configured,Audience Segment has no filters configured
+Audience Segment {0} does not exist,Audience Segment {0} does not exist
+Audience Segments,Audience Segments
+AuraCRM,AuraCRM
+AuraCRM Industry Preset,AuraCRM Industry Preset
+AuraCRM Settings,AuraCRM Settings
+AuraCRM — Command Center,AuraCRM — Command Center
+Auto Dialer Campaign,Auto Dialer Campaign
+Auto Dialer Entry,Auto Dialer Entry
+Auto Sold-Proof Posts,Auto Sold-Proof Posts
+Auto-Assign on Lead Creation,Auto-Assign on Lead Creation
+Auto-Assignment,Auto-Assignment
+Auto-Classification Rules,Auto-Classification Rules
+Auto-Classify,Auto-Classify
+Auto-Dialer,Auto-Dialer
+Auto-Dialer Enabled,Auto-Dialer Enabled
+Auto-DM,Auto-DM
+Auto-Flag Suspicious Activity,Auto-Flag Suspicious Activity
+Auto-Generate Deal Rooms,Auto-Generate Deal Rooms
+Auto-Generate Review Responses,Auto-Generate Review Responses
+Auto-populate entries from this segment,Auto-populate entries from this segment
+Automatically pause point accrual and notify admin,Automatically pause point accrual and notify admin
+Automatically post 'Just Sold' content on opportunity win,Automatically post 'Just Sold' content on opportunity win
+Automatically tag matching contacts with this classification,Automatically tag matching contacts with this classification
+Automation & Sequences,Automation & Sequences
+Automation Enabled,Automation Enabled
+Automation Rules,Automation Rules
+Automation rules evaluated,Automation rules evaluated
+Available Variables,Available Variables
+Avg Conversion %,Avg Conversion %
+Avg Days in Pipeline,Avg Days in Pipeline
+Avg Days in Stage,Avg Days in Stage
+Avg Lead Score,Avg Lead Score
+Avg Likes,Avg Likes
+Avg Response (hrs),Avg Response (hrs)
+Avg Response Time (min),Avg Response Time (min)
+Avg Score,Avg Score
+Avg Value,Avg Value
+Avg Views,Avg Views
+Badge Image,Badge Image
+Badge Name,Badge Name
+Badge Type,Badge Type
+badges,badges
+Badges,Badges
+Badges & Achievements,Badges & Achievements
+Base Points,Base Points
+Base Points cannot be negative,Base Points cannot be negative
+base_points × multiplier (including streak bonus),base_points × multiplier (including streak bonus)
+Bayut,Bayut
+Best Day,Best Day
+Best Hour End,Best Hour End
+Best Hour Start,Best Hour Start
+Blacklisted,Blacklisted
+Block,Block
+Blog Article,Blog Article
+bonus,bonus
+Bonus Multiplier Condition,Bonus Multiplier Condition
+Bonus Points on Earn,Bonus Points on Earn
+bonus points!,bonus points!
+Bot Name,Bot Name
+Both,Both
+Bounced,Bounced
+Brand,Brand
+Brand Name,Brand Name
+Brand Safety Score,Brand Safety Score
+Brand Voice Description,Brand Voice Description
+Breach Time,Breach Time
+BREACHED,BREACHED
+Brief,Brief
+Broadcast Name,Broadcast Name
+Broadcasts,Broadcasts
+Broker Detection Reason,Broker Detection Reason
+Bronze,Bronze
+Budget Adjustment History,Budget Adjustment History
+Budget History,Budget History
+Built-in Preset,Built-in Preset
+Bulk Auto-Classify,Bulk Auto-Classify
+Business,Business
+Busy,Busy
+Button Menu,Button Menu
+C-Level,C-Level
+Calendar Entry,Calendar Entry
+Calendarific API Key,Calendarific API Key
+Call,Call
+Call Context Rule,Call Context Rule
+Call Context Rules,Call Context Rules
+Call Details,Call Details
+Call Duration (sec),Call Duration (sec)
+Call Guidance,Call Guidance
+Call Log,Call Log
+Call Script,Call Script
+Call Script Template,Call Script Template
+Call Type,Call Type
+Call Window End,Call Window End
+Call Window End must be after Call Window Start,Call Window End must be after Call Window Start
+Call Window Start,Call Window Start
+Callback Requested,Callback Requested
+Calls Made,Calls Made
+Campaign,Campaign
+Campaign Brief,Campaign Brief
+Campaign can only be started from Draft or Paused status,Campaign can only be started from Draft or Paused status
+Campaign Name,Campaign Name
+Campaign ROI,Campaign ROI
+Campaign Sequence,Campaign Sequence
+Campaign Sequence Step,Campaign Sequence Step
+Campaign Sequences,Campaign Sequences
+Campaign started,Campaign started
+Campaign {0} does not exist,Campaign {0} does not exist
+Campaigns,Campaigns
+Campaigns & Marketing,Campaigns & Marketing
+Cancelled,Cancelled
+Cannot activate sequence without steps,Cannot activate sequence without steps
+"Cap for streak multiplier (e.g., 3.0 = max 3× points)","Cap for streak multiplier (e.g., 3.0 = max 3× points)"
+CAPS Capability Templates,CAPS Capability Templates
+Carousel,Carousel
+Carousel Copy,Carousel Copy
+Casual,Casual
+Category,Category
+Celebrations & Animations,Celebrations & Animations
+Challenge,Challenge
+Challenge Complete:,Challenge Complete:
+Challenge has no participants. Add agents to the participants table.,Challenge has no participants. Add agents to the participants table.
+Challenge Name,Challenge Name
+Challenge Participant,Challenge Participant
+Challenges,Challenges
+Challenges & Competitions,Challenges & Competitions
+Change Segment,Change Segment
+Channel,Channel
+Chatbot Flow,Chatbot Flow
+Chatbot Node,Chatbot Node
+Chatbots,Chatbots
+Check Condition,Check Condition
+Classification,Classification
+Classification Name,Classification Name
+Classifications,Classifications
+classified,classified
+Classifying...,Classifying...
+Clicks,Clicks
+Closing,Closing
+Cold (0-29),Cold (0-29)
+Color,Color
+"Comma-separated list: Facebook,Instagram,Twitter,LinkedIn","Comma-separated list: Facebook,Instagram,Twitter,LinkedIn"
+"Comma-separated: residential, commercial, luxury, arabic, english","Comma-separated: residential, commercial, luxury, arabic, english"
+Command Center,Command Center
+Comment,Comment
+Commenter Followers,Commenter Followers
+Commenter Info,Commenter Info
+Commenter Name,Commenter Name
+Commenter Profile Url,Commenter Profile Url
+Commenter Username,Commenter Username
+Communication,Communication
+Communication History,Communication History
+Communication Template,Communication Template
+Communication Templates,Communication Templates
+Communications,Communications
+Company,Company
+Company Label,Company Label
+Company Size,Company Size
+Company-Wide,Company-Wide
+Comparison Value,Comparison Value
+Competitive Intel,Competitive Intel
+Competitor,Competitor
+Competitor Complaint,Competitor Complaint
+Competitor Intel Entry,Competitor Intel Entry
+Competitor Name,Competitor Name
+Competitor Profile,Competitor Profile
+Competitor Tracking,Competitor Tracking
+Competitors,Competitors
+Complete,Complete
+complete,complete
+Completed,Completed
+Completed At,Completed At
+Completed!,Completed!
+Completion Rate,Completion Rate
+Composite performance score 0-100,Composite performance score 0-100
+Condition,Condition
+Condition (Jinja),Condition (Jinja)
+Condition Field,Condition Field
+Condition Map,Condition Map
+Condition Value,Condition Value
+Conditions for automatically applying this classification,Conditions for automatically applying this classification
+Confidence Score,Confidence Score
+Configuration,Configuration
+Configuration Data,Configuration Data
+Congratulations Message,Congratulations Message
+Consistency & Streaks,Consistency & Streaks
+Contact,Contact
+Contact Classification,Contact Classification
+Contact DocType,Contact DocType
+Contact Email,Contact Email
+Contact Information,Contact Information
+Contact is already enrolled in this sequence,Contact is already enrolled in this sequence
+Contact Name,Contact Name
+Contact Phone,Contact Phone
+Contact Source,Contact Source
+Contacted,Contacted
+Contacts,Contacts
+contacts,contacts
+contains,contains
+Content,Content
+Content Asset Row,Content Asset Row
+Content Body,Content Body
+Content Calendar,Content Calendar
+Content Calendar Entry,Content Calendar Entry
+Content Created,Content Created
+Content Piece,Content Piece
+Content Template,Content Template
+Content Topic Suggestions,Content Topic Suggestions
+Content Type,Content Type
+Context Panel Configuration,Context Panel Configuration
+Context Rules,Context Rules
+Context Rules determine what agents see during calls. Higher priority wins.,Context Rules determine what agents see during calls. Higher priority wins.
+Contract Draft Url,Contract Draft Url
+Conv,Conv
+Conv. %,Conv. %
+Conv. Rate,Conv. Rate
+Conversations Count,Conversations Count
+Conversion %,Conversion %
+Conversion Rate,Conversion Rate
+Conversions,Conversions
+Conversions (MTD),Conversions (MTD)
+Converted,Converted
+Cool (30-59),Cool (30-59)
+Cooldown (Minutes),Cooldown (Minutes)
+Cooldown cannot be negative,Cooldown cannot be negative
+Cost (USD),Cost (USD)
+Cost/Lead,Cost/Lead
+Could not load,Could not load
+Could not load timeline,Could not load timeline
+Count,Count
+Counter-Ad Created,Counter-Ad Created
+Counter-Content Scheduled,Counter-Content Scheduled
+Create Deal Room,Create Deal Room
+Create Lead,Create Lead
+Create Task,Create Task
+Created,Created
+Created At,Created At
+Created Leads Count,Created Leads Count
+Created {0} entries from audience segment,Created {0} entries from audience segment
+Criteria,Criteria
+Criteria Type,Criteria Type
+CRM Admin,CRM Admin
+CRM Admin access required,CRM Admin access required
+CRM Automation Rule,CRM Automation Rule
+CRM Campaign ROI Link,CRM Campaign ROI Link
+CRM Core,CRM Core
+Crypto Whale,Crypto Whale
+Crypto Whales,Crypto Whales
+Cumulative points needed to reach this level,Cumulative points needed to reach this level
+Current Active Leads,Current Active Leads
+Current Daily Budget,Current Daily Budget
+Current Market Price,Current Market Price
+Current Progress,Current Progress
+Current Status,Current Status
+Current Step,Current Step
+Currently applied industry preset,Currently applied industry preset
+Custom,Custom
+Custom Weights,Custom Weights
+Customer,Customer
+Customer Journey,Customer Journey
+Customers,Customers
+Customize labels per industry,Customize labels per industry
+daily,daily
+Daily,Daily
+Daily Calls Target,Daily Calls Target
+Daily Cap,Daily Cap
+Daily Cap cannot be negative,Daily Cap cannot be negative
+Daily Count,Daily Count
+Daily Emails Target,Daily Emails Target
+Daily Limit,Daily Limit
+Daily Rebalancing,Daily Rebalancing
+Daily Workload Rebalancing,Daily Workload Rebalancing
+Dashboard,Dashboard
+Data Driven,Data Driven
+Data Source,Data Source
+Data Sources,Data Sources
+Date,Date
+Day of Week,Day of Week
+day streak,day streak
+day streak!,day streak!
+Days,Days
+Deal,Deal
+Deal Close Date,Deal Close Date
+Deal Label,Deal Label
+Deal Room,Deal Room
+Deal Room Asset,Deal Room Asset
+Deal Room Opened,Deal Room Opened
+Deal Room Trigger Status,Deal Room Trigger Status
+Deal Room View,Deal Room View
+Deal Rooms,Deal Rooms
+Deal Rooms & Resale,Deal Rooms & Resale
+Deals above this value earn bonus points,Deals above this value earn bonus points
+Default Call Script,Default Call Script
+Default Distribution Method,Default Distribution Method
+Default KPIs,Default KPIs
+Default OSINT Segments,Default OSINT Segments
+Default points awarded per occurrence,Default points awarded per occurrence
+Default Response Time (Minutes),Default Response Time (Minutes)
+Default Score Rules,Default Score Rules
+Default SLA Policies,Default SLA Policies
+Delay (Days),Delay (Days)
+Delay (Hours),Delay (Hours)
+Delay Unit,Delay Unit
+Delay Value,Delay Value
+Delete+Reply,Delete+Reply
+Deliverables,Deliverables
+Delivered Count,Delivered Count
+Description,Description
+Description of what this level unlocks,Description of what this level unlocks
+Details,Details
+Detected At,Detected At
+Dialer,Dialer
+Dialer Campaigns,Dialer Campaigns
+Dialer Entries,Dialer Entries
+Dialing,Dialing
+Diamond,Diamond
+Direction,Direction
+Director,Director
+Disc Guidance,Disc Guidance
+Disc Profile,Disc Profile
+Discovered,Discovered
+Discovery Source,Discovery Source
+Display,Display
+Display Name,Display Name
+Display Order,Display Order
+Display ↑↓ indicators for position changes,Display ↑↓ indicators for position changes
+Disposition,Disposition
+Disqualification Reason,Disqualification Reason
+Disqualified,Disqualified
+Distribution Agent,Distribution Agent
+Distribution Agents,Distribution Agents
+Distribution Configuration,Distribution Configuration
+Distribution Method,Distribution Method
+Distribution Rules,Distribution Rules
+Distribution Statistics,Distribution Statistics
+DM,DM
+DNC,DNC
+Do Not Call,Do Not Call
+DocType,DocType
+Draft,Draft
+Dubizzle,Dubizzle
+Duplicate Blocked,Duplicate Blocked
+Duplicate detected! This record matches: {0}. Saving is blocked by rule: {1},Duplicate detected! This record matches: {0}. Saving is blocked by rule: {1}
+Duplicate Detection Enabled,Duplicate Detection Enabled
+Duplicate detection strategies,Duplicate detection strategies
+Duplicate Rule,Duplicate Rule
+Duplicate Rules,Duplicate Rules
+Duplicate Warning,Duplicate Warning
+Duration,Duration
+Duration Seconds,Duration Seconds
+Dynamic,Dynamic
+"e.g. 1.5 = 50% bonus, 2.0 = double points","e.g. 1.5 = 50% bonus, 2.0 = double points"
+"e.g. 100 calls, 1000 points, 30 streak days","e.g. 100 calls, 1000 points, 30 streak days"
+"e.g. source, territory, industry","e.g. source, territory, industry"
+"Each filter must be [doctype, field, operator, value]. Got: {0}","Each filter must be [doctype, field, operator, value]. Got: {0}"
+Earning Criteria,Earning Criteria
+Educational,Educational
+Either name or values is required,Either name or values is required
+Email,Email
+Email Found,Email Found
+Email Newsletter,Email Newsletter
+Email Open,Email Open
+Email Opened,Email Opened
+Email Template,Email Template
+"Emoji (e.g. 🏆, 🔥, ⭐, 💎)","Emoji (e.g. 🏆, 🔥, ⭐, 💎)"
+Emoji or icon class,Emoji or icon class
+"Emoji or icon class (e.g. 📞, 🏆, ⭐)","Emoji or icon class (e.g. 📞, 🏆, ⭐)"
+Empathetic,Empathetic
+en,en
+Enable Appointment Booking,Enable Appointment Booking
+Enable Compliance Fields,Enable Compliance Fields
+Enable Daily Point Caps,Enable Daily Point Caps
+Enable Event Cooldowns,Enable Event Cooldowns
+Enable Physical Location,Enable Physical Location
+Enable Project Milestones,Enable Project Milestones
+Enable Property Inventory,Enable Property Inventory
+Enable Rental Management,Enable Rental Management
+Enable Subscription Products,Enable Subscription Products
+Enable/disable industry-specific features,Enable/disable industry-specific features
+Enabled,Enabled
+End Date,End Date
+End Date must be after Start Date,End Date must be after Start Date
+End Time,End Time
+End Time must be after Start Time,End Time must be after Start Time
+Eng. Rate %,Eng. Rate %
+Engagement,Engagement
+Engagement Rate,Engagement Rate
+Engagements,Engagements
+English,English
+Enrichment,Enrichment
+Enrichment Job,Enrichment Job
+Enrichment Jobs,Enrichment Jobs
+Enrichment Result,Enrichment Result
+Enrichment Status,Enrichment Status
+Enrolled At,Enrolled At
+Enrollments,Enrollments
+Entered At,Entered At
+Entries,Entries
+equals,equals
+Error,Error
+Error loading context:,Error loading context:
+Error Log,Error Log
+Error Message,Error Message
+Escalate To,Escalate To
+Escalated,Escalated
+Escalation,Escalation
+Europe/London,Europe/London
+Event Count,Event Count
+Event Key,Event Key
+Event Type,Event Type
+Events,Events
+events,events
+Exact,Exact
+Exclude Keywords,Exclude Keywords
+Execution Log,Execution Log
+Executive Summary,Executive Summary
+Exit Conditions,Exit Conditions
+Exited,Exited
+Expat,Expat
+Expats,Expats
+Expiry Date,Expiry Date
+External Services,External Services
+Extra points awarded when this badge is earned,Extra points awarded when this badge is earned
+Facebook,Facebook
+Facebook Page,Facebook Page
+Facebook Page ID,Facebook Page ID
+Facebook/Instagram Marketing API token,Facebook/Instagram Marketing API token
+Failed,Failed
+Failed to load 360° view.,Failed to load 360° view.
+Failed to load gamification data,Failed to load gamification data
+Failed to load manager data,Failed to load manager data
+Failed to load workspace data,Failed to load workspace data
+Fake Follower Score,Fake Follower Score
+Fallback Message,Fallback Message
+Family,Family
+Family Office,Family Office
+Feature Toggles,Feature Toggles
+Fee,Fee
+Field,Field
+Field Name,Field Name
+"Field name on the reference document (e.g. grand_total, duration)","Field name on the reference document (e.g. grand_total, duration)"
+Field to Check,Field to Check
+Field Visibility,Field Visibility
+"Fieldname to check for duplicates (e.g., email_id, phone, company_name)","Fieldname to check for duplicates (e.g., email_id, phone, company_name)"
+Filter JSON,Filter JSON
+Filter JSON must be a list of filter arrays,Filter JSON must be a list of filter arrays
+Filters,Filters
+Final Points,Final Points
+Final Response,Final Response
+Finance,Finance
+Financial Data,Financial Data
+First Touch,First Touch
+First Touch Date,First Touch Date
+Flag if agent earns more than this many points in a single day,Flag if agent earns more than this many points in a single day
+Flagged as Suspicious,Flagged as Suspicious
+Follow Up,Follow Up
+Followers Count,Followers Count
+For pulling Google Business reviews,For pulling Google Business reviews
+"Frappe filter format: [[doctype, field, operator, value], ...]","Frappe filter format: [[doctype, field, operator, value], ...]"
+Free-form notes appended to the script,Free-form notes appended to the script
+Friday,Friday
+From Date,From Date
+Full Call Script,Full Call Script
+Full Name,Full Name
+Fuzzy,Fuzzy
+Fuzzy Threshold (%),Fuzzy Threshold (%)
+Gamification,Gamification
+Gamification Badge,Gamification Badge
+Gamification Challenge,Gamification Challenge
+Gamification Enabled,Gamification Enabled
+Gamification Event,Gamification Event
+Gamification Hub,Gamification Hub
+Gamification Level,Gamification Level
+Gamification Master Controls,Gamification Master Controls
+Gamification Settings,Gamification Settings
+General,General
+General Settings,General Settings
+Generate AI Content,Generate AI Content
+Generated Content,Generated Content
+Generated Image Url,Generated Image Url
+Generated Output,Generated Output
+Generating,Generating
+geographic,geographic
+Go to AuraCRM Workspace,Go to AuraCRM Workspace
+Gold,Gold
+Google,Google
+Google Ads Customer ID,Google Ads Customer ID
+Google Ads Developer Token,Google Ads Developer Token
+Google Business URL,Google Business URL
+Google CSE API Key,Google CSE API Key
+Google CSE ID,Google CSE ID
+Google CSE Queries,Google CSE Queries
+Google Maps,Google Maps
+Google Place ID,Google Place ID
+Google Places API Key,Google Places API Key
+Google Search,Google Search
+greater_than,greater_than
+Greeting Message,Greeting Message
+Guidelines for AI-generated content tone and style,Guidelines for AI-generated content tone and style
+HeyGen API Key,HeyGen API Key
+Hidden until earned — adds surprise element,Hidden until earned — adds surprise element
+High-Value Deal Threshold,High-Value Deal Threshold
+Higher = more important (used for rule precedence),Higher = more important (used for rule precedence)
+Higher number = higher priority in queue,Higher number = higher priority in queue
+Higher priority rules override lower ones. First matching rule wins.,Higher priority rules override lower ones. First matching rule wins.
+Higher weight = more leads (for weighted distribution),Higher weight = more leads (for weighted distribution)
+Highlight Fields,Highlight Fields
+Holiday checking API,Holiday checking API
+Home,Home
+Hot (80-100),Hot (80-100)
+Hour of day when a new streak day begins (0-23),Hour of day when a new streak day begins (0-23)
+Hours,Hours
+How leads are assigned to agents,How leads are assigned to agents
+How many consecutive missed days before streak resets to 0,How many consecutive missed days before streak resets to 0
+How many times the event must occur to complete the challenge,How many times the event must occur to complete the challenge
+Hub Dashboard,Hub Dashboard
+Human Handoff Keywords,Human Handoff Keywords
+Human Queue,Human Queue
+Humorous,Humorous
+Hunt Config,Hunt Config
+Hunt Configs,Hunt Configs
+Hunt Logs,Hunt Logs
+Hunt Name,Hunt Name
+Hunter,Hunter
+Icon,Icon
+"If checked, segment members are recalculated dynamically from filters","If checked, segment members are recalculated dynamically from filters"
+"If unchecked, agents only see their own rank","If unchecked, agents only see their own rank"
+If-then automation for CRM events,If-then automation for CRM events
+Ignore,Ignore
+Ignored,Ignored
+Image,Image
+Image generation,Image generation
+Image Prompt,Image Prompt
+Import,Import
+In Progress,In Progress
+in_list,in_list
+Inactive,Inactive
+Individual,Individual
+Individual Contributor,Individual Contributor
+Industry,Industry
+Industry Preset,Industry Preset
+Industry Terminology,Industry Terminology
+Inflation Hedger,Inflation Hedger
+Inflation Hedgers,Inflation Hedgers
+Influencer,Influencer
+Influencer Campaign,Influencer Campaign
+Influencer Campaign Row,Influencer Campaign Row
+Influencer Profile,Influencer Profile
+Influencers,Influencers
+Input,Input
+Inspiring,Inspiring
+Instagram,Instagram
+Instagram Business Account ID,Instagram Business Account ID
+Instagram Handle,Instagram Handle
+Instructions shown before the call connects,Instructions shown before the call connects
+Instructions/tips shown to agent before calling,Instructions/tips shown to agent before calling
+Insufficient permissions,Insufficient permissions
+Intel Entries,Intel Entries
+Intel Type,Intel Type
+Interaction Automation Rule,Interaction Automation Rule
+Interaction Queue,Interaction Queue
+Interaction Type,Interaction Type
+Interactions,Interactions
+Interested,Interested
+Invalid JSON in filters: {0},Invalid JSON in filters: {0}
+Invited,Invited
+Is Active,Is Active
+Is Broker Detected,Is Broker Detected
+Is Competitor Review,Is Competitor Review
+Is Default,Is Default
+Is Verified,Is Verified
+is_not_set,is_not_set
+is_set,is_set
+"Jinja variables: {{ lead_name }}, {{ company }}, {{ agent_name }}, {{ phone }}","Jinja variables: {{ lead_name }}, {{ company }}, {{ agent_name }}, {{ phone }}"
+Journey,Journey
+Journey Days,Journey Days
+Journey Name,Journey Name
+Journey Steps,Journey Steps
+Journey Touchpoint,Journey Touchpoint
+Journeys,Journeys
+"JSON array of checklist items, e.g. [""Confirm email"",""Schedule follow-up"",""Update status""]","JSON array of checklist items, e.g. [""Confirm email"",""Schedule follow-up"",""Update status""]"
+"JSON array of contact field names to display, e.g. [""company_name"",""territory"",""annual_revenue""]","JSON array of contact field names to display, e.g. [""company_name"",""territory"",""annual_revenue""]"
+JSON array of field names to highlight prominently,JSON array of field names to highlight prominently
+"JSON array of field names to show during call, e.g. [""company_name"",""territory"",""annual_revenue""]","JSON array of field names to show during call, e.g. [""company_name"",""territory"",""annual_revenue""]"
+"JSON log of each step execution: [{step_idx, step_name, channel, status, sent_at, error}]","JSON log of each step execution: [{step_idx, step_name, channel, status, sent_at, error}]"
+Key Fields,Key Fields
+Key Message,Key Message
+Keyword Filters,Keyword Filters
+Language,Language
+Last Attempt,Last Attempt
+Last Calculated,Last Calculated
+Last Call,Last Call
+Last Checked,Last Checked
+Last Price Check,Last Price Check
+Last Profiled At,Last Profiled At
+Last Roi Check,Last Roi Check
+Last Step At,Last Step At
+Last Step Name,Last Step Name
+Last Synced,Last Synced
+Last Touch,Last Touch
+Last Updated,Last Updated
+Last Viewed At,Last Viewed At
+Lead,Lead
+Lead Actions,Lead Actions
+Lead Capture,Lead Capture
+Lead Count,Lead Count
+Lead Created,Lead Created
+Lead Distribution Rule,Lead Distribution Rule
+"Lead field to evaluate (e.g. source, industry, company_name)","Lead field to evaluate (e.g. source, industry, company_name)"
+Lead Label,Lead Label
+Lead Management,Lead Management
+Lead Metrics,Lead Metrics
+Lead Name,Lead Name
+Lead name is required,Lead name is required
+Lead Owner,Lead Owner
+Lead Profiles,Lead Profiles
+Lead Score,Lead Score
+Lead Score Changed,Lead Score Changed
+Lead Score Distribution,Lead Score Distribution
+Lead Score Log,Lead Score Log
+Lead Scoring,Lead Scoring
+Lead scoring criteria and weights,Lead scoring criteria and weights
+Lead Scoring Enabled,Lead Scoring Enabled
+Lead Scoring Rule,Lead Scoring Rule
+Lead Segment,Lead Segment
+Lead Targeted,Lead Targeted
+Lead {0} not found,Lead {0} not found
+Leaderboard,Leaderboard
+Leaderboard Configuration,Leaderboard Configuration
+Leaderboard Period,Leaderboard Period
+Leads,Leads
+Leads (MTD),Leads (MTD)
+Leads Assigned,Leads Assigned
+Leads Contacted,Leads Contacted
+Leads Converted,Leads Converted
+Leads Created,Leads Created
+Leads Disqualified,Leads Disqualified
+Leads Gen.,Leads Gen.
+Leads Generated,Leads Generated
+left,left
+less_than,less_than
+Level Color,Level Color
+Level Name,Level Name
+Level Number,Level Number
+Level Perks,Level Perks
+Level Progression,Level Progression
+Level Up!,Level Up!
+levels,levels
+Levels,Levels
+Lifestyle,Lifestyle
+Linear,Linear
+Link to AZ Call Log or Communication,Link to AZ Call Log or Communication
+LinkedIn,LinkedIn
+LinkedIn Access Token,LinkedIn Access Token
+LinkedIn Organization ID,LinkedIn Organization ID
+LinkedIn Sales Nav URL,LinkedIn Sales Nav URL
+Linkedin Url,Linkedin Url
+List,List
+List Members,List Members
+List Name,List Name
+Lists,Lists
+load_based,load_based
+Loading 360° view…,Loading 360° view…
+Loading badges...,Loading badges...
+Loading call context...,Loading call context...
+Loading challenges...,Loading challenges...
+Loading Gamification Hub...,Loading Gamification Hub...
+Loading...,Loading...
+Loading…,Loading…
+Lookback Window Days,Lookback Window Days
+Lower number = higher priority,Lower number = higher priority
+Lusha,Lusha
+Lusha API Key,Lusha API Key
+Lusha enrichment API key,Lusha enrichment API key
+Luxury,Luxury
+Lv.,Lv.
+Manager,Manager
+Manual,Manual
+manual_pool,manual_pool
+Marketing,Marketing
+Marketing List,Marketing List
+Marketing List Member,Marketing List Member
+Marketing Lists,Marketing Lists
+Marketing Manager,Marketing Manager
+Marketing Mgr,Marketing Mgr
+Master toggle for the entire gamification system,Master toggle for the entire gamification system
+Match Field 1,Match Field 1
+Match Field 2,Match Field 2
+Match Field 3,Match Field 3
+Match Fields,Match Fields
+Match Type,Match Type
+Matched Rule,Matched Rule
+Max Concurrent Calls,Max Concurrent Calls
+Max Concurrent Leads,Max Concurrent Leads
+Max History Items,Max History Items
+Max Level!,Max Level!
+Max Open Items,Max Open Items
+Max Points Per Occurrence,Max Points Per Occurrence
+Max Results Per Run,Max Results Per Run
+Max Streak Multiplier,Max Streak Multiplier
+Maximum concurrent open leads/opportunities,Maximum concurrent open leads/opportunities
+Maximum Lead Score,Maximum Lead Score
+Maximum times this event can earn points per day. 0 = unlimited.,Maximum times this event can earn points per day. 0 = unlimited.
+Media Asset,Media Asset
+Media Assets,Media Assets
+Member,Member
+Member Count,Member Count
+Member not found in list,Member not found in list
+Members,Members
+Mention,Mention
+Merge,Merge
+Merge Suggestion,Merge Suggestion
+Message,Message
+Messages,Messages
+Messages Sent,Messages Sent
+Meta,Meta
+Meta Access Token,Meta Access Token
+Meta Ad Account ID,Meta Ad Account ID
+Meta Page Access Token,Meta Page Access Token
+Metadata,Metadata
+Metrics,Metrics
+Milestone,Milestone
+Minimum minutes between earning points from this event. 0 = no cooldown.,Minimum minutes between earning points from this event. 0 = no cooldown.
+Minimum Points,Minimum Points
+Minutes,Minutes
+Mixed,Mixed
+mixed,mixed
+Model for quality content generation,Model for quality content generation
+"Model for quick tasks (profiling, tagging)","Model for quick tasks (profiling, tagging)"
+Model Name,Model Name
+Model Type,Model Type
+Model Used,Model Used
+Models,Models
+Monday,Monday
+Monitoring Active,Monitoring Active
+monthly,monthly
+Monthly,Monthly
+Monthly Revenue Target,Monthly Revenue Target
+Moved to,Moved to
+Multiplier Applied,Multiplier Applied
+Multiplier Description,Multiplier Description
+Multiplier Factor,Multiplier Factor
+Multiplier Factor cannot be negative,Multiplier Factor cannot be negative
+My Open Leads,My Open Leads
+N/A,N/A
+Name,Name
+Negative,Negative
+Negative Review,Negative Review
+Negotiating,Negotiating
+Neutral,Neutral
+New,New
+New Ad,New Ad
+New Campaign,New Campaign
+New Classification,New Classification
+New Content,New Content
+New Context Rule,New Context Rule
+New Dialer Campaign,New Dialer Campaign
+New Document,New Document
+New List,New List
+New Offer,New Offer
+New Rule,New Rule
+New Score,New Score
+New Sequence,New Sequence
+Next Action At,Next Action At
+Next Node Id,Next Node Id
+Next Retry At,Next Retry At
+Next Step Due,Next Step Due
+Niche,Niche
+No active breaches,No active breaches
+No active challenges,No active challenges
+No active enrollment found for this contact,No active enrollment found for this contact
+No activity yet. Start earning points!,No activity yet. Start earning points!
+No agent data available,No agent data available
+No Answer,No Answer
+No Audience Segment linked,No Audience Segment linked
+No available agents in this rule,No available agents in this rule
+No classifications,No classifications
+No communications,No communications
+No communications yet.,No communications yet.
+No Contact Classification linked,No Contact Classification linked
+No contact linked to this customer,No contact linked to this customer
+No contacts found in the audience segment,No contacts found in the audience segment
+No data,No data
+No data found.,No data found.
+No data yet,No data yet
+No details available.,No details available.
+No enrollments found. Link an Audience Segment or create enrollments manually.,No enrollments found. Link an Audience Segment or create enrollments manually.
+No leads assigned,No leads assigned
+No lists yet,No lists yet
+No phone number found for this customer,No phone number found for this customer
+No pipeline stages,No pipeline stages
+No recent communications,No recent communications
+No related records.,No related records.
+No rules yet,No rules yet
+No score history found,No score history found
+No segments,No segments
+No tasks or assignments.,No tasks or assignments.
+No team members found,No team members found
+No templates,No templates
+Node Id,Node Id
+Node Type,Node Type
+Nodes,Nodes
+None,None
+Not Contacted,Not Contacted
+Not Interested,Not Interested
+Not Responded,Not Responded
+not_equals,not_equals
+Notes,Notes
+Notification Settings,Notification Settings
+Notify Agent,Notify Agent
+Notify on Badge Earned,Notify on Badge Earned
+Notify on Challenge Complete,Notify on Challenge Complete
+Notify on Level Up,Notify on Level Up
+Notify on Points Earned,Notify on Points Earned
+Number of days without interaction before score starts decaying,Number of days without interaction before score starts decaying
+Nurture,Nurture
+Nurture Journey,Nurture Journey
+Nurture Lead Instance,Nurture Lead Instance
+Nurture Step,Nurture Step
+Occurred At,Occurred At
+Off,Off
+Old,Old
+Old Score,Old Score
+On,On
+On Duplicate,On Duplicate
+Only active campaigns can be paused,Only active campaigns can be paused
+Only active sequences can be paused,Only active sequences can be paused
+Only check items with this status,Only check items with this status
+Only execute if this evaluates to true. E.g.: {{ not responded }},Only execute if this evaluates to true. E.g.: {{ not responded }}
+Open Breaches,Open Breaches
+Open Leads,Open Leads
+Open Tasks,Open Tasks
+openai,openai
+OpenAI API Key,OpenAI API Key
+Operator,Operator
+Opportunities,Opportunities
+Opportunities Lost,Opportunities Lost
+Opportunities Won,Opportunities Won
+Opportunity,Opportunity
+Opportunity Lead,Opportunity Lead
+Opportunity status that triggers auto deal room creation,Opportunity status that triggers auto deal room creation
+Opps,Opps
+Opt Out Count,Opt Out Count
+Opt Outs,Opt Outs
+Opt-Out Reason,Opt-Out Reason
+Opted Out,Opted Out
+Optimal Time Calculated,Optimal Time Calculated
+Optimal Time Override,Optimal Time Override
+Optimal Time Rule,Optimal Time Rule
+Optimal Times,Optimal Times
+Optional badge awarded on completion,Optional badge awarded on completion
+Optional condition that multiplies base points when met,Optional condition that multiplies base points when met
+Options,Options
+Organic Social,Organic Social
+OSINT,OSINT
+OSINT & Enrichment APIs,OSINT & Enrichment APIs
+OSINT hunt '{0}' queued for lead {1},OSINT hunt '{0}' queued for lead {1}
+OSINT Hunt Configuration,OSINT Hunt Configuration
+OSINT Hunt Log,OSINT Hunt Log
+OSINT Intelligence,OSINT Intelligence
+OSINT Outreach,OSINT Outreach
+OSINT Raw Result,OSINT Raw Result
+Osint Result,Osint Result
+Outbound,Outbound
+Outbound calling campaign setup,Outbound calling campaign setup
+Overall Score,Overall Score
+Partial,Partial
+Participants,Participants
+Partnerships,Partnerships
+Past Brand Partnerships,Past Brand Partnerships
+Paused,Paused
+Paused At,Paused At
+Paused Reason,Paused Reason
+Pending,Pending
+Pending Approval,Pending Approval
+Performance Metrics,Performance Metrics
+Performance Snapshot,Performance Snapshot
+Performance Targets (for target-based events),Performance Targets (for target-based events)
+performance_based,performance_based
+Period,Period
+Phone,Phone
+Phone Call,Phone Call
+Phone Found,Phone Found
+Phone Number,Phone Number
+Phone number is too short: {0},Phone number is too short: {0}
+Phonetic,Phonetic
+Pinterest,Pinterest
+Pipeline Board,Pipeline Board
+Pipeline Flow,Pipeline Flow
+Pipeline Progress,Pipeline Progress
+Pipeline Report,Pipeline Report
+Pipeline Stage,Pipeline Stage
+Pipeline Value,Pipeline Value
+Platform,Platform
+Platform AdSet ID,Platform AdSet ID
+Platform Campaign ID,Platform Campaign ID
+Platform Insights,Platform Insights
+Platform Post Id,Platform Post Id
+Platform Post Url,Platform Post Url
+Platform Review Id,Platform Review Id
+Platform Search,Platform Search
+Platinum,Platinum
+Points,Points
+Points Configuration,Points Configuration
+Points Log,Points Log
+Points System,Points System
+Points to add when matched (-100 to 100),Points to add when matched (-100 to 100)
+Points to subtract per day of inactivity,Points to subtract per day of inactivity
+Policy Name,Policy Name
+Poll,Poll
+Portfolio Items,Portfolio Items
+Position Based,Position Based
+Positive,Positive
+Positive Review,Positive Review
+Post,Post
+Post Id,Post Id
+Post-Call Checklist,Post-Call Checklist
+Power Dialer,Power Dialer
+Pre-Call Briefing,Pre-Call Briefing
+Predictive,Predictive
+Preset Applied On,Preset Applied On
+Preset Code,Preset Code
+Preset Name,Preset Name
+Preview,Preview
+Preview Agent Call Context,Preview Agent Call Context
+Preview Agent View,Preview Agent View
+Price Alert Triggered,Price Alert Triggered
+Price Change,Price Change
+Pricing,Pricing
+Priority,Priority
+Priority Score,Priority Score
+Processed,Processed
+Processing,Processing
+Processing Date,Processing Date
+Product Label,Product Label
+Professional,Professional
+Professional Profile,Professional Profile
+Profile Url,Profile Url
+Profiles,Profiles
+Progress,Progress
+Promotion,Promotion
+Property Finder,Property Finder
+Property Portfolio Item,Property Portfolio Item
+Property Type,Property Type
+Property Unit,Property Unit
+Property Viewed,Property Viewed
+Provider,Provider
+Provider Results,Provider Results
+Providers Attempted,Providers Attempted
+Psychological Driver,Psychological Driver
+pts,pts
+pts to,pts to
+Publish Results,Publish Results
+Published,Published
+Published At,Published At
+Publishing,Publishing
+Publishing Queue,Publishing Queue
+Publishing Results,Publishing Results
+Purchase Date,Purchase Date
+Purchase Price,Purchase Price
+Qualification Fields,Qualification Fields
+Quality,Quality
+Quality & Compliance,Quality & Compliance
+Quality Analyst,Quality Analyst
+Quarterly,Quarterly
+Question,Question
+Queue,Queue
+Queued,Queued
+Rank,Rank
+Rate,Rate
+Rating,Rating
+Raw Data,Raw Data
+Raw Results,Raw Results
+Read Count,Read Count
+Real Estate,Real Estate
+Reason,Reason
+Rebalance Workload,Rebalance Workload
+Rebalance workload across agents?,Rebalance workload across agents?
+Rebalanced,Rebalanced
+Received At,Received At
+Recent Breaches,Recent Breaches
+Recent Communications,Recent Communications
+Recipient Count,Recipient Count
+Reel,Reel
+Reference,Reference
+Reference DocType,Reference DocType
+Reference Name,Reference Name
+Referral,Referral
+Rejected,Rejected
+Related,Related
+Related Event,Related Event
+Reminder,Reminder
+Replied,Replied
+Replied At,Replied At
+Reply Count,Reply Count
+Repurposed Outputs,Repurposed Outputs
+Reputation,Reputation
+Reputation Management,Reputation Management
+Request Type,Request Type
+Resale Interest,Resale Interest
+Resolved,Resolved
+Respect per-event cooldown periods to prevent spam,Respect per-event cooldown periods to prevent spam
+Respect per-event daily maximums,Respect per-event daily maximums
+Responded,Responded
+Responded At,Responded At
+Response,Response
+Response Configuration,Response Configuration
+Response Status,Response Status
+Response Template,Response Template
+Response Time,Response Time
+Response Time (Minutes),Response Time (Minutes)
+Response time thresholds and escalation,Response time thresholds and escalation
+Response Type,Response Type
+Responses,Responses
+Result,Result
+Result Data,Result Data
+Results,Results
+Results Found,Results Found
+Results Processed,Results Processed
+Retry,Retry
+Retry Attempts,Retry Attempts
+Retry Attempts cannot be negative,Retry Attempts cannot be negative
+Retry Attempts is set very high (>10). Consider reducing.,Retry Attempts is set very high (>10). Consider reducing.
+Retry Interval (min),Retry Interval (min)
+Retry Interval must be at least 1 minute,Retry Interval must be at least 1 minute
+Revenue Threshold,Revenue Threshold
+Review,Review
+Review Content,Review Content
+Review Date,Review Date
+Review Entry,Review Entry
+Review Text,Review Text
+Reviewer Name,Reviewer Name
+Reviews,Reviews
+Reward,Reward
+Reward Badge,Reward Badge
+Reward Points,Reward Points
+Rewards,Rewards
+Ringing,Ringing
+ROI,ROI
+Room Title,Room Title
+Room Url Key,Room Url Key
+round_robin,round_robin
+RSS,RSS
+RSS Feed URLs,RSS Feed URLs
+Rule,Rule
+Rule is disabled,Rule is disabled
+Rule Name,Rule Name
+Rule {0} not found,Rule {0} not found
+Run,Run
+Run Date,Run Date
+Run Script,Run Script
+Sales Activity,Sales Activity
+Sales Agent,Sales Agent
+Sales Agent Workspace,Sales Agent Workspace
+Sales Manager,Sales Manager
+Sales Manager — Team Dashboard,Sales Manager — Team Dashboard
+Sales User,Sales User
+Saturday,Saturday
+Schedule,Schedule
+Scheduled,Scheduled
+Scheduled At,Scheduled At
+Scheduled Datetime,Scheduled Datetime
+Scheduled time for next retry attempt,Scheduled time for next retry attempt
+Score,Score
+Score Decay After (Days),Score Decay After (Days)
+Score Decay Points/Day,Score Decay Points/Day
+Score History,Score History
+Score History -,Score History -
+Score Logs,Score Logs
+Scorecard recalculated for {0},Scorecard recalculated for {0}
+Scorecards recalculated for {0} agents,Scorecards recalculated for {0} agents
+Scoring Configuration,Scoring Configuration
+Scoring Criteria,Scoring Criteria
+Scoring Criterion,Scoring Criterion
+Scoring Rules,Scoring Rules
+"Scoring, SLA, distribution toggles","Scoring, SLA, distribution toggles"
+Script shown to agent during calls with contacts in this classification,Script shown to agent during calls with contacts in this classification
+Script template shown to agent. Supports Jinja with contact fields.,Script template shown to agent. Supports Jinja with contact fields.
+Script/template to display to agent during call,Script/template to display to agent during call
+Search Configuration,Search Configuration
+Secondary Field,Secondary Field
+Secret Badge,Secret Badge
+Secret badge — keep playing to discover!,Secret badge — keep playing to discover!
+Seed Defaults,Seed Defaults
+Seeded,Seeded
+Segment,Segment
+Segment Name,Segment Name
+Segments,Segments
+Segments & Templates,Segments & Templates
+Selected Assets,Selected Assets
+Send Email,Send Email
+Send Notification,Send Notification
+Send SMS,Send SMS
+Send WhatsApp,Send WhatsApp
+Sending,Sending
+Senior,Senior
+Seniority,Seniority
+Sent,Sent
+Sent Count,Sent Count
+Sentiment,Sentiment
+Sentiment Filter,Sentiment Filter
+Sequence,Sequence
+Sequence activated,Sequence activated
+Sequence can only be activated from Draft or Paused status,Sequence can only be activated from Draft or Paused status
+Sequence Enrollment,Sequence Enrollment
+Sequence Name,Sequence Name
+Sequence Steps,Sequence Steps
+Set Field Value,Set Field Value
+Settings,Settings
+Settings Hub,Settings Hub
+Shift Name,Shift Name
+Shift overlaps with {0} ({1} - {2}),Shift overlaps with {0} ({1} - {2})
+Shift Timing,Shift Timing
+Short,Short
+Show Campaign Information,Show Campaign Information
+Show confetti / toast on milestone achievements,Show confetti / toast on milestone achievements
+Show Contact History,Show Contact History
+Show Last Call Summary,Show Last Call Summary
+Show Lead Score,Show Lead Score
+Show Rank Changes,Show Rank Changes
+Show realtime toast when points are earned,Show realtime toast when points are earned
+Show SLA Status,Show SLA Status
+Show Top N Agents,Show Top N Agents
+Show warning when this percentage of SLA time has elapsed,Show warning when this percentage of SLA time has elapsed
+"Shown to agents, e.g. 'Calls over 3 minutes earn 1.5× points'","Shown to agents, e.g. 'Calls over 3 minutes earn 1.5× points'"
+Shown when badge is earned. Supports {{ agent_name }},Shown when badge is earned. Supports {{ agent_name }}
+Shows,Shows
+Silver,Silver
+skill_based,skill_based
+Skills,Skills
+Skipped,Skipped
+Skipped-Holiday,Skipped-Holiday
+SLA & Quality,SLA & Quality
+SLA Breach Log,SLA Breach Log
+SLA Breached,SLA Breached
+SLA Breaches,SLA Breaches
+SLA Compliance,SLA Compliance
+SLA Configuration,SLA Configuration
+SLA Deadline,SLA Deadline
+SLA OK,SLA OK
+SLA Policies,SLA Policies
+SLA Policy,SLA Policy
+SLA Status,SLA Status
+SLA Tracking,SLA Tracking
+SLA Tracking Enabled,SLA Tracking Enabled
+SLA Warning Threshold (%),SLA Warning Threshold (%)
+SMS,SMS
+Snapchat,Snapchat
+Snippet,Snippet
+Social & Content,Social & Content
+Social Account,Social Account
+Social Comment,Social Comment
+Social Mention,Social Mention
+Social Performance,Social Performance
+Social Post,Social Post
+Social Profiles,Social Profiles
+Social Publishing,Social Publishing
+Softphone not available,Softphone not available
+Sold Post Language,Sold Post Language
+Sold via Us,Sold via Us
+Sold-Proof Platforms,Sold-Proof Platforms
+Source,Source
+Source Url,Source Url
+Spam,Spam
+Special,Special
+Stability AI API Key,Stability AI API Key
+Stage,Stage
+Stale (>30d),Stale (>30d)
+Stale Leads,Stale Leads
+Start Date,Start Date
+Start Time,Start Time
+Statistics,Statistics
+Status,Status
+Status Changed,Status Changed
+Status Filter,Status Filter
+Step History,Step History
+Step Name,Step Name
+Step Order,Step Order
+Step {0} must have a channel,Step {0} must have a channel
+Steps,Steps
+Story,Story
+Story Caption,Story Caption
+Story Reaction,Story Reaction
+Story Reply,Story Reply
+Streak,Streak
+Streak Configuration,Streak Configuration
+Streak Day,Streak Day
+Streak Day Starts At (Hour),Streak Day Starts At (Hour)
+Streak Days,Streak Days
+Streak Multiplier Per Day,Streak Multiplier Per Day
+Streak Resets After (Missed Days),Streak Resets After (Missed Days)
+Subject,Subject
+Subject is required for Email templates,Subject is required for Email templates
+Success,Success
+Successful,Successful
+Suggested Opening Line,Suggested Opening Line
+Sunday,Sunday
+Suspicious Activity Threshold,Suspicious Activity Threshold
+Synced,Synced
+System Manager,System Manager
+System Status,System Status
+Tag,Tag
+Tag Label,Tag Label
+Target,Target
+Target Audience Segment,Target Audience Segment
+Target Count,Target Count
+Target Countries (ISO codes),Target Countries (ISO codes)
+Target Day,Target Day
+Target DocType,Target DocType
+Target Event,Target Event
+Target Platform Row,Target Platform Row
+Target Platforms,Target Platforms
+Target Segment,Target Segment
+Target Value,Target Value
+Task,Task
+Tasks,Tasks
+Tax Refugee,Tax Refugee
+Tax Refugees,Tax Refugees
+Team,Team
+Team Collaboration,Team Collaboration
+Team Conversions (MTD),Team Conversions (MTD)
+Team Dashboard,Team Dashboard
+Team Members,Team Members
+Tech,Tech
+Tech Founder,Tech Founder
+Tech Founders,Tech Founders
+Telegram,Telegram
+Template,Template
+Template Name,Template Name
+Template rendering error: {0},Template rendering error: {0}
+Template syntax error: {0},Template syntax error: {0}
+Templates,Templates
+Term for Agent,Term for Agent
+Term for Company,Term for Company
+Term for Deal,Term for Deal
+Term for Lead,Term for Lead
+Term for Product,Term for Product
+Terminology,Terminology
+The event participants must accumulate,The event participants must accumulate
+This challenge is not active,This challenge is not active
+This contact is already in the list,This contact is already in the list
+This Month,This Month
+This Week,This Week
+"This will create default events, badges, and levels. Continue?","This will create default events, badges, and levels. Continue?"
+Thread,Thread
+Threads,Threads
+Thursday,Thursday
+Tier,Tier
+TikTok,TikTok
+TikTok Access Token,TikTok Access Token
+Time Decay,Time Decay
+Time Period,Time Period
+Timeline,Timeline
+Timestamp,Timestamp
+Timestamps,Timestamps
+Timezone,Timezone
+Title,Title
+To Date,To Date
+Today,Today
+Today Assigned,Today Assigned
+Toggle Sidebar,Toggle Sidebar
+Token Count,Token Count
+Tone,Tone
+Top Post,Top Post
+Topic,Topic
+Total,Total
+Total Assigned,Total Assigned
+Total Budget,Total Budget
+Total Clicks,Total Clicks
+Total Contacts,Total Contacts
+Total Converted,Total Converted
+Total Deals (7d),Total Deals (7d)
+Total Engagement,Total Engagement
+Total Entries,Total Entries
+Total Impressions,Total Impressions
+Total Leads,Total Leads
+Total Members,Total Members
+Total Open Leads,Total Open Leads
+Total Participants,Total Participants
+Total Points,Total Points
+Total Posts,Total Posts
+Total Reach,Total Reach
+Total Revenue,Total Revenue
+Total Revenue (7d),Total Revenue (7d)
+Total Steps,Total Steps
+Total Time (seconds),Total Time (seconds)
+Total Value,Total Value
+Total Value (K),Total Value (K)
+Total Views,Total Views
+Touchpoint Type,Touchpoint Type
+Touchpoint Weights,Touchpoint Weights
+Touchpoints,Touchpoints
+Tracking Link,Tracking Link
+Transfer,Transfer
+Travel,Travel
+Trigger,Trigger
+Trigger DocType,Trigger DocType
+Trigger Event,Trigger Event
+Trigger Field,Trigger Field
+Trigger Keywords,Trigger Keywords
+Trigger Segment,Trigger Segment
+Trigger Type,Trigger Type
+Trigger Value,Trigger Value
+Triggered By,Triggered By
+TripAdvisor,TripAdvisor
+TrueCaller,TrueCaller
+TrueCaller API Key,TrueCaller API Key
+Truecaller Result,Truecaller Result
+Trustpilot,Trustpilot
+Tuesday,Tuesday
+Twitter,Twitter
+Twitter/X Bearer Token,Twitter/X Bearer Token
+Type,Type
+Unable to load settings,Unable to load settings
+Unassigned Leads,Unassigned Leads
+"Unique identifier, e.g. call_completed, deal_won","Unique identifier, e.g. call_completed, deal_won"
+Unit Type,Unit Type
+Unknown,Unknown
+Unsubscribed,Unsubscribed
+Urgent,Urgent
+Url,Url
+Used in AI-generated review responses,Used in AI-generated review responses
+User,User
+User to notify on SLA breach,User to notify on SLA breach
+Username,Username
+UTC,UTC
+UTM Parameters,UTM Parameters
+Value,Value
+Value Changed,Value Changed
+Value to compare against. For in_list: comma-separated values,Value to compare against. For in_list: comma-separated values
+Vapi API Key,Vapi API Key
+Variable Mapping,Variable Mapping
+Variables,Variables
+Verified At,Verified At
+Video,Video
+Video personalization,Video personalization
+Video Script,Video Script
+View Log,View Log
+Viewer,Viewer
+Visible Contact Fields,Visible Contact Fields
+Visible Contact Fields must be valid JSON,Visible Contact Fields must be valid JSON
+Visible Fields,Visible Fields
+Visible to All Agents,Visible to All Agents
+Visual CRM Platform with Unified Communications,Visual CRM Platform with Unified Communications
+Visual Dashboards,Visual Dashboards
+Voice AI agents,Voice AI agents
+Voicemail,Voicemail
+VP,VP
+Wait,Wait
+Warm (60-79),Warm (60-79)
+Warn,Warn
+Website,Website
+Website Visit,Website Visit
+Wednesday,Wednesday
+Weekly,Weekly
+weekly,weekly
+Weekly Deals Target,Weekly Deals Target
+Weeks,Weeks
+Weight,Weight
+weighted_round_robin,weighted_round_robin
+Welcome,Welcome
+What must the agent achieve to earn this badge?,What must the agent achieve to earn this badge?
+What the agent sees when calling a contact in this classification,What the agent sees when calling a contact in this classification
+WhatsApp,WhatsApp
+WhatsApp Account,WhatsApp Account
+WhatsApp Broadcast,WhatsApp Broadcast
+WhatsApp Chatbot,WhatsApp Chatbot
+WhatsApp Cloud API Token,WhatsApp Cloud API Token
+WhatsApp Configuration,WhatsApp Configuration
+WhatsApp Phone Number ID,WhatsApp Phone Number ID
+WhatsApp Replied,WhatsApp Replied
+WhatsApp Reply,WhatsApp Reply
+WhatsApp Template,WhatsApp Template
+When,When
+When the next step should be executed,When the next step should be executed
+Working hours and availability,Working hours and availability
+Workload,Workload
+Workspaces,Workspaces
+Wrong Number,Wrong Number
+You are already participating in this challenge,You are already participating in this challenge
+You are now,You are now
+You do not have the '{0}' capability. Contact your administrator.,You do not have the '{0}' capability. Contact your administrator.
+You don't have access to this workspace,You don't have access to this workspace
+YouTube,YouTube
+⏭ Next Stage,⏭ Next Stage
+⚠️ Possible duplicates found: {0},⚠️ Possible duplicates found: {0}
+✅ No active breaches!,✅ No active breaches!
+🏆 Badge Earned!,🏆 Badge Earned!
+💬 WhatsApp,💬 WhatsApp
+📊 Opportunities,📊 Opportunities
+📞 Call,📞 Call
+📞 Call Contact,📞 Call Contact
+📧 Email,📧 Email
+🔀 Merge candidates found: {0}. Use the merge tool to combine records.,🔀 Merge candidates found: {0}. Use the merge tool to combine records.
+🔮 360° View,🔮 360° View
+Your property has appreciated by {0}%! Contact us to learn more.,Your property has appreciated by {0}%! Contact us to learn more.
+Your property has appreciated by {0}%! Contact us.,Your property has appreciated by {0}%! Contact us.
+License,License
+License Key,License Key
+License Status,License Status
+License Tier,License Tier
+License Source,License Source
+License Information,License Information
+Free,Free
+Premium,Premium
+Expired,Expired
+Invalid,Invalid
+Frappe Cloud,Frappe Cloud
+License Key Validation,License Key Validation
+Feature not available in Free tier,Feature not available in Free tier
+Upgrade to Premium,Upgrade to Premium
+This feature requires a Premium license,This feature requires a Premium license
+Premium Feature,Premium Feature
+Free Features,Free Features
+Premium Features,Premium Features
+Contact Management,Contact Management
+Basic Reports,Basic Reports
+AI Lead Scoring,AI Lead Scoring
+AI Content Generation,AI Content Generation
+AI Profiler,AI Profiler
+OSINT Engine,OSINT Engine
+Enrichment Engine,Enrichment Engine
+Advanced Analytics,Advanced Analytics
+Automation Builder,Automation Builder
+Reputation Engine,Reputation Engine
+License validated successfully,License validated successfully
+Invalid license key format,Invalid license key format
+Only System Manager can generate license keys,Only System Manager can generate license keys
+$14-52/user/mo,$14-52/user/mo
+$25-300/user/mo,$25-300/user/mo
+$9-69/user/mo,$9-69/user/mo
+25 fine-grained capabilities covering every AuraCRM module and action,25 fine-grained capabilities covering every AuraCRM module and action
+360° Customer Timeline,360° Customer Timeline
+360° Customer View,360° Customer View
+AI Intelligence,AI Intelligence
+AI Profile,AI Profile
+AI Scoring,AI Scoring
+"AI analyzes customer messages to detect frustration, urgency, and satisfaction","AI analyzes customer messages to detect frustration, urgency, and satisfaction"
+"AI identifies customers at risk of churning before they leave, enabling proactive retention","AI identifies customers at risk of churning before they leave, enabling proactive retention"
+AI suggests relevant articles from your knowledge base as you type responses,AI suggests relevant articles from your knowledge base as you type responses
+AI-Powered Visual CRM Platform,AI-Powered Visual CRM Platform
+"AI-generated alerts for at-risk deals, declining satisfaction, and missed SLAs","AI-generated alerts for at-risk deals, declining satisfaction, and missed SLAs"
+"AI-generated summaries highlighting opportunities, risks, and recommended actions","AI-generated summaries highlighting opportunities, risks, and recommended actions"
+AI-suggested answers from your knowledge base for faster resolution times,AI-suggested answers from your knowledge base for faster resolution times
+AI-weighted forecasts based on your team's historical win rates per stage,AI-weighted forecasts based on your team's historical win rates per stage
+AI-weighted pipeline forecasting based on historical win rates and deal velocity,AI-weighted pipeline forecasting based on historical win rates and deal velocity
+About AuraCRM,About AuraCRM
+Access control & field masking,Access control & field masking
+Action Gates,Action Gates
+Activity Overview,Activity Overview
+Activity Reports,Activity Reports
+Activity Tracking,Activity Tracking
+Add-on,Add-on
+"Agent scorecards, performance rankings, gamification challenges, and incentive tracking","Agent scorecards, performance rankings, gamification challenges, and incentive tracking"
+"Aggregate customer health combining deal activity, support tickets, and engagement metrics","Aggregate customer health combining deal activity, support tickets, and engagement metrics"
+"All teams report to you — Sales pipeline, Marketing ROI, Customer Service satisfaction, all unified in one platform.","All teams report to you — Sales pipeline, Marketing ROI, Customer Service satisfaction, all unified in one platform."
+Analytics & AI,Analytics & AI
+Analytics & ROI,Analytics & ROI
+Apply Industry Presets,Apply Industry Presets
+"As customer service agent, AuraCRM empowers you to resolve issues quickly and keep customers happy:","As customer service agent, AuraCRM empowers you to resolve issues quickly and keep customers happy:"
+"As general manager, AuraCRM gives you the big picture across sales, marketing, and service:","As general manager, AuraCRM gives you the big picture across sales, marketing, and service:"
+"As marketing manager, AuraCRM lets you run sophisticated campaigns and prove their impact on revenue:","As marketing manager, AuraCRM lets you run sophisticated campaigns and prove their impact on revenue:"
+"As sales manager, AuraCRM gives you the tools to track every deal, coach your team, and forecast revenue with confidence:","As sales manager, AuraCRM gives you the tools to track every deal, coach your team, and forecast revenue with confidence:"
+Atomic Capabilities,Atomic Capabilities
+Attribution Models,Attribution Models
+Audit Trail,Audit Trail
+AuraCRM Dashboard,AuraCRM Dashboard
+AuraCRM Entity Relationships,AuraCRM Entity Relationships
+AuraCRM Modules,AuraCRM Modules
+AuraCRM Onboarding,AuraCRM Onboarding
+AuraCRM declares its capabilities in hooks.py — CAPS auto-discovers and enforces them. No code changes needed.,AuraCRM declares its capabilities in hooks.py — CAPS auto-discovers and enforces them. No code changes needed.
+"AuraCRM delivers enterprise-grade CRM capabilities with full ERPNext integration — at zero licensing cost, fully open source.","AuraCRM delivers enterprise-grade CRM capabilities with full ERPNext integration — at zero licensing cost, fully open source."
+AuraCRM gives you complete visibility into team performance with actionable insights:,AuraCRM gives you complete visibility into team performance with actionable insights:
+"AuraCRM includes industry presets that configure pipelines, fields, scoring rules, and automation for your specific business domain.","AuraCRM includes industry presets that configure pipelines, fields, scoring rules, and automation for your specific business domain."
+"AuraCRM integrates natively with the Frappe/ERPNext ecosystem — no middleware, no external dependencies.","AuraCRM integrates natively with the Frappe/ERPNext ecosystem — no middleware, no external dependencies."
+"AuraCRM integrates with: ERPNext, Arrowz VoIP, CAPS, frappe_visual, WhatsApp, HRMS, and Frappe Core.","AuraCRM integrates with: ERPNext, Arrowz VoIP, CAPS, frappe_visual, WhatsApp, HRMS, and Frappe Core."
+"AuraCRM is an AI-powered visual CRM platform that combines lead management, sales pipeline, marketing automation, gamification, and unified communications into one seamless experience built on ERPNext.","AuraCRM is an AI-powered visual CRM platform that combines lead management, sales pipeline, marketing automation, gamification, and unified communications into one seamless experience built on ERPNext."
+Auto Dialer,Auto Dialer
+Auto Dialer (VoIP),Auto Dialer (VoIP)
+Auto Distribution,Auto Distribution
+"Auto-assign leads based on territory, skill, workload, or round-robin — no lead left behind","Auto-assign leads based on territory, skill, workload, or round-robin — no lead left behind"
+Automated SLA monitoring with breach logging,Automated SLA monitoring with breach logging
+"Automated SLA monitoring with countdown timers, escalation triggers, and breach alerts","Automated SLA monitoring with countdown timers, escalation triggers, and breach alerts"
+Automatic CSAT and NPS surveys after ticket resolution with trend analytics,Automatic CSAT and NPS surveys after ticket resolution with trend analytics
+"Automatic escalation based on priority, SLA breach, sentiment analysis, or VIP status","Automatic escalation based on priority, SLA breach, sentiment analysis, or VIP status"
+Automatic satisfaction surveys sent after ticket resolution via email or WhatsApp,Automatic satisfaction surveys sent after ticket resolution via email or WhatsApp
+Automation,Automation
+Automation Engine,Automation Engine
+"Broadcast, Chatbot, Sequences","Broadcast, Chatbot, Sequences"
+Build multi-step automated campaigns that nurture leads from first touch to sales-ready:,Build multi-step automated campaigns that nurture leads from first touch to sales-ready:
+Build your first campaign sequence,Build your first campaign sequence
+CAPS Integration,CAPS Integration
+CSAT Survey,CSAT Survey
+CSAT Surveys,CSAT Surveys
+Calculate true acquisition costs by factoring in campaign spend and team effort,Calculate true acquisition costs by factoring in campaign spend and team effort
+Campaign Performance,Campaign Performance
+Campaign ROI Report,Campaign ROI Report
+Campaign → Lead → AI Scoring → Opportunity → Deal Room → Customer → Service Ticket → CSAT,Campaign → Lead → AI Scoring → Opportunity → Deal Room → Customer → Service Ticket → CSAT
+"Campaigns, sequences, content calendar, and lead generation","Campaigns, sequences, content calendar, and lead generation"
+Choose Another Role,Choose Another Role
+Choose Your Role,Choose Your Role
+Choose your role to see a personalized walkthrough of the features most relevant to you.,Choose your role to see a personalized walkthrough of the features most relevant to you.
+Churn Prediction,Churn Prediction
+"Click-to-call, Auto Dialer","Click-to-call, Auto Dialer"
+Close & Convert,Close & Convert
+"Collaborative spaces for complex deals with documents, tasks, and stakeholder tracking","Collaborative spaces for complex deals with documents, tasks, and stakeholder tracking"
+Compare channel performance!,Compare channel performance!
+Competitor Intelligence,Competitor Intelligence
+"Complete business visibility with real-time dashboards, team performance metrics, and strategic analytics.","Complete business visibility with real-time dashboards, team performance metrics, and strategic analytics."
+Complete history of all lead and deal interactions,Complete history of all lead and deal interactions
+"Complete interaction history across calls, emails, WhatsApp, and meetings in one timeline","Complete interaction history across calls, emails, WhatsApp, and meetings in one timeline"
+Configure AuraCRM Settings,Configure AuraCRM Settings
+Configure Distribution Rules,Configure Distribution Rules
+Configure your AuraCRM settings,Configure your AuraCRM settings
+Connect every marketing dollar to revenue with full attribution tracking:,Connect every marketing dollar to revenue with full attribution tracking:
+Content Assistant,Content Assistant
+"Control who can create campaigns, approve deals, export data, and manage settings","Control who can create campaigns, approve deals, export data, and manage settings"
+Conversion Funnels,Conversion Funnels
+"Conversion rates, stage duration, win/loss analysis, and forecasting","Conversion rates, stage duration, win/loss analysis, and forecasting"
+Core framework,Core framework
+Cost,Cost
+Cost per Lead / Deal,Cost per Lead / Deal
+"Countdown timers show time to breach, auto-escalation to managers on violation","Countdown timers show time to breach, auto-escalation to managers on violation"
+Create Campaign Sequences,Create Campaign Sequences
+"Create challenges, set targets, and track leaderboards to motivate your team","Create challenges, set targets, and track leaderboards to motivate your team"
+"Create dynamic segments based on behavior, demographics, and engagement scores","Create dynamic segments based on behavior, demographics, and engagement scores"
+Create your first sequence,Create your first sequence
+Cross-Team KPIs,Cross-Team KPIs
+"Cross-department performance comparisons with drill-down by agent, team, or territory","Cross-department performance comparisons with drill-down by agent, team, or territory"
+Customer Health,Customer Health
+Customer Health Score,Customer Health Score
+Customer Journey Tracking,Customer Journey Tracking
+Customer Service,Customer Service
+Customer Service — Satisfaction Tracking,Customer Service — Satisfaction Tracking
+Customer Service — Support & Retention,Customer Service — Support & Retention
+Customer Service — Support Hub,Customer Service — Support Hub
+"Customer retention rates, churn risk indicators, lifetime value analysis, and NPS trends","Customer retention rates, churn risk indicators, lifetime value analysis, and NPS trends"
+Customize your executive widgets!,Customize your executive widgets!
+Data Enrichment,Data Enrichment
+Data-Driven Strategy,Data-Driven Strategy
+Define SLA Policies,Define SLA Policies
+Define SLA policies for your team,Define SLA policies for your team
+Department Comparisons,Department Comparisons
+"Design multi-step flows with email, WhatsApp, SMS, delays, and conditional branches","Design multi-step flows with email, WhatsApp, SMS, delays, and conditional branches"
+Distribution Rule,Distribution Rule
+Drag your first deal!,Drag your first deal!
+Drag-and-Drop Pipeline,Drag-and-Drop Pipeline
+"Drag-and-drop Kanban board with real-time deal values, stage duration, and bottleneck alerts","Drag-and-drop Kanban board with real-time deal values, stage duration, and bottleneck alerts"
+"Dynamic segments based on behavior, demographics, engagement score, and custom fields","Dynamic segments based on behavior, demographics, engagement score, and custom fields"
+ERPNext Integration,ERPNext Integration
+Education,Education
+Einstein,Einstein
+Employee-linked agents,Employee-linked agents
+Enable Gamification,Enable Gamification
+Enable auto-escalation!,Enable auto-escalation!
+Enable auto-send after ticket close!,Enable auto-send after ticket close!
+Enroll leads!,Enroll leads!
+Enrollment,Enrollment
+Enterprise,Enterprise
+Entity Relationships,Entity Relationships
+Escalation Workflows,Escalation Workflows
+Executive Dashboard,Executive Dashboard
+"Executive dashboards, strategic insights, and cross-team analytics","Executive dashboards, strategic insights, and cross-team analytics"
+Explore About Page,Explore About Page
+"Explore pipeline, campaign, and service analytics!","Explore pipeline, campaign, and service analytics!"
+Feature,Feature
+Field Masking,Field Masking
+Field-Level Access (CAPS),Field-Level Access (CAPS)
+Fine-grained capability-based access on every field and action,Fine-grained capability-based access on every field and action
+"First-touch, last-touch, linear, and custom attribution to prove campaign ROI","First-touch, last-touch, linear, and custom attribution to prove campaign ROI"
+"First-touch, last-touch, linear, and time-decay models to accurately credit campaigns","First-touch, last-touch, linear, and time-decay models to accurately credit campaigns"
+Follow these steps to set up AuraCRM for your organization:,Follow these steps to set up AuraCRM for your organization:
+For Customer Service,For Customer Service
+For General Managers,For General Managers
+For Marketing Teams,For Marketing Teams
+For Sales Managers,For Sales Managers
+Forecast Accuracy,Forecast Accuracy
+Freddy AI,Freddy AI
+Free-$120/user/mo,Free-$120/user/mo
+From lead capture through AI scoring to deal closure — the complete sales lifecycle.,From lead capture through AI scoring to deal closure — the complete sales lifecycle.
+"Full pipeline visibility, team analytics, and revenue forecasting to hit your targets.","Full pipeline visibility, team analytics, and revenue forecasting to hit your targets."
+General Manager,General Manager
+General Manager — Executive Overview & Strategic Decisions,General Manager — Executive Overview & Strategic Decisions
+General Manager — Executive View,General Manager — Executive View
+General Manager — Strategic Insights,General Manager — Strategic Insights
+Get notified when customer satisfaction drops or churn risk increases,Get notified when customer satisfaction drops or churn risk increases
+"Get the complete picture of your business performance across sales, marketing, and service:","Get the complete picture of your business performance across sales, marketing, and service:"
+Getting Started,Getting Started
+Go to,Go to
+Go to Dashboard,Go to Dashboard
+Healthcare,Healthcare
+Here is how AuraCRM's DocTypes connect together — from lead capture to customer retention.,Here is how AuraCRM's DocTypes connect together — from lead capture to customer retention.
+"Hide deal values, commission rates, and cost data from unauthorized users","Hide deal values, commission rates, and cost data from unauthorized users"
+High-value customers flagged automatically with priority routing and dedicated agents,High-value customers flagged automatically with priority routing and dedicated agents
+How AuraCRM Adapts to Your Industry,How AuraCRM Adapts to Your Industry
+How Everything Connects,How Everything Connects
+How your work connects,How your work connects
+Import or create your first leads,Import or create your first leads
+"Increase your sales, organize follow-ups, and give every team member the tools they need — from first contact to closed deal.","Increase your sales, organize follow-ups, and give every team member the tools they need — from first contact to closed deal."
+"Individual performance metrics: calls made, emails sent, deals closed, response time averages","Individual performance metrics: calls made, emails sent, deals closed, response time averages"
+Integration Map,Integration Map
+Interactive map of all AuraCRM modules and their relationships — click any node to explore.,Interactive map of all AuraCRM modules and their relationships — click any node to explore.
+Knowledge Base,Knowledge Base
+Knowledge Base Suggestions,Knowledge Base Suggestions
+Lead Capture → Enrichment → AI Scoring → Distribution → Nurture → Pipeline → Deal Room → Close → Customer Service → Analytics,Lead Capture → Enrichment → AI Scoring → Distribution → Nurture → Pipeline → Deal Room → Close → Customer Service → Analytics
+Lead Source Analysis,Lead Source Analysis
+Leaderboards,Leaderboards
+"Leads, Opportunities, Customers","Leads, Opportunities, Customers"
+Long-running automated programs with intelligent branching and scoring triggers,Long-running automated programs with intelligent branching and scoring triggers
+Long-term automated nurture programs with intelligent branching and scoring triggers,Long-term automated nurture programs with intelligent branching and scoring triggers
+Machine learning models that rank leads by conversion probability,Machine learning models that rank leads by conversion probability
+Map Frappe roles like Sales User or Sales Manager to specific CAPS capabilities,Map Frappe roles like Sales User or Sales Manager to specific CAPS capabilities
+Marketing Campaigns,Marketing Campaigns
+Marketing — Campaign Engine,Marketing — Campaign Engine
+Marketing — Campaigns & Lead Generation,Marketing — Campaigns & Lead Generation
+Marketing — ROI & Attribution,Marketing — ROI & Attribution
+Marketing → fills your pipeline | Customer Service → retains your wins | General Manager → sees your forecasts,Marketing → fills your pipeline | Customer Service → retains your wins | General Manager → sees your forecasts
+Measure & Improve Satisfaction,Measure & Improve Satisfaction
+Module Map,Module Map
+Motivator,Motivator
+Move deals between stages with visual Kanban cards showing deal value and age,Move deals between stages with visual Kanban cards showing deal value and age
+Multi-Channel Sequences,Multi-Channel Sequences
+Multi-Touch Attribution,Multi-Touch Attribution
+Multi-channel campaign automation with full attribution tracking and ROI analysis.,Multi-channel campaign automation with full attribution tracking and ROI analysis.
+"Multi-step workflows with email, WhatsApp, SMS, delays, and conditional branching","Multi-step workflows with email, WhatsApp, SMS, delays, and conditional branching"
+Multi-touch attribution connecting marketing spend to revenue,Multi-touch attribution connecting marketing spend to revenue
+NPS Tracking,NPS Tracking
+Net Promoter Score surveys at key customer lifecycle moments,Net Promoter Score surveys at key customer lifecycle moments
+Next →,Next →
+Nurture Journeys,Nurture Journeys
+Nurture Sequence,Nurture Sequence
+"Omni-channel support with SLA enforcement, customer satisfaction tracking, and escalation workflows.","Omni-channel support with SLA enforcement, customer satisfaction tracking, and escalation workflows."
+Open Dashboard,Open Dashboard
+Open Source,Open Source
+"Order-linked customer profiles, loyalty programs, cart abandonment sequences, and purchase analytics","Order-linked customer profiles, loyalty programs, cart abandonment sequences, and purchase analytics"
+Paid add-on,Paid add-on
+"Patient relationship management, appointment scheduling, HIPAA-aligned field masking, and referral tracking","Patient relationship management, appointment scheduling, HIPAA-aligned field masking, and referral tracking"
+Per-App CAPS Integration,Per-App CAPS Integration
+Pipeline Analytics,Pipeline Analytics
+Pipeline Management,Pipeline Management
+"Pipeline forecasting, deal velocity trends, and revenue attribution across channels","Pipeline forecasting, deal velocity trends, and revenue attribution across channels"
+"Pipeline, team performance, forecasting, and deal management","Pipeline, team performance, forecasting, and deal management"
+"Plan, schedule, and publish content across all channels with visual calendar view","Plan, schedule, and publish content across all channels with visual calendar view"
+Priority-based auto-escalation with notification chains and manager overrides,Priority-based auto-escalation with notification chains and manager overrides
+Professional Services,Professional Services
+"Project-based pipeline, retainer management, time tracking integration, and client portal access","Project-based pipeline, retainer management, time tracking integration, and client portal access"
+"Property listing integration, viewing schedules, commission tracking, and location-based lead assignment","Property listing integration, viewing schedules, commission tracking, and location-based lead assignment"
+Prove Your Campaign Impact,Prove Your Campaign Impact
+Publish to social platforms with AI-generated content suggestions and scheduling,Publish to social platforms with AI-generated content suggestions and scheduling
+Qualification,Qualification
+Quick Start:,Quick Start:
+Ready to Get Started?,Ready to Get Started?
+"Real-time KPIs: revenue pipeline, conversion rates, campaign ROI, CSAT scores — all in one view","Real-time KPIs: revenue pipeline, conversion rates, campaign ROI, CSAT scores — all in one view"
+"Real-time agent performance rankings, challenges, and badges","Real-time agent performance rankings, challenges, and badges"
+"Reply to customer queries in WhatsApp with templates, quick replies, and chatbot handoff","Reply to customer queries in WhatsApp with templates, quick replies, and chatbot handoff"
+Reports,Reports
+Resolve customer issues fast with a 360° view of every interaction and automated workflows:,Resolve customer issues fast with a 360° view of every interaction and automated workflows:
+"Respond to customer queries via WhatsApp with templates, chatbot handoff, and quick replies","Respond to customer queries via WhatsApp with templates, chatbot handoff, and quick replies"
+"Response time SLAs with automatic escalation, breach alerts, and compliance reports","Response time SLAs with automatic escalation, breach alerts, and compliance reports"
+Retail & E-Commerce,Retail & E-Commerce
+Retention Alerts,Retention Alerts
+Revenue Analytics,Revenue Analytics
+Revenue Attribution,Revenue Attribution
+Revenue Forecasting,Revenue Forecasting
+Revenue Pipeline,Revenue Pipeline
+Review team metrics,Review team metrics
+Role Maps,Role Maps
+Row-level permissions based on territory assignment,Row-level permissions based on territory assignment
+SLA Enforcement,SLA Enforcement
+SLA Monitoring,SLA Monitoring
+SaaS & Technology,SaaS & Technology
+Sales Gamification,Sales Gamification
+Sales Manager — Pipeline & Team Performance,Sales Manager — Pipeline & Team Performance
+Sales Manager — Team Analytics,Sales Manager — Team Analytics
+Sales Manager — Your Pipeline,Sales Manager — Your Pipeline
+Sales Manager → receives your qualified leads | Customer Service → uses your content for support | General Manager → tracks your spend vs revenue,Sales Manager → receives your qualified leads | Customer Service → uses your content for support | General Manager → tracks your spend vs revenue
+Sales Manager → you protect their closed deals | Marketing → you provide upsell opportunities | General Manager → sees CSAT scores and retention metrics,Sales Manager → you protect their closed deals | Marketing → you provide upsell opportunities | General Manager → sees CSAT scores and retention metrics
+Sales Workflow,Sales Workflow
+"Sales conversion, marketing ROI, service CSAT, and agent productivity — all in one view","Sales conversion, marketing ROI, service CSAT, and agent productivity — all in one view"
+Satisfaction Surveys,Satisfaction Surveys
+Schedule posts across social platforms with AI-generated content suggestions,Schedule posts across social platforms with AI-generated content suggestions
+Scoring Rule,Scoring Rule
+Security & Access Control,Security & Access Control
+Security & Analytics,Security & Analytics
+"See every call, email, WhatsApp message, meeting, and deal in one chronological view","See every call, email, WhatsApp message, meeting, and deal in one chronological view"
+"See how AuraCRM compares to leading CRM platforms in features, flexibility, and total cost of ownership.","See how AuraCRM compares to leading CRM platforms in features, flexibility, and total cost of ownership."
+See who's active and who needs coaching with real-time activity feeds,See who's active and who needs coaching with real-time activity feeds
+"Send bulk WhatsApp messages with templates, personalization, and opt-out handling","Send bulk WhatsApp messages with templates, personalization, and opt-out handling"
+Sentiment Analysis,Sentiment Analysis
+Service Ticket,Service Ticket
+Service Tickets,Service Tickets
+Set gamification challenges!,Set gamification challenges!
+Set response time SLAs and get alerts before breaches happen,Set response time SLAs and get alerts before breaches happen
+Set up Lead Scoring Rules,Set up Lead Scoring Rules
+Set up SLA Policies,Set up SLA Policies
+Set up lead scoring rules,Set up lead scoring rules
+"Set up rules to auto-assign leads by territory, workload, skill level, or round-robin","Set up rules to auto-assign leads by territory, workload, skill level, or round-robin"
+Shield,Shield
+"Side-by-side performance metrics for sales, marketing, and service teams","Side-by-side performance metrics for sales, marketing, and service teams"
+Smart Distribution,Smart Distribution
+Smart Lead Distribution,Smart Lead Distribution
+Start Onboarding,Start Onboarding
+Strategic Alerts,Strategic Alerts
+Strategic Insights,Strategic Insights
+"Student enrollment pipelines, course interest tracking, alumni engagement, and financial aid workflows","Student enrollment pipelines, course interest tracking, alumni engagement, and financial aid workflows"
+"Support tickets, SLA management, customer satisfaction","Support tickets, SLA management, customer satisfaction"
+Switch to Kanban View,Switch to Kanban View
+Team Gamification,Team Gamification
+Team Leaderboards,Team Leaderboards
+Team Performance,Team Performance
+Territory Rules,Territory Rules
+"The AuraCRM data model — 66 DocTypes organized into leads, pipeline, campaigns, gamification, AI, and communications.","The AuraCRM data model — 66 DocTypes organized into leads, pipeline, campaigns, gamification, AI, and communications."
+The visual pipeline board is your command center. Here's what you can do:,The visual pipeline board is your command center. Here's what you can do:
+"This onboarding guide will help you learn the platform step by step. We'll start with a quick overview of how everything connects, then you'll choose your role to see a personalized walkthrough.","This onboarding guide will help you learn the platform step by step. We'll start with a quick overview of how everything connects, then you'll choose your role to see a personalized walkthrough."
+"Total pipeline value, weighted forecast, expected close dates, and revenue trend charts","Total pipeline value, weighted forecast, expected close dates, and revenue trend charts"
+Track & Coach Your Team,Track & Coach Your Team
+"Track competitor moves, win/loss analysis, and battle cards for your team","Track competitor moves, win/loss analysis, and battle cards for your team"
+Track conversion rates at each pipeline stage to identify bottlenecks,Track conversion rates at each pipeline stage to identify bottlenecks
+Track customer happiness and identify improvement opportunities:,Track customer happiness and identify improvement opportunities:
+Track how accurate your pipeline forecasts are over time and improve prediction models,Track how accurate your pipeline forecasts are over time and improve prediction models
+"Track open rates, click rates, response rates, and conversions per campaign step","Track open rates, click rates, response rates, and conversions per campaign step"
+"Trial-to-paid conversion tracking, usage-based scoring, churn prediction, and MRR analytics","Trial-to-paid conversion tracking, usage-based scoring, churn prediction, and MRR analytics"
+"Understand exactly why you win or lose deals — by competitor, pricing, timing, and team","Understand exactly why you win or lose deals — by competitor, pricing, timing, and team"
+"Understand why deals are won or lost — by competitor, industry, deal size, and stage","Understand why deals are won or lost — by competitor, industry, deal size, and stage"
+Unified Comms,Unified Comms
+Use AuraCRM's analytics and AI to make strategic decisions with confidence:,Use AuraCRM's analytics and AI to make strategic decisions with confidence:
+VIP Detection,VIP Detection
+Via AppExchange,Via AppExchange
+Via CTI,Via CTI
+Via Pardot,Via Pardot
+Visual Pipeline,Visual Pipeline
+Visual Pipeline Board,Visual Pipeline Board
+"Visual calendar to plan, schedule, and track content across all channels","Visual calendar to plan, schedule, and track content across all channels"
+Visual graphs & dashboards,Visual graphs & dashboards
+WA Broadcast,WA Broadcast
+WA Chatbot,WA Chatbot
+Welcome to AuraCRM,Welcome to AuraCRM
+Welcome to AuraCRM!,Welcome to AuraCRM!
+What best describes your role?,What best describes your role?
+What is AuraCRM?,What is AuraCRM?
+WhatsApp Native Integration,WhatsApp Native Integration
+WhatsApp Support,WhatsApp Support
+Which channels produce the highest quality leads? Track from first touch to closed deal,Which channels produce the highest quality leads? Track from first touch to closed deal
+"Which marketing campaigns, salespeople, and channels drive the most revenue?","Which marketing campaigns, salespeople, and channels drive the most revenue?"
+Who did what today — complete activity feed across all teams and channels,Who did what today — complete activity feed across all teams and channels
+"Who did what, when — complete activity tracking across calls, emails, meetings, and tasks","Who did what, when — complete activity tracking across calls, emails, meetings, and tasks"
+Why AuraCRM? — Competitive Comparison,Why AuraCRM? — Competitive Comparison
+Win/Loss Analysis,Win/Loss Analysis
+Win/Loss Intelligence,Win/Loss Intelligence
+You now have a solid understanding of AuraCRM. Here's what to do next:,You now have a solid understanding of AuraCRM. Here's what to do next:
+You're All Set!,You're All Set!
+Your Campaign Engine,Your Campaign Engine
+Your Executive Dashboard,Your Executive Dashboard
+Your Pipeline & Deal Management,Your Pipeline & Deal Management
+Your Support Command Center,Your Support Command Center
+Zia AI,Zia AI
+frappe_visual is not loaded.,frappe_visual is not loaded.
+frappe_visual is not loaded. Please ensure frappe_visual app is installed.,frappe_visual is not loaded. Please ensure frappe_visual app is installed.
+← Previous,← Previous
+AUTOMATION,AUTOMATION
+AVG CONVERSION,AVG CONVERSION
+Agent performance and org structure,Agent performance and org structure
+AuraCRM Analytics,AuraCRM Analytics
+AuraCRM Command Center,AuraCRM Command Center
+AuraCRM Pipeline,AuraCRM Pipeline
+AuraCRM Team,AuraCRM Team
+"AuraCRM combines lead management, sales pipeline, team performance, and marketing automation — all powered by interactive visual graphs.","AuraCRM combines lead management, sales pipeline, team performance, and marketing automation — all powered by interactive visual graphs."
+CONVERSION,CONVERSION
+CONVERSION RATE,CONVERSION RATE
+CONVERTED,CONVERTED
+CRM Module Map,CRM Module Map
+CRM Onboarding,CRM Onboarding
+Close,Close
+Conversion Funnel,Conversion Funnel
+"Conversion funnel, score heatmap, quality & SLA","Conversion funnel, score heatmap, quality & SLA"
+Day Streak,Day Streak
+Deal moved to {0},Deal moved to {0}
+Distribution,Distribution
+Done,Done
+Drag-and-drop opportunity management,Drag-and-drop opportunity management
+Duplicates,Duplicates
+Failed to load command center,Failed to load command center
+Failed to load pipeline board,Failed to load pipeline board
+Failed to load quality data,Failed to load quality data
+Failed to load team graph,Failed to load team graph
+Gamification data unavailable,Gamification data unavailable
+Get Started,Get Started
+Hub,Hub
+Interactive CRM Map,Interactive CRM Map
+Jump into any module:,Jump into any module:
+KPI data unavailable,KPI data unavailable
+LEVEL,LEVEL
+LOST DEALS,LOST DEALS
+Lead Score Heatmap,Lead Score Heatmap
+Lead → Customer,Lead → Customer
+Level,Level
+Loading quality data...,Loading quality data...
+Manage and score incoming leads,Manage and score incoming leads
+Move failed,Move failed
+My Leads,My Leads
+NEW LEADS,NEW LEADS
+Navigate the Module Map,Navigate the Module Map
+New Lead,New Lead
+New Opportunity,New Opportunity
+No CRM data yet. Create Leads and Opportunities to see the map.,No CRM data yet. Create Leads and Opportunities to see the map.
+No Sales Stages configured. Create Sales Stages first.,No Sales Stages configured. Create Sales Stages first.
+No active breaches!,No active breaches!
+No agents,No agents
+No analytics data available,No analytics data available
+No pipeline data available,No pipeline data available
+No team members found. Assign Sales roles to users.,No team members found. Assign Sales roles to users.
+OPPORTUNITIES,OPPORTUNITIES
+Onboarding,Onboarding
+Onboarding complete! 🎉,Onboarding complete! 🎉
+Open,Open
+Open Deals,Open Deals
+Open Hub,Open Hub
+PIPELINE VALUE,PIPELINE VALUE
+POINTS,POINTS
+Pipeline,Pipeline
+Quality & SLA Compliance,Quality & SLA Compliance
+Ready to Go!,Ready to Go!
+Recalculate Scores,Recalculate Scores
+SLA BREACHES,SLA BREACHES
+STREAK,STREAK
+Scoring,Scoring
+Settings & Configuration,Settings & Configuration
+Start using AuraCRM to see the module map.,Start using AuraCRM to see the module map.
+TEAM SIZE,TEAM SIZE
+TOP PERFORMER,TOP PERFORMER
+TOTAL LEADS,TOTAL LEADS
+TOTAL OPPS,TOTAL OPPS
+TOTAL PIPELINE,TOTAL PIPELINE
+Team Organization,Team Organization
+"The graph above shows all CRM modules. Click any node to see details, double-click to navigate.","The graph above shows all CRM modules. Click any node to see details, double-click to navigate."
+View,View
+View Pipeline,View Pipeline
+View Profile,View Profile
+YOUR ROLE,YOUR ROLE
+Your Visual CRM Platform,Your Visual CRM Platform
+Your unified CRM platform — explore the module map below to navigate.,Your unified CRM platform — explore the module map below to navigate.
+active agents,active agents
+active rules,active rules
+all clear,all clear
+assigned this month,assigned this month
+days,days
+deals,deals
+deals won,deals won
+lead-to-customer,lead-to-customer
+leads,leads
+needs attention,needs attention
+new,new
+rate,rate
+team average,team average
+this,this
+this month,this month
+won,won
+{0} of {1} breaches resolved,{0} of {1} breaches resolved
+AI Lead Profiles,AI Lead Profiles
+"AI-generated profiles that analyze lead data to predict conversion probability, suggest ideal approach, and recommend next actions.","AI-generated profiles that analyze lead data to predict conversion probability, suggest ideal approach, and recommend next actions."
+AuraCRM Help,AuraCRM Help
+"Build conversational chatbots for WhatsApp with a visual node editor. Qualify leads, answer FAQs, and route to agents.","Build conversational chatbots for WhatsApp with a visual node editor. Qualify leads, answer FAQs, and route to agents."
+"Choose how conversion credit is distributed: first-touch, last-touch, linear, time-decay, or custom weighted models.","Choose how conversion credit is distributed: first-touch, last-touch, linear, time-decay, or custom weighted models."
+"Collaborative spaces for each deal with shared documents, notes, activity timeline, and stakeholder management. Share externally with customers.","Collaborative spaces for each deal with shared documents, notes, activity timeline, and stakeholder management. Share externally with customers."
+Competitor Intel,Competitor Intel
+"Configure how leads are automatically assigned to sales agents. Use round-robin, territory-based, skill-based, or workload-balanced distribution.","Configure how leads are automatically assigned to sales agents. Use round-robin, territory-based, skill-based, or workload-balanced distribution."
+"Configure the gamification engine: point values, badge thresholds, challenge types, and leaderboard settings to boost team performance.","Configure the gamification engine: point values, badge thresholds, challenge types, and leaderboard settings to boost team performance."
+Cool (30-49),Cool (30-49)
+Create automated calling campaigns. Agents get calls queued with context rules that show relevant information for each contact.,Create automated calling campaigns. Agents get calls queued with context rules that show relevant information for each contact.
+"Create dynamic segments based on lead behavior, demographics, engagement, and custom criteria for targeted campaigns.","Create dynamic segments based on lead behavior, demographics, engagement, and custom criteria for targeted campaigns."
+"Define response time expectations for leads and opportunities. Automatic monitoring, escalation workflows, and breach logging.","Define response time expectations for leads and opportunities. Automatic monitoring, escalation workflows, and breach logging."
+"Define scoring criteria that automatically rate leads based on demographics, behavior, and engagement. Higher scores mean higher conversion probability.","Define scoring criteria that automatically rate leads based on demographics, behavior, and engagement. Higher scores mean higher conversion probability."
+"Global configuration for AuraCRM: scoring weights, distribution mode, AI settings, gamification toggles, and integration credentials.","Global configuration for AuraCRM: scoring weights, distribution mode, AI settings, gamification toggles, and integration credentials."
+Influencer Campaigns,Influencer Campaigns
+Invalid license key,Invalid license key
+Lead Distribution,Lead Distribution
+License key is valid,License key is valid
+"Long-term nurture programs with branching logic. Move leads through awareness, consideration, and decision stages automatically.","Long-term nurture programs with branching logic. Move leads through awareness, consideration, and decision stages automatically."
+Lost,Lost
+"Manage influencer partnerships with profile tracking, campaign assignment, and ROI measurement.","Manage influencer partnerships with profile tracking, campaign assignment, and ROI measurement."
+"Multi-step automated campaigns with email, WhatsApp, SMS, and wait steps. Enroll leads and track progression through each step.","Multi-step automated campaigns with email, WhatsApp, SMS, and wait steps. Enroll leads and track progression through each step."
+New Leads,New Leads
+Plan and schedule content across channels. Visual calendar view with drag-and-drop scheduling and AI content suggestions.,Plan and schedule content across channels. Visual calendar view with drag-and-drop scheduling and AI content suggestions.
+Qualified,Qualified
+SLA,SLA
+"Send bulk WhatsApp messages with templates and personalization. Track delivery, read status, and responses.","Send bulk WhatsApp messages with templates and personalization. Track delivery, read status, and responses."
+"This is part of AuraCRM — the AI-powered visual CRM platform. For a full overview, visit the About page or start the Onboarding walkthrough.","This is part of AuraCRM — the AI-powered visual CRM platform. For a full overview, visit the About page or start the Onboarding walkthrough."
+"Track competitor information, pricing, strengths/weaknesses. Log competitive intelligence entries for market positioning.","Track competitor information, pricing, strengths/weaknesses. Log competitive intelligence entries for market positioning."
+Track every touchpoint from first contact to closed deal. Visualize the full journey with timeline and attribution data.,Track every touchpoint from first contact to closed deal. Visualize the full journey with timeline and attribution data.
+Upgrade Now,Upgrade Now
+View List,View List
+Warm (50-79),Warm (50-79)
+Won,Won
+assigned by,assigned by
+calls,calls
+communicated,communicated
+enrolled in,enrolled in
+generates,generates
+has,has
+monitors,monitors
+my-site.com,my-site.com
+owned by,owned by
+requires a premium license.,requires a premium license.
+scored,scored
+scored by,scored by
+tasks,tasks
+test,test
+test-site,test-site
+triggers,triggers
+→ opportunity,→ opportunity

@@ -6,7 +6,7 @@ app_email = "dev@auracrm.io"
 app_license = "mit"
 app_version = "1.0.0"
 
-required_apps = ["frappe", "erpnext", "frappe_visual", "arrowz", "caps"]
+required_apps = ["frappe", "erpnext", "frappe_visual", "arrowz", "caps", "arkan_help"]
 
 # ---------------------------------------------------------------------------
 # App Icon / Logo / Desktop
@@ -50,6 +50,7 @@ after_migrate = ["auracrm.seed.seed_data"]
 before_uninstall = "auracrm.install.before_uninstall"
 
 fixtures = [
+    {"dt": "Workspace", "filters": [["module", "like", "AuraCRM%"]]},
         {"dt": "Role", "filters": [["name", "in", ["Sales Agent", "Sales Manager", "Quality Analyst", "Marketing Manager", "CRM Admin"]]]},
         {"dt": "Custom Field", "filters": [["module", "=", "AuraCRM"]]},
 ]
