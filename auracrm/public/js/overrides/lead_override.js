@@ -1,3 +1,8 @@
+// Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+// Developer Website: https://arkan.it.com
+// License: MIT
+// For license information, please see license.txt
+
 /**
  * AuraCRM — Lead Form Override
  * Adds scoring gauge, SLA timer, communication buttons, and quick actions.

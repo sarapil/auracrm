@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 app_name = "auracrm"
 app_title = "AuraCRM"
 app_publisher = "Development Team"
@@ -30,6 +35,7 @@ app_include_js = [
         "/assets/auracrm/js/aura_sidebar.js",
         "/assets/auracrm/js/overrides/contact_360.js",
         "/assets/auracrm/js/aura_contextual_help.js",
+    "/assets/auracrm/js/fv_integration.js",
 ]
 app_include_css = [
     "/assets/auracrm/css/auracrm-theme.css",

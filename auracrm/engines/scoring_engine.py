@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """
 AuraCRM - Lead Scoring Engine (Phase 2 - Full Implementation)
 ===============================================================

@@ -1,4 +1,8 @@
-# Copyright (c) 2026, Arkan Labs and contributors
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 # auracrm/industry/preset_manager.py
 # bench execute auracrm.industry.preset_manager.apply_preset --kwargs '{"preset_code": "real_estate"}'
 

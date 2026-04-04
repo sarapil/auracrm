@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """AuraCRM Settings — Singleton configuration for AuraCRM."""
 
 import frappe

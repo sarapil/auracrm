@@ -1,3 +1,8 @@
+// Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+// Developer Website: https://arkan.it.com
+// License: MIT
+// For license information, please see license.txt
+
 frappe.ui.form.on("Lead Distribution Rule", {
 	refresh(frm) {
 		frm.set_indicator_formatter("agent", (doc) => {

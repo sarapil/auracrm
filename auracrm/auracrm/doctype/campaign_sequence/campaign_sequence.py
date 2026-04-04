@@ -1,3 +1,8 @@
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """AuraCRM - Campaign Sequence DocType Controller.
 
 Multi-step automated campaign sequences (e.g., Day 1: Email, Day 3: WhatsApp, Day 7: Call).

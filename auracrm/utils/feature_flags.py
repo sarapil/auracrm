@@ -1,4 +1,10 @@
 # -*- coding: utf-8 -*-
+
+# Copyright (c) 2024, Moataz M Hassan (Arkan Lab)
+# Developer Website: https://arkan.it.com
+# License: MIT
+# For license information, please see license.txt
+
 """
 Feature gating system for AuraCRM.
 Implements Open Core model: free core + premium features.
