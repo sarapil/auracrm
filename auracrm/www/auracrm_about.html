@@ -1,0 +1,80 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("About AuraCRM") }}{% endblock %}
+
+{% block page_content %}
+<div id="auracrm-about-container" data-page="auracrm-about"></div>
+
+<style>
+  :root { --ac-primary: #6366F1; --ac-primary-dark: #4F46E5; --ac-gradient: linear-gradient(135deg, #6366F1, #4F46E5); }
+  #auracrm-about-container { min-height: 80vh; padding: 24px 0; }
+  .ac-about-hero { text-align: center; padding: 60px 20px; }
+  .ac-about-hero img { width: 160px; height: 160px; margin-bottom: 24px; }
+  .ac-about-hero h1 { font-size: 2.5rem; font-weight: 800; background: var(--ac-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 12px; }
+  .ac-about-hero p { font-size: 1.15rem; color: var(--text-muted); max-width: 640px; margin: 0 auto 32px; }
+  .ac-features { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+  .ac-feature-card { padding: 28px; border-radius: 16px; background: var(--card-bg); border: 1px solid var(--border-color); transition: transform 0.2s, box-shadow 0.2s; }
+  .ac-feature-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(99, 102, 241, 0.12); }
+  .ac-feature-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--text-color); margin-bottom: 8px; }
+  .ac-feature-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
+  .ac-stat-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 20px; background: rgba(99, 102, 241, 0.08); color: var(--ac-primary); font-weight: 600; font-size: 0.9rem; }
+  .ac-stats-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin: 32px 0; }
+  .ac-footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('auracrm-about-container');
+  container.innerHTML = `
+    <div class="ac-about-hero">
+      <img src="/assets/auracrm/images/auracrm-logo.svg" alt="AuraCRM" onerror="this.style.display='none'">
+      <h1>${__("AuraCRM")}</h1>
+      <p>${__("Visual CRM Platform with Unified Communications — Leads, Pipeline, Campaigns, Sales Analytics, WhatsApp & Telegram Integration.")}</p>
+      <div class="ac-stats-row">
+        <span class="ac-stat-badge">👥 ${__("Lead Management")}</span>
+        <span class="ac-stat-badge">📊 ${__("Sales Pipeline")}</span>
+        <span class="ac-stat-badge">📱 ${__("Omni-Channel")}</span>
+        <span class="ac-stat-badge">📈 ${__("Analytics")}</span>
+      </div>
+    </div>
+    <div class="ac-features">
+      <div class="ac-feature-card">
+        <h3>👥 ${__("Lead & Contact Management")}</h3>
+        <p>${__("Capture and qualify leads from multiple channels — web forms, WhatsApp, email, phone calls. Track interactions and automate follow-ups.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>📊 ${__("Visual Sales Pipeline")}</h3>
+        <p>${__("Drag-and-drop Kanban pipeline with customizable stages, probability scoring, weighted forecasting, and automated stage actions.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>📱 ${__("Omni-Channel Communication")}</h3>
+        <p>${__("WhatsApp, Telegram, email, and SMS from one unified inbox. Full conversation history linked to contacts and deals.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>📈 ${__("Sales Analytics & Reports")}</h3>
+        <p>${__("Revenue forecasts, conversion funnels, team performance dashboards, campaign ROI tracking, and executive summaries.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>🎯 ${__("Campaign Management")}</h3>
+        <p>${__("Design multi-channel marketing campaigns with audience segmentation, A/B testing, and automated nurture sequences.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>🤝 ${__("Customer Success")}</h3>
+        <p>${__("Post-sale relationship management, satisfaction scoring, renewal tracking, upsell opportunity identification.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>📋 ${__("Quotation & Proposals")}</h3>
+        <p>${__("Generate professional quotes from pipeline opportunities, track versions, manage approvals and customer responses.")}</p>
+      </div>
+      <div class="ac-feature-card">
+        <h3>🔗 ${__("ERPNext Integration")}</h3>
+        <p>${__("Seamless connection to ERPNext for invoicing, accounting, inventory — complete quote-to-cash workflow.")}</p>
+      </div>
+    </div>
+    <div class="ac-footer">
+      <p>${__("Built by")} <strong>Arkan Lab</strong> &bull; ${__("Powered by")} <strong>Frappe + ERPNext</strong></p>
+    </div>
+  `;
+});
+</script>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ _("AuraCRM Onboarding") }}{% endblock %}
+
+{% block page_content %}
+<div id="auracrm-onboarding-container" data-page="auracrm-onboarding"></div>
+
+<style>
+  #auracrm-onboarding-container { min-height: 80vh; padding: 24px 0; }
+  .ac-onboard-hero { text-align: center; padding: 60px 20px; }
+  .ac-onboard-hero h1 { font-size: 2rem; font-weight: 700; color: var(--text-color); margin-bottom: 16px; }
+  .ac-onboard-hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 500px; margin: 0 auto 32px; }
+  .ac-onboard-steps { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+  .ac-step { display: flex; gap: 16px; padding: 20px 0; border-bottom: 1px solid var(--border-color); }
+  .ac-step-num { width: 40px; height: 40px; border-radius: 50%; background: rgba(99, 102, 241, 0.1); color: #6366F1; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+  .ac-step h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+  .ac-step p { font-size: 0.9rem; color: var(--text-muted); }
+  .ac-onboard-footer { text-align: center; padding: 40px 20px; }
+  .ac-onboard-footer a { display: inline-block; padding: 12px 32px; border-radius: 8px; background: #6366F1; color: white; text-decoration: none; font-weight: 600; transition: opacity 0.2s; }
+  .ac-onboard-footer a:hover { opacity: 0.9; }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.getElementById('auracrm-onboarding-container');
+  const steps = [
+    { title: __("Company & Team Setup"), desc: __("Configure your company profile, add sales team members, and define organizational hierarchy.") },
+    { title: __("Import Contacts & Leads"), desc: __("Bulk import existing contacts from CSV/Excel or connect lead capture forms and social channels.") },
+    { title: __("Configure Sales Pipeline"), desc: __("Define pipeline stages, win probabilities, and automation rules for your sales process.") },
+    { title: __("Set Up Communication Channels"), desc: __("Connect WhatsApp Business, Telegram, email accounts for unified inbox.") },
+    { title: __("Create Campaigns"), desc: __("Design your first marketing campaign with target audience and messaging sequence.") },
+    { title: __("Customize Dashboards"), desc: __("Set up team and personal dashboards with KPIs, targets, and report widgets.") },
+    { title: __("Train Your Team"), desc: __("Walk through role-specific workflows — sales reps, managers, and campaign operators.") }
+  ];
+  container.innerHTML = `
+    <div class="ac-onboard-hero">
+      <h1>🚀 ${__("Get Started with AuraCRM")}</h1>
+      <p>${__("Follow these steps to set up and start using AuraCRM.")}</p>
+    </div>
+    <div class="ac-onboard-steps">
+      ${steps.map((s, i) => `
+        <div class="ac-step">
+          <div class="ac-step-num">${i + 1}</div>
+          <div>
+            <h3>${s.title}</h3>
+            <p>${s.desc}</p>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+    <div class="ac-onboard-footer">
+      <a href="/app">${__("Go to Dashboard →")}</a>
+    </div>
+  `;
+});
+</script>
+{% endblock %}
