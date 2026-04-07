@@ -17,6 +17,7 @@
     "disposition",
     "sb_call_details",
     "assigned_agent",
+    "call_log_doctype",
     "call_log",
     "cb_call",
     "attempts",
@@ -106,6 +107,13 @@
       "fieldtype": "Link",
       "label": "Assigned Agent",
       "options": "User"
+    },
+    {
+      "fieldname": "call_log_doctype",
+      "fieldtype": "Link",
+      "label": "Call Log DocType",
+      "options": "DocType",
+      "hidden": 1
     },
     {
       "fieldname": "call_log",

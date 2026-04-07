@@ -1,0 +1,36 @@
+# CODEOWNERS — مالكو الكود
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+#
+# These owners will be automatically requested for review when a PR
+# modifies files matching the patterns.
+# سيتم طلب مراجعة هؤلاء المالكين تلقائياً عند تعديل ملفات مطابقة.
+
+# ─── Default Owner — المالك الافتراضي ─────────────────────────────────────────
+*                           @sarapil/auracrm-maintainers
+
+# ─── Core Configuration — الإعدادات الأساسية ──────────────────────────────────
+auracrm/hooks.py       @sarapil/auracrm-maintainers
+auracrm/install.py     @sarapil/auracrm-maintainers
+auracrm/seed.py        @sarapil/auracrm-maintainers
+pyproject.toml              @sarapil/auracrm-maintainers
+setup.cfg                   @sarapil/auracrm-maintainers
+
+# ─── API Layer — طبقة الواجهة البرمجية ────────────────────────────────────────
+auracrm/api/           @sarapil/auracrm-maintainers
+
+# ─── Security & Permissions — الأمان والصلاحيات ───────────────────────────────
+auracrm/caps/          @sarapil/auracrm-maintainers
+SECURITY.md                 @sarapil/auracrm-maintainers
+
+# ─── CI/CD — خط الأنابيب ─────────────────────────────────────────────────────
+.github/workflows/          @sarapil/auracrm-maintainers
+
+# ─── Frontend — الواجهة الأمامية ──────────────────────────────────────────────
+auracrm/public/        @sarapil/auracrm-maintainers
+
+# ─── Translations — الترجمات ──────────────────────────────────────────────────
+auracrm/translations/  @sarapil/auracrm-maintainers
+
+# ─── Documentation — التوثيق ──────────────────────────────────────────────────
+auracrm/help/          @sarapil/auracrm-maintainers
+*.md                        @sarapil/auracrm-maintainers

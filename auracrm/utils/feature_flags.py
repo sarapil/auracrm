@@ -6,42 +6,41 @@
 # For license information, please see license.txt
 
 """
-Feature gating system for AuraCRM.
-Implements Open Core model: free core + premium features.
+Feature gating system for AuraCRM — delegates to base_base unified engine.
+
+Backward-compatible: all existing imports continue to work.
+The feature registry stays here (app-specific), but the gating logic
+is in ``base_base.utils.feature_gating``.
 
 Usage::
 
     from auracrm.utils.feature_flags import require_premium, is_feature_enabled
 
-    # Decorator for API endpoints
     @frappe.whitelist()
     @require_premium("ai_lead_scoring")
     def score_lead_with_ai(lead):
-        frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
-
         ...
 
-    # Runtime check
     if is_feature_enabled("advanced_analytics"):
         show_advanced_dashboard()
 """
 
-from functools import wraps
-
 import frappe
 
 # ---------------------------------------------------------------------------
-# Tier constants
+# Tier constants (re-exported for backward compat)
 # ---------------------------------------------------------------------------
 TIER_FREE = "free"
 TIER_PREMIUM = "premium"
 
+_APP = "auracrm"
+
 # ---------------------------------------------------------------------------
-# Feature Registry — single source of truth
+# Feature Registry — single source of truth for AuraCRM
+# This is also declared in hooks.py via app_feature_registry
 # ---------------------------------------------------------------------------
 FEATURE_REGISTRY: dict[str, str] = {
 	# === FREE TIER ===
-	# Core CRM functionality available to all users
 	"lead_management": TIER_FREE,
 	"contact_management": TIER_FREE,
 	"pipeline_board": TIER_FREE,
@@ -57,7 +56,6 @@ FEATURE_REGISTRY: dict[str, str] = {
 	"basic_gamification": TIER_FREE,
 
 	# === PREMIUM TIER ===
-	# Advanced features requiring license
 	"ai_lead_scoring": TIER_PREMIUM,
 	"ai_content_generation": TIER_PREMIUM,
 	"ai_profiler": TIER_PREMIUM,
@@ -91,62 +89,19 @@ FEATURE_REGISTRY: dict[str, str] = {
 
 
 # ---------------------------------------------------------------------------
-# Decorator
+# Backward-compatible wrappers (single-arg form for AuraCRM)
 # ---------------------------------------------------------------------------
 
 def require_premium(feature_key: str):
-	"""Decorator: block execution if feature requires premium and no license.
+	"""Decorator: block execution if feature requires premium."""
+	from base_base.utils.feature_gating import require_premium as _rp
+	return _rp(_APP, feature_key)
 
-	Usage::
-
-	    @frappe.whitelist()
-	    @require_premium("automation_builder")
-	    def create_automation(data):
-	        frappe.only_for(["AuraCRM Manager", "System Manager"])
-
-	        ...
-	"""
-	def decorator(func):
-		@wraps(func)
-		def wrapper(*args, **kwargs):
-			tier = FEATURE_REGISTRY.get(feature_key, TIER_PREMIUM)
-
-			if tier == TIER_PREMIUM:
-				from auracrm.utils.license import is_premium_active
-
-				if not is_premium_active():
-					frappe.throw(
-						frappe._(
-							"This feature requires a premium license. "
-							"Subscribe on Frappe Cloud Marketplace or "
-							"contact Arkan Lab for a license key."
-						),
-						title=frappe._("Premium Feature"),
-						exc=frappe.PermissionError,
-					)
-
-			return func(*args, **kwargs)
-		return wrapper
-	return decorator
-
-
-# ---------------------------------------------------------------------------
-# Runtime checks
-# ---------------------------------------------------------------------------
 
 def is_feature_enabled(feature_key: str) -> bool:
-	"""Check if a feature is available for the current license tier.
-
-	Free features always return True.
-	Premium features return True only if a valid license is active.
-	"""
-	tier = FEATURE_REGISTRY.get(feature_key, TIER_PREMIUM)
-
-	if tier == TIER_FREE:
-		return True
-
-	from auracrm.utils.license import is_premium_active
-	return is_premium_active()
+	"""Check if a feature is available for the current license tier."""
+	from base_base.utils.feature_gating import is_feature_enabled as _ife
+	return _ife(_APP, feature_key)
 
 
 def get_feature_tier(feature_key: str) -> str:
@@ -156,48 +111,25 @@ def get_feature_tier(feature_key: str) -> str:
 
 def get_all_features() -> dict[str, dict]:
 	"""Get all features with their status."""
-	from auracrm.utils.license import is_premium_active
-	premium = is_premium_active()
-
-	return {
-		feature: {
-			"tier": tier,
-			"enabled": tier == TIER_FREE or premium,
-			"requires_upgrade": tier == TIER_PREMIUM and not premium,
-		}
-		for feature, tier in FEATURE_REGISTRY.items()
-	}
+	from base_base.utils.feature_gating import get_app_features
+	return get_app_features(_APP)
 
 
 # ---------------------------------------------------------------------------
-# API Endpoints
+# API Endpoints (backward compatible)
 # ---------------------------------------------------------------------------
 
 @frappe.whitelist()
 def get_enabled_features() -> dict[str, bool]:
 	"""API: Get dictionary of feature:enabled for client-side use."""
 	frappe.only_for(["AuraCRM Manager", "System Manager"])
-
-	from auracrm.utils.license import is_premium_active
-	premium = is_premium_active()
-
-	return {
-		feature: (tier == TIER_FREE or premium)
-		for feature, tier in FEATURE_REGISTRY.items()
-	}
+	from base_base.utils.feature_gating import get_enabled_features_dict
+	return get_enabled_features_dict(_APP)
 
 
 @frappe.whitelist()
 def check_feature(feature_key: str) -> dict:
 	"""API: Check if a specific feature is available."""
 	frappe.only_for(["AuraCRM User", "AuraCRM Manager", "System Manager"])
-
-	enabled = is_feature_enabled(feature_key)
-	tier = get_feature_tier(feature_key)
-
-	return {
-		"feature": feature_key,
-		"enabled": enabled,
-		"tier": tier,
-		"upgrade_required": not enabled and tier == TIER_PREMIUM,
-	}
+	from base_base.utils.feature_gating import check_feature_api
+	return check_feature_api(_APP, feature_key)

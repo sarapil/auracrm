@@ -11,7 +11,57 @@ app_email = "dev@auracrm.io"
 app_license = "mit"
 app_version = "1.0.0"
 
-required_apps = ["frappe", "erpnext", "frappe_visual", "arrowz", "caps", "arkan_help"]
+required_apps = ["frappe", "erpnext", "frappe_visual", "arrowz", "caps", "arkan_help", "base_base"]
+
+# ---------------------------------------------------------------------------
+# Feature Registry (Open Core) — consumed by base_base.utils.feature_gating
+# ---------------------------------------------------------------------------
+app_feature_registry = {
+    # FREE TIER (13 core features)
+    "lead_management": "free",
+    "contact_management": "free",
+    "pipeline_board": "free",
+    "team_dashboard": "free",
+    "basic_reports": "free",
+    "sla_tracking": "free",
+    "lead_scoring_basic": "free",
+    "distribution_roundrobin": "free",
+    "dedup_basic": "free",
+    "manual_assignment": "free",
+    "email_templates": "free",
+    "industry_presets": "free",
+    "basic_gamification": "free",
+    # PREMIUM TIER (24+ advanced features)
+    "ai_lead_scoring": "premium",
+    "ai_content_generation": "premium",
+    "ai_profiler": "premium",
+    "osint_engine": "premium",
+    "enrichment_engine": "premium",
+    "advanced_analytics": "premium",
+    "automation_builder": "premium",
+    "campaign_sequences": "premium",
+    "auto_dialer": "premium",
+    "marketing_lists_advanced": "premium",
+    "social_publishing": "premium",
+    "whatsapp_chatbot": "premium",
+    "interaction_automation": "premium",
+    "nurture_engine": "premium",
+    "competitive_intel": "premium",
+    "deal_rooms": "premium",
+    "reputation_engine": "premium",
+    "attribution_engine": "premium",
+    "advertising_engine": "premium",
+    "content_engine": "premium",
+    "resale_engine": "premium",
+    "holiday_guard": "premium",
+    "distribution_advanced": "premium",
+    "advanced_gamification": "premium",
+    "custom_dashboards": "premium",
+    "redis_caching": "premium",
+    "api_bulk_operations": "premium",
+    "white_labeling": "premium",
+    "priority_support": "premium",
+}
 
 # ---------------------------------------------------------------------------
 # App Icon / Logo / Desktop

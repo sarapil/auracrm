@@ -1,68 +1,69 @@
-# Security Policy
+# Security Policy — سياسة الأمان
 
-## Supported Versions
+## Supported Versions — الإصدارات المدعومة
 
-| Version | Supported          |
-|---------|--------------------|
-| 1.0.x   | ✅ Yes             |
-| < 1.0   | ❌ No              |
+| Version | Supported | الحالة |
+|---------|-----------|--------|
+| latest (main) | ✅ Active | نشط |
+| previous minor | ✅ Security fixes | إصلاحات أمنية |
+| older | ❌ End of Life | نهاية الدعم |
 
-## Reporting a Vulnerability
+## Reporting a Vulnerability — الإبلاغ عن ثغرة أمنية
 
-**Please do NOT open a public GitHub issue for security vulnerabilities.**
+### ⚠️ DO NOT open a public issue for security vulnerabilities — لا تفتح مشكلة عامة للثغرات الأمنية
 
-Instead, report security issues via email:
+Instead, please use one of these methods:
 
-📧 **moatazsarapil@gmail.com**
+1. **GitHub Security Advisory** (preferred — مُفضّل):
+   - Go to the [Security tab](../../security/advisories/new) of this repository
+   - Click "Report a vulnerability"
+   - Fill in the details
 
-Include:
-- Description of the vulnerability
-- Steps to reproduce
-- Potential impact
-- Suggested fix (if any)
+2. **Email — البريد الإلكتروني**:
+   - Send to: `security@arkan.it.com`
+   - Include: vulnerability description, steps to reproduce, impact assessment
+   - PGP key available upon request
 
-### Response Timeline
+### What to Include — ماذا تتضمن
 
-| Stage | Timeline |
-|-------|----------|
-| Acknowledgment | Within 48 hours |
-| Initial assessment | Within 1 week |
-| Fix development | Within 2 weeks |
-| Release | Within 30 days |
+- **Type of vulnerability** — نوع الثغرة (e.g., SQL injection, XSS, CSRF)
+- **Affected component** — المكون المتأثر (file path, API endpoint)
+- **Steps to reproduce** — خطوات إعادة الإنتاج
+- **Proof of concept** — إثبات المفهوم (if available)
+- **Impact assessment** — تقييم التأثير
+- **Suggested fix** — الإصلاح المقترح (if any)
 
-## Security Measures
+### Response Timeline — الجدول الزمني للاستجابة
 
-AuraCRM implements the following security measures:
+| Action | Timeline |
+|--------|----------|
+| Acknowledgment — الإقرار | Within 48 hours — خلال ٤٨ ساعة |
+| Initial assessment — التقييم الأولي | Within 1 week — خلال أسبوع |
+| Fix development — تطوير الإصلاح | Within 2 weeks — خلال أسبوعين |
+| Security release — إصدار أمني | Within 30 days — خلال ٣٠ يوماً |
 
-### Authentication & Authorization
-- All API endpoints require authentication (`@frappe.whitelist()`)
-- Role-based access control (5 CRM roles)
-- Row-level security for lead ownership
-- Field-level encryption for sensitive data (API keys, passwords)
+### Disclosure Policy — سياسة الإفصاح
 
-### Data Protection
-- Sensitive fields use Frappe's Password fieldtype (encrypted at rest)
-- No external data transmission without explicit configuration
-- License validation performed locally (no phone-home)
-- All SQL queries are parameterized (no SQL injection)
+- We follow **Coordinated Disclosure** — نتبع الإفصاح المنسق
+- We will credit you in the security advisory (unless you prefer anonymity) — سننسب الفضل إليك
+- We ask that you give us a reasonable window to fix before public disclosure — نطلب منك منحنا وقتاً معقولاً
 
-### Infrastructure
-- CSRF protection via Frappe's token system
-- Rate limiting at web server level
-- Input validation through DocType field definitions
-- Session management handled by Frappe's security layer
+## Security Standards — معايير الأمان
 
-## Disclosure Policy
+This app follows the [Arkan Lab Security Commandments](https://github.com/sarapil/frappe_docker/blob/main/.github/copilot-instructions.md):
 
-We follow responsible disclosure:
-1. Reporter contacts us privately
-2. We acknowledge and assess the issue
-3. We develop and test a fix
-4. We release the fix and credit the reporter (if desired)
-5. Public disclosure after fix is available
+- ✅ No `eval()`/`exec()`
+- ✅ Parameterized SQL only
+- ✅ Permission checks on all whitelisted APIs
+- ✅ No hardcoded credentials
+- ✅ No sensitive data in logs
+- ✅ External API calls use timeout
+- ✅ Semgrep security scanning in CI
+- ✅ No `frappe.db.commit()` in document events
 
-## Hall of Fame
+## Security Scanning — الفحص الأمني
 
-We gratefully acknowledge security researchers who help keep AuraCRM safe. Reporters will be listed here (with permission).
-
-*No reports yet — be the first!*
+Every PR and release is scanned using:
+- **Semgrep** — static analysis for Python/JS vulnerabilities
+- **Ruff** — Python linting including security rules
+- **Custom Frappe checks** — forbidden patterns detection
