@@ -9,6 +9,9 @@
  * Lightweight nav injected on AuraCRM routes only.
  * Links to the 5 visual pages + key DocType lists.
  */
+// Guard: skip if jQuery/frappe not loaded
+if (typeof $ === "undefined" || typeof frappe === "undefined") return;
+
 (function () {
     "use strict";
 

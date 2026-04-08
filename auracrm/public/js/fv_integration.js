@@ -8,7 +8,7 @@
     // App branding registration
     const APP_CONFIG = {
         name: "auracrm",
-        title: __("AuraCRM"),
+        title: "AuraCRM",
         color: "#6366F1",
         module: "AuraCRM",
     };
