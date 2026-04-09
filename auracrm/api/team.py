@@ -152,7 +152,7 @@ def calculate_daily_scorecards():
             continue
 
         # Skip if already calculated for today
-        if frappe.db.exists("Agent Scorecard", {"agent": agent.name, "period_date": today}):
+        if frappe.db.exists("Agent Scorecard", {"agent_email": agent.name, "date": today}):
             continue
 
         _create_scorecard(agent.name, today, yesterday)
@@ -208,13 +208,12 @@ def _create_scorecard(agent, today, yesterday):
     try:
         frappe.get_doc({
             "doctype": "Agent Scorecard",
-            "agent": agent,
-            "period_date": today,
-            "total_score": score,
-            "leads_handled": leads_handled,
-            "conversions": conversions,
-            "communications_sent": comms_sent,
-            "sla_breaches": breaches,
+            "agent_email": agent,
+            "date": today,
+            "overall_score": score,
+            "leads_assigned": leads_handled,
+            "leads_converted": conversions,
+            "messages_sent": comms_sent,
             "conversion_rate": round((conversions / leads_handled * 100) if leads_handled else 0, 1),
         }).insert(ignore_permissions=True)
     except Exception:
