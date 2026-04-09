@@ -7,7 +7,7 @@
  "icon": "settings",
  "icon_type": "Link",
  "idx": 0,
- "label": "AuraCRM Settings",
+ "label": "Settings",
  "link_to": "AuraCRM Settings",
  "link_type": "Workspace Sidebar",
  "logo_url": "",
