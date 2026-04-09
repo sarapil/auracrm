@@ -114,10 +114,10 @@ def get_agent_detail(agent):
     # Latest scorecard
     scorecard = frappe.get_all(
         "Agent Scorecard",
-        filters={"agent": agent},
-        fields=["name", "period_date", "total_score", "leads_handled",
-                "conversions", "avg_response_time_hours"],
-        order_by="period_date desc",
+        filters={"agent_email": agent},
+        fields=["name", "date", "overall_score", "leads_assigned",
+                "leads_converted", "avg_response_time_minutes"],
+        order_by="date desc",
         limit=1,
     )
 
@@ -252,7 +252,7 @@ def recalculate_agent_scores(agent=None):
         if not any(r in roles for r in ["Sales User", "Sales Agent"]):
             continue
         # Delete existing scorecard for today to allow recalculation
-        existing = frappe.db.exists("Agent Scorecard", {"agent": a.name, "period_date": today})
+        existing = frappe.db.exists("Agent Scorecard", {"agent_email": a.name, "date": today})
         if existing:
             frappe.delete_doc("Agent Scorecard", existing, ignore_permissions=True)
         _create_scorecard(a.name, today, yesterday)

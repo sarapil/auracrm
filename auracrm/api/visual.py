@@ -559,7 +559,7 @@ def get_lead_explorer(lead_name):
     # ── Score History ─────────────────────────────────────────────
     score_logs = frappe.get_all("Lead Score Log",
         filters={"lead": lead_name},
-        fields=["name", "rule_name", "points_change", "new_score", "creation"],
+        fields=["name", "reason", "old_score", "new_score", "creation"],
         order_by="creation desc", limit=5)
 
     if score_logs:

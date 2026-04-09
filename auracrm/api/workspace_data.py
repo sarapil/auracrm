@@ -23,7 +23,7 @@ def get_sales_agent_workspace():
         "Lead",
         filters={"lead_owner": user, "status": ["in", ["Open", "Replied"]]},
         fields=["name", "lead_name", "company_name", "phone", "mobile_no",
-                "email_id", "source", "status", "aura_score", "creation", "modified"],
+                "email_id", "utm_source", "status", "aura_score", "creation", "modified"],
         order_by="aura_score desc, modified desc",
         limit=50,
     )
@@ -149,7 +149,7 @@ def get_contact_360(doctype, name):
         related_leads = frappe.get_all(
             "Lead",
             filters={"company_name": info.get("customer_name")},
-            fields=["name", "lead_name", "status", "aura_score", "source", "modified"],
+            fields=["name", "lead_name", "status", "aura_score", "utm_source", "modified"],
             order_by="modified desc",
             limit=10,
         )
@@ -214,7 +214,7 @@ def get_contact_360(doctype, name):
         "score_label": score_label,
         "sla_status": sla_status,
         "status": info.get("status") or "",
-        "source": info.get("source") or "",
+        "source": info.get("utm_source") or "",
         "company_name": info.get("company_name") or info.get("customer_name") or "",
         "phone": info.get("mobile_no") or info.get("phone") or info.get("contact_mobile") or "",
         "email": info.get("email_id") or info.get("contact_email") or "",

@@ -27,7 +27,7 @@ def get_lead_scores(filters=None, limit=50):
     return frappe.get_all(
         "Lead",
         filters=base_filters,
-        fields=["name", "lead_name", "company_name", "source", "lead_owner",
+        fields=["name", "lead_name", "company_name", "utm_source", "lead_owner",
                 "status", "aura_score", "modified", "creation"],
         order_by="aura_score desc",
         limit_page_length=limit,

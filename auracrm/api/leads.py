@@ -88,7 +88,7 @@ def get_ai_profile(lead_name: str):
         "email": lead.email_id,
         "phone": lead.mobile_no,
         "company": lead.company_name,
-        "source": lead.source,
+        "source": lead.utm_source,
         "score": getattr(lead, "lead_score", 0),
     }
 
@@ -179,7 +179,7 @@ def generate_content(lead_name: str = None, topic: str = None, platform: str = "
             "name": lead.lead_name,
             "company": lead.company_name,
             "industry": getattr(lead, "industry", ""),
-            "source": lead.source,
+            "source": lead.utm_source,
         }
 
     if topic:
