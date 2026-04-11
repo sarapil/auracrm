@@ -80,11 +80,11 @@ add_to_apps_screen = [
         }
 ]
 
-app_include_js = ["/assets/auracrm/js/auracrm_combined.js"]
-app_include_css = [
-    "auracrm.bundle.css",
-    "/assets/auracrm/css/auracrm_combined.css",
-]
+# MEGA: app_include_js = ["/assets/auracrm/js/auracrm_combined.js"]
+# MEGA: app_include_css = [
+# MEGA:     "auracrm.bundle.css",
+# MEGA:     "/assets/auracrm/css/auracrm_combined.css",
+# MEGA: ]
 
 doctype_js = {
         "Lead": "public/js/overrides/lead_override.js",
