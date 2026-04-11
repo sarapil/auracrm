@@ -80,18 +80,10 @@ add_to_apps_screen = [
         }
 ]
 
-app_include_js = [
-        "/assets/auracrm/js/aura_bootstrap.js",
-        "/assets/auracrm/js/aura_sidebar.js",
-        "/assets/auracrm/js/overrides/contact_360.js",
-        "/assets/auracrm/js/aura_contextual_help.js",
-    "/assets/auracrm/js/fv_integration.js",
-]
+app_include_js = ["/assets/auracrm/js/auracrm_combined.js"]
 app_include_css = [
-    "/assets/auracrm/css/auracrm-theme.css",
-        "auracrm.bundle.css",
-        "/assets/auracrm/css/aura_brand.css",
-        "/assets/auracrm/css/aura_sidebar.css",
+    "auracrm.bundle.css",
+    "/assets/auracrm/css/auracrm_combined.css",
 ]
 
 doctype_js = {
