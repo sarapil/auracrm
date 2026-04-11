@@ -21,7 +21,7 @@ def process_nurture_queue():
     active = frappe.get_all(
         "Nurture Lead Instance",
         filters={"status": "Active", "next_action_at": ("<=", now_datetime())},
-        fields=["name", "lead", "nurture_journey", "current_step_index"],
+        fields=["name", "lead", "journey", "current_step"],
         order_by="next_action_at asc",
         limit_page_length=100,
     )
@@ -57,7 +57,7 @@ def enroll_lead(lead_name, journey_name, source="manual"):
     # Check for existing active enrollment
     existing = frappe.db.exists(
         "Nurture Lead Instance",
-        {"lead": lead_name, "nurture_journey": journey_name, "status": "Active"},
+        {"lead": lead_name, "journey": journey_name, "status": "Active"},
     )
     if existing:
         frappe.msgprint(f"Lead {lead_name} is already enrolled in {journey_name}")
@@ -76,12 +76,11 @@ def enroll_lead(lead_name, journey_name, source="manual"):
 
     instance = frappe.new_doc("Nurture Lead Instance")
     instance.lead = lead_name
-    instance.nurture_journey = journey_name
-    instance.enrollment_source = source
-    instance.current_step_index = 0
+    instance.journey = journey_name
+    instance.current_step = 0
     instance.status = "Active"
     instance.next_action_at = add_to_date(now_datetime(), minutes=delay_minutes)
-    instance.enrolled_at = now_datetime()
+    instance.entered_at = now_datetime()
     instance.insert(ignore_permissions=True)
     frappe.db.commit()
 
@@ -132,7 +131,7 @@ def pause_on_conversion(doc, method):
         frappe.db.set_value(
             "Nurture Lead Instance",
             inst_name,
-            {"status": "Completed", "completed_reason": f"Lead status: {doc.status}"},
+            {"status": "Completed"},
         )
     if active_instances:
         frappe.db.commit()
@@ -143,9 +142,9 @@ def pause_on_conversion(doc, method):
 # ---------------------------------------------------------------------------
 def _advance_instance(instance):
     """Execute the current step and schedule the next one."""
-    journey_name = instance.nurture_journey
+    journey_name = instance.journey
     steps = _get_journey_steps(journey_name)
-    current_idx = cint(instance.current_step_index)
+    current_idx = cint(instance.current_step)
 
     if current_idx >= len(steps):
         # Journey complete
@@ -169,11 +168,7 @@ def _advance_instance(instance):
         frappe.db.set_value(
             "Nurture Lead Instance",
             instance.name,
-            {
-                "status": "Completed",
-                "current_step_index": next_idx,
-                "completed_reason": "All steps completed",
-            },
+            {"status": "Completed", "current_step": next_idx},
         )
     else:
         next_step = steps[next_idx]
@@ -182,9 +177,8 @@ def _advance_instance(instance):
             "Nurture Lead Instance",
             instance.name,
             {
-                "current_step_index": next_idx,
+                "current_step": next_idx,
                 "next_action_at": add_to_date(now_datetime(), minutes=delay),
-                "last_action_at": now_datetime(),
             },
         )
 

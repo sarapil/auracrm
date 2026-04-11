@@ -16,9 +16,9 @@ def process_publishing_queue():
     """Scheduled every 5 minutes — picks Pending queue items and publishes."""
     pending = frappe.get_all(
         "Publishing Queue",
-        filters={"status": "Pending", "scheduled_time": ("<=", now_datetime())},
-        fields=["name", "platform", "content_calendar_entry", "content_body", "media_url"],
-        order_by="scheduled_time asc",
+        filters={"status": "Pending"},
+        fields=["name", "platform", "calendar_entry", "adapted_content"],
+        order_by="creation asc",
         limit_page_length=20,
     )
 
@@ -33,14 +33,14 @@ def process_publishing_queue():
                 item.name,
                 {
                     "status": "Published",
-                    "published_at": now_datetime(),
+                    "last_attempt": now_datetime(),
                     "platform_post_id": result.get("post_id", ""),
-                    "platform_url": result.get("url", ""),
+                    "platform_post_url": result.get("url", ""),
                 },
             )
 
-            if item.content_calendar_entry:
-                _update_calendar_entry(item.content_calendar_entry, "Published")
+            if item.calendar_entry:
+                _update_calendar_entry(item.calendar_entry, "Published")
 
             frappe.db.commit()
         except Exception as e:
@@ -77,11 +77,9 @@ def enqueue_from_calendar(doc, method):
             scheduled = optimal
 
         q = frappe.new_doc("Publishing Queue")
-        q.content_calendar_entry = doc.name
+        q.calendar_entry = doc.name
         q.platform = p.platform
-        q.content_body = doc.content_body or ""
-        q.media_url = doc.media_url or ""
-        q.scheduled_time = scheduled
+        q.adapted_content = doc.content_body or ""
         q.status = "Pending"
         q.insert(ignore_permissions=True)
 
@@ -90,8 +88,8 @@ def reschedule_failed():
     """Scheduled daily — retries failed posts once."""
     failed = frappe.get_all(
         "Publishing Queue",
-        filters={"status": "Failed", "retry_count": ("<", 3)},
-        fields=["name", "retry_count"],
+        filters={"status": "Failed", "attempts": ("<", 3)},
+        fields=["name", "attempts"],
         limit_page_length=50,
     )
     for item in failed:
@@ -100,8 +98,7 @@ def reschedule_failed():
             item.name,
             {
                 "status": "Pending",
-                "scheduled_time": add_to_date(now_datetime(), minutes=30),
-                "retry_count": (item.retry_count or 0) + 1,
+                "attempts": (item.attempts or 0) + 1,
             },
         )
     if failed:
