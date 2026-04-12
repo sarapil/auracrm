@@ -80,11 +80,11 @@ add_to_apps_screen = [
         }
 ]
 
-# CODESPACES: app_include_js = ["/assets/auracrm/js/auracrm_combined.js"]
-# CODESPACES: app_include_css = [
-# CODESPACES:     "auracrm.bundle.css",
-# CODESPACES:     "/assets/auracrm/css/auracrm_combined.css",
-# CODESPACES: ]
+app_include_js = ["/assets/auracrm/js/auracrm_combined.js"]
+app_include_css = [
+    "auracrm.bundle.css",
+    "/assets/auracrm/css/auracrm_combined.css",
+]
 
 doctype_js = {
         "Lead": "public/js/overrides/lead_override.js",
