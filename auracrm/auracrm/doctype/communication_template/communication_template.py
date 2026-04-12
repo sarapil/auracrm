@@ -38,6 +38,8 @@ class CommunicationTemplate(Document):
 
 @frappe.whitelist()
 def render_preview(template_name, doctype=None, name=None):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
+def render_preview(template_name, doctype=None, name=None):
     """Render a template preview with sample or real data.
 
     Args:

@@ -33,6 +33,7 @@ import json
 # ---------------------------------------------------------------------------
 @frappe.whitelist()
 def resolve_call_context(contact_doctype, contact_name, campaign_name=None):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Find the best-matching Call Context Rule for a contact.
 
@@ -175,6 +176,7 @@ def _contact_matches_segment(doctype, name, filter_json):
 # ---------------------------------------------------------------------------
 @frappe.whitelist()
 def get_agent_call_panel(contact_doctype, contact_name, campaign_name=None):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Assemble the full Agent Context Panel data for a call.
 

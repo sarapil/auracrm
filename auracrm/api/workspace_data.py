@@ -66,6 +66,8 @@ def get_sales_agent_workspace():
 
 @frappe.whitelist()
 def get_contact_360(doctype, name):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
+def get_contact_360(doctype, name):
     """Get 360° view of a contact — all related data across systems.
 
     Supports Lead, Opportunity, Customer, and Contact doctypes.

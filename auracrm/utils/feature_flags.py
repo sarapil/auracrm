@@ -19,6 +19,7 @@ Usage::
     @frappe.whitelist()
     @require_premium("ai_lead_scoring")
     def score_lead_with_ai(lead):
+        frappe.only_for(["AC User", "AC Manager", "System Manager"])
         ...
 
     if is_feature_enabled("advanced_analytics"):

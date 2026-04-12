@@ -19,6 +19,8 @@ import json
 # ---------------------------------------------------------------------------
 @frappe.whitelist()
 def create_deal_room(opportunity=None, lead=None, title=None, assets=None):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
+def create_deal_room(opportunity=None, lead=None, title=None, assets=None):
     """Create a new Deal Room and return its URL.
 
     Args:

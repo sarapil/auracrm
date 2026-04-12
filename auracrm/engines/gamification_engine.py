@@ -75,6 +75,7 @@ def is_enabled():
 @frappe.whitelist()
 def record_event(event_key, user=None, reference_doctype=None, reference_name=None,
                  notes=None, extra_multiplier=1.0):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Main entry point. Records a gamification event for a user.
 

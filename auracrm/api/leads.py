@@ -21,6 +21,7 @@ def get_lead_list(
     sort_by: str = "modified",
     sort_order: str = "desc",
 ):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Get paginated, filtered Lead list. Respects CAPS visibility rules.
 
@@ -71,6 +72,7 @@ def get_lead_list(
 @frappe.whitelist()
 @require_capability("osint_enrich")
 def get_ai_profile(lead_name: str):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Get AI-enriched profile for a Lead.
     Requires osint_enrich capability.
@@ -131,6 +133,7 @@ def get_ai_profile(lead_name: str):
 @frappe.whitelist()
 @require_capability("osint_hunt_run")
 def trigger_osint_hunt(lead_name: str, hunt_type: str = "basic"):
+    frappe.only_for(["AC User", "AC Manager", "System Manager"])
     """
     Trigger an OSINT intelligence hunt for a Lead.
     Requires osint_hunt_run capability.
