@@ -99,8 +99,9 @@ before_uninstall = "auracrm.install.before_uninstall"
 
 fixtures = [
     {"dt": "Workspace", "filters": [["module", "like", "AuraCRM%"]]},
-        {"dt": "Role", "filters": [["name", "in", ["Sales Agent", "Sales Manager", "Quality Analyst", "Marketing Manager", "CRM Admin"]]]},
-        {"dt": "Custom Field", "filters": [["module", "=", "AuraCRM"]]},
+    {"dt": "Role", "filters": [["name", "in", ["Sales Agent", "Sales Manager", "Quality Analyst", "Marketing Manager", "CRM Admin", "AC Sales Manager", "AC Sales Agent", "AC Marketing Manager", "AC Admin"]]]},
+    {"dt": "Custom Field", "filters": [["module", "=", "AuraCRM"]]},
+    {"dt": "Desktop Icon", "filters": [["app", "=", "auracrm"]]},
 ]
 
 # ---------------------------------------------------------------------------
@@ -310,20 +311,6 @@ has_permission = {
 }
 
 boot_session = "auracrm.boot.boot_session"
-
-# ---------------------------------------------------------------------------
-# Fixtures
-# ---------------------------------------------------------------------------
-fixtures = [
-    {
-        "dt": "Role",
-        "filters": [["name", "in", ["AC Sales Manager", "AC Sales Agent", "AC Marketing Manager", "AC Admin"]]],
-    },
-    {
-        "dt": "Desktop Icon",
-        "filters": [["app", "=", "auracrm"]],
-    },
-]
 
 # ---------------------------------------------------------------------------
 # CAPS Self-Capabilities — what AuraCRM declares for access control
