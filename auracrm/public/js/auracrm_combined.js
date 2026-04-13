@@ -15,113 +15,113 @@
  * Provides the `frappe.auracrm` namespace and lazy-load helpers.
  */
 (function () {
-    "use strict";
+	"use strict";
 
-    // Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
+	// Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
 	if (typeof frappe === "undefined" || typeof frappe.provide !== "function") {
 		window.frappe = window.frappe || {};
-		frappe.provide = frappe.provide || function () {};
+		frappe.provide = frappe.provide || function () { };
 	}
 	frappe.provide("frappe.auracrm");
-    frappe.provide("frappe.auracrm._cache");
+	frappe.provide("frappe.auracrm._cache");
 
-    const BUNDLE = "auracrm.bundle.js";
+	const BUNDLE = "auracrm.bundle.js";
 
-    frappe.auracrm._loaded = false;
-    frappe.auracrm.version = "1.0.0";
+	frappe.auracrm._loaded = false;
+	frappe.auracrm.version = "1.0.0";
 
-    /**
-     * Load the full AuraCRM bundle on demand.
-     */
-    frappe.auracrm.load = async function () {
-        if (!frappe.auracrm._loaded) {
-            if (frappe.visual && frappe.visual.engine) {
-                await frappe.visual.engine();
-            }
-            await frappe.require(BUNDLE);
-            frappe.auracrm._loaded = true;
-        }
-        return frappe.auracrm;
-    };
+	/**
+	 * Load the full AuraCRM bundle on demand.
+	 */
+	frappe.auracrm.load = async function () {
+		if (!frappe.auracrm._loaded) {
+			if (frappe.visual && frappe.visual.engine) {
+				await frappe.visual.engine();
+			}
+			await frappe.require(BUNDLE);
+			frappe.auracrm._loaded = true;
+		}
+		return frappe.auracrm;
+	};
 
-    /**
-     * Get user CRM role from boot session.
-     */
-    frappe.auracrm.getUserRole = function () {
-        const boot = (frappe.boot && frappe.boot.auracrm) || {};
-        const roles = boot.user_roles || {};
-        if (roles.is_crm_admin) return "admin";
-        if (roles.is_sales_manager) return "manager";
-        if (roles.is_quality_analyst) return "quality";
-        if (roles.is_marketing_manager) return "marketing";
-        if (roles.is_sales_agent) return "agent";
-        return "viewer";
-    };
+	/**
+	 * Get user CRM role from boot session.
+	 */
+	frappe.auracrm.getUserRole = function () {
+		const boot = (frappe.boot && frappe.boot.auracrm) || {};
+		const roles = boot.user_roles || {};
+		if (roles.is_crm_admin) return "admin";
+		if (roles.is_sales_manager) return "manager";
+		if (roles.is_quality_analyst) return "quality";
+		if (roles.is_marketing_manager) return "marketing";
+		if (roles.is_sales_agent) return "agent";
+		return "viewer";
+	};
 
-    // ── Visual Page Quick Navigation ─────────────────────────────
-    frappe.auracrm.goHub = () => frappe.set_route("auracrm-hub");
-    frappe.auracrm.goPipeline = () => frappe.set_route("auracrm-pipeline");
-    frappe.auracrm.goTeam = () => frappe.set_route("auracrm-team");
-    frappe.auracrm.goAnalytics = () => frappe.set_route("auracrm-analytics");
+	// ── Visual Page Quick Navigation ─────────────────────────────
+	frappe.auracrm.goHub = () => frappe.set_route("auracrm-hub");
+	frappe.auracrm.goPipeline = () => frappe.set_route("auracrm-pipeline");
+	frappe.auracrm.goTeam = () => frappe.set_route("auracrm-team");
+	frappe.auracrm.goAnalytics = () => frappe.set_route("auracrm-analytics");
 
-    // ── Feature Gating (License System) ──────────────────────────
-    frappe.auracrm._features = {};
-    frappe.auracrm._license = {};
+	// ── Feature Gating (License System) ──────────────────────────
+	frappe.auracrm._features = {};
+	frappe.auracrm._license = {};
 
-    frappe.auracrm.loadFeatures = function () {
-        frappe.call({
-            method: "auracrm.utils.feature_flags.get_enabled_features",
-            async: false,
-            callback: (r) => { frappe.auracrm._features = r.message || {}; },
-        });
-    };
+	frappe.auracrm.loadFeatures = function () {
+		frappe.call({
+			method: "auracrm.utils.feature_flags.get_enabled_features",
+			async: false,
+			callback: (r) => { frappe.auracrm._features = r.message || {}; },
+		});
+	};
 
-    frappe.auracrm.loadLicense = function () {
-        frappe.call({
-            method: "auracrm.utils.license.get_license_status",
-            callback: (r) => { frappe.auracrm._license = r.message || {}; },
-        });
-    };
+	frappe.auracrm.loadLicense = function () {
+		frappe.call({
+			method: "auracrm.utils.license.get_license_status",
+			callback: (r) => { frappe.auracrm._license = r.message || {}; },
+		});
+	};
 
-    frappe.auracrm.isEnabled = function (feature_key) {
-        return frappe.auracrm._features[feature_key] === true;
-    };
+	frappe.auracrm.isEnabled = function (feature_key) {
+		return frappe.auracrm._features[feature_key] === true;
+	};
 
-    frappe.auracrm.showUpgradePrompt = function (feature_name) {
-        frappe.msgprint({
-            title: __("Premium Feature"),
-            indicator: "blue",
-            message: `
+	frappe.auracrm.showUpgradePrompt = function (feature_name) {
+		frappe.msgprint({
+			title: __("Premium Feature"),
+			indicator: "blue",
+			message: `
                 <div style="text-align:center">
                     <p><strong>${feature_name}</strong> ${__("requires a premium license.")}</p>
                     <a href="https://frappecloud.com/marketplace/apps/auracrm"
                        target="_blank" class="btn btn-primary btn-sm">${__("Upgrade Now")}</a>
                 </div>
             `,
-        });
-    };
+		});
+	};
 
-    frappe.auracrm.requirePremium = function (feature_key, feature_name, callback) {
-        if (frappe.auracrm.isEnabled(feature_key)) {
-            callback();
-        } else {
-            frappe.auracrm.showUpgradePrompt(feature_name);
-        }
-    };
+	frappe.auracrm.requirePremium = function (feature_key, feature_name, callback) {
+		if (frappe.auracrm.isEnabled(feature_key)) {
+			callback();
+		} else {
+			frappe.auracrm.showUpgradePrompt(feature_name);
+		}
+	};
 
-    // Load features on page ready (non-blocking)
-    $(document).ready(function () {
-        if (frappe.session && frappe.session.user !== "Guest") {
-            frappe.auracrm.loadFeatures();
-            frappe.auracrm.loadLicense();
-        }
-    });
+	// Load features on page ready (non-blocking)
+	$(document).ready(function () {
+		if (frappe.session && frappe.session.user !== "Guest") {
+			frappe.auracrm.loadFeatures();
+			frappe.auracrm.loadLicense();
+		}
+	});
 
-    console.log(
-        "%c✦ AuraCRM%c v1.0.0 ready",
-        "color:#6366f1;font-weight:bold;font-size:12px",
-        "color:#94a3b8"
-    );
+	console.log(
+		"%c✦ AuraCRM%c v1.0.0 ready",
+		"color:#6366f1;font-weight:bold;font-size:12px",
+		"color:#94a3b8"
+	);
 })();
 
 
@@ -140,79 +140,79 @@
 // Guard: skip if jQuery/frappe not loaded
 if (typeof $ !== "undefined" && typeof frappe !== "undefined")
 
-(function () {
-    "use strict";
+	(function () {
+		"use strict";
 
-    const CRM_ROUTES = ["auracrm", "auracrm-hub", "auracrm-pipeline", "auracrm-team", "auracrm-analytics"];
-    const CRM_DOCTYPES = ["lead", "opportunity", "contact", "customer"];
+		const CRM_ROUTES = ["auracrm", "auracrm-hub", "auracrm-pipeline", "auracrm-team", "auracrm-analytics"];
+		const CRM_DOCTYPES = ["lead", "opportunity", "contact", "customer"];
 
-    const SIDEBAR_ID = "aura-sidebar-nav";
+		const SIDEBAR_ID = "aura-sidebar-nav";
 
-    const NAV_ITEMS = [
-        { label: "Home", route: "auracrm", icon: "🏠" },
-        { label: "Hub", route: "auracrm-hub", icon: "📈" },
-        { label: "Pipeline", route: "auracrm-pipeline", icon: "🔄" },
-        { label: "Team", route: "auracrm-team", icon: "👥" },
-        { label: "Analytics", route: "auracrm-analytics", icon: "📉" },
-        { type: "divider" },
-        { label: "Leads", route: "List/Lead", icon: "📋" },
-        { label: "Opportunities", route: "List/Opportunity", icon: "🎯" },
-        { label: "Contacts", route: "List/Contact", icon: "📇" },
-        { label: "Customers", route: "List/Customer", icon: "🏢" },
-        { type: "divider" },
-        { label: "Settings", route: "Form/AuraCRM Settings", icon: "⚙️", admin: true },
-    ];
+		const NAV_ITEMS = [
+			{ label: "Home", route: "auracrm", icon: "🏠" },
+			{ label: "Hub", route: "auracrm-hub", icon: "📈" },
+			{ label: "Pipeline", route: "auracrm-pipeline", icon: "🔄" },
+			{ label: "Team", route: "auracrm-team", icon: "👥" },
+			{ label: "Analytics", route: "auracrm-analytics", icon: "📉" },
+			{ type: "divider" },
+			{ label: "Leads", route: "List/Lead", icon: "📋" },
+			{ label: "Opportunities", route: "List/Opportunity", icon: "🎯" },
+			{ label: "Contacts", route: "List/Contact", icon: "📇" },
+			{ label: "Customers", route: "List/Customer", icon: "🏢" },
+			{ type: "divider" },
+			{ label: "Settings", route: "Form/AuraCRM Settings", icon: "⚙️", admin: true },
+		];
 
-    function isCRMRoute() {
-        const route = (frappe.get_route_str() || "").toLowerCase();
-        if (CRM_ROUTES.some(r => route === r)) return true;
-        if (CRM_DOCTYPES.some(d => route.includes(d))) return true;
-        return false;
-    }
+		function isCRMRoute() {
+			const route = (frappe.get_route_str() || "").toLowerCase();
+			if (CRM_ROUTES.some(r => route === r)) return true;
+			if (CRM_DOCTYPES.some(d => route.includes(d))) return true;
+			return false;
+		}
 
-    function getActiveRoute() {
-        return (frappe.get_route_str() || "").toLowerCase();
-    }
+		function getActiveRoute() {
+			return (frappe.get_route_str() || "").toLowerCase();
+		}
 
-    function injectSidebar() {
-        // Remove stale sidebar
-        $(`#${SIDEBAR_ID}`).remove();
+		function injectSidebar() {
+			// Remove stale sidebar
+			$(`#${SIDEBAR_ID}`).remove();
 
-        if (!isCRMRoute()) return;
+			if (!isCRMRoute()) return;
 
-        const active = getActiveRoute();
-        const boot = frappe.boot?.auracrm || {};
-        const isAdmin = boot.user_roles?.is_crm_admin;
+			const active = getActiveRoute();
+			const boot = frappe.boot?.auracrm || {};
+			const isAdmin = boot.user_roles?.is_crm_admin;
 
-        let html = `<div id="${SIDEBAR_ID}" class="aura-sidebar-slim">`;
-        html += `<div class="aura-sidebar-brand" onclick="frappe.set_route('auracrm')">✦ AuraCRM</div>`;
+			let html = `<div id="${SIDEBAR_ID}" class="aura-sidebar-slim">`;
+			html += `<div class="aura-sidebar-brand" onclick="frappe.set_route('auracrm')">✦ AuraCRM</div>`;
 
-        for (const item of NAV_ITEMS) {
-            if (item.type === "divider") {
-                html += `<div class="aura-sidebar-divider"></div>`;
-                continue;
-            }
-            if (item.admin && !isAdmin) continue;
+			for (const item of NAV_ITEMS) {
+				if (item.type === "divider") {
+					html += `<div class="aura-sidebar-divider"></div>`;
+					continue;
+				}
+				if (item.admin && !isAdmin) continue;
 
-            const isActive = active === item.route.toLowerCase() ||
-                (item.route.startsWith("List/") && active.includes(item.route.split("/")[1].toLowerCase()));
+				const isActive = active === item.route.toLowerCase() ||
+					(item.route.startsWith("List/") && active.includes(item.route.split("/")[1].toLowerCase()));
 
-            html += `<div class="aura-sidebar-item${isActive ? ' active' : ''}"
+				html += `<div class="aura-sidebar-item${isActive ? ' active' : ''}"
                 onclick="frappe.set_route('${item.route}')" title="${__(item.label)}">
                 <span class="aura-sidebar-icon">${item.icon}</span>
                 <span class="aura-sidebar-label">${__(item.label)}</span>
             </div>`;
-        }
-        html += `</div>`;
+			}
+			html += `</div>`;
 
-        $(".layout-main").prepend(html);
-    }
+			$(".layout-main").prepend(html);
+		}
 
-    // Inject on route change
-    $(document).on("page-change", injectSidebar);
-    // Initial inject
-    $(document).ready(() => setTimeout(injectSidebar, 500));
-})();
+		// Inject on route change
+		$(document).on("page-change", injectSidebar);
+		// Initial inject
+		$(document).ready(() => setTimeout(injectSidebar, 500));
+	})();
 
 
 /* === contact_360.js === */
@@ -353,8 +353,8 @@ function _renderTimeline(comms) {
 	const items = comms.map((c) => {
 		const icon = c.communication_medium === "Phone" ? "📞"
 			: c.communication_medium === "Chat" ? "💬"
-			: c.communication_medium === "SMS" ? "📱"
-			: "📧";
+				: c.communication_medium === "SMS" ? "📱"
+					: "📧";
 		const dir = c.sent_or_received === "Sent" ? "↗" : "↙";
 		const time = frappe.datetime.prettyDate(c.creation);
 		const subject = frappe.utils.escape_html(c.subject || c.communication_type || "");
@@ -537,24 +537,24 @@ function _bind360Events($body, data) {
 	];
 
 	const HELP_MAP = {
-		"AuraCRM Settings":        { title: __("AuraCRM Settings"), body: __("Global configuration for AuraCRM: scoring weights, distribution mode, AI settings, gamification toggles, and integration credentials.") },
-		"Lead Scoring Rule":       { title: __("Lead Scoring"), body: __("Define scoring criteria that automatically rate leads based on demographics, behavior, and engagement. Higher scores mean higher conversion probability.") },
-		"Lead Distribution Rule":  { title: __("Lead Distribution"), body: __("Configure how leads are automatically assigned to sales agents. Use round-robin, territory-based, skill-based, or workload-balanced distribution.") },
-		"AI Lead Profile":         { title: __("AI Lead Profiles"), body: __("AI-generated profiles that analyze lead data to predict conversion probability, suggest ideal approach, and recommend next actions.") },
-		"Auto Dialer Campaign":    { title: __("Auto Dialer"), body: __("Create automated calling campaigns. Agents get calls queued with context rules that show relevant information for each contact.") },
-		"Campaign Sequence":       { title: __("Campaign Sequences"), body: __("Multi-step automated campaigns with email, WhatsApp, SMS, and wait steps. Enroll leads and track progression through each step.") },
-		"Nurture Journey":         { title: __("Nurture Journeys"), body: __("Long-term nurture programs with branching logic. Move leads through awareness, consideration, and decision stages automatically.") },
-		"Deal Room":               { title: __("Deal Rooms"), body: __("Collaborative spaces for each deal with shared documents, notes, activity timeline, and stakeholder management. Share externally with customers.") },
-		"Customer Journey":        { title: __("Customer Journey"), body: __("Track every touchpoint from first contact to closed deal. Visualize the full journey with timeline and attribution data.") },
-		"SLA Policy":              { title: __("SLA Policies"), body: __("Define response time expectations for leads and opportunities. Automatic monitoring, escalation workflows, and breach logging.") },
-		"Gamification Settings":   { title: __("Gamification"), body: __("Configure the gamification engine: point values, badge thresholds, challenge types, and leaderboard settings to boost team performance.") },
-		"WhatsApp Broadcast":      { title: __("WhatsApp Broadcast"), body: __("Send bulk WhatsApp messages with templates and personalization. Track delivery, read status, and responses.") },
-		"WhatsApp Chatbot":        { title: __("WhatsApp Chatbot"), body: __("Build conversational chatbots for WhatsApp with a visual node editor. Qualify leads, answer FAQs, and route to agents.") },
-		"Competitor Profile":      { title: __("Competitor Intel"), body: __("Track competitor information, pricing, strengths/weaknesses. Log competitive intelligence entries for market positioning.") },
-		"Content Calendar Entry":  { title: __("Content Calendar"), body: __("Plan and schedule content across channels. Visual calendar view with drag-and-drop scheduling and AI content suggestions.") },
-		"Attribution Model":       { title: __("Attribution Models"), body: __("Choose how conversion credit is distributed: first-touch, last-touch, linear, time-decay, or custom weighted models.") },
-		"Audience Segment":        { title: __("Audience Segments"), body: __("Create dynamic segments based on lead behavior, demographics, engagement, and custom criteria for targeted campaigns.") },
-		"Influencer Profile":      { title: __("Influencer Campaigns"), body: __("Manage influencer partnerships with profile tracking, campaign assignment, and ROI measurement.") },
+		"AuraCRM Settings": { title: __("AuraCRM Settings"), body: __("Global configuration for AuraCRM: scoring weights, distribution mode, AI settings, gamification toggles, and integration credentials.") },
+		"Lead Scoring Rule": { title: __("Lead Scoring"), body: __("Define scoring criteria that automatically rate leads based on demographics, behavior, and engagement. Higher scores mean higher conversion probability.") },
+		"Lead Distribution Rule": { title: __("Lead Distribution"), body: __("Configure how leads are automatically assigned to sales agents. Use round-robin, territory-based, skill-based, or workload-balanced distribution.") },
+		"AI Lead Profile": { title: __("AI Lead Profiles"), body: __("AI-generated profiles that analyze lead data to predict conversion probability, suggest ideal approach, and recommend next actions.") },
+		"Auto Dialer Campaign": { title: __("Auto Dialer"), body: __("Create automated calling campaigns. Agents get calls queued with context rules that show relevant information for each contact.") },
+		"Campaign Sequence": { title: __("Campaign Sequences"), body: __("Multi-step automated campaigns with email, WhatsApp, SMS, and wait steps. Enroll leads and track progression through each step.") },
+		"Nurture Journey": { title: __("Nurture Journeys"), body: __("Long-term nurture programs with branching logic. Move leads through awareness, consideration, and decision stages automatically.") },
+		"Deal Room": { title: __("Deal Rooms"), body: __("Collaborative spaces for each deal with shared documents, notes, activity timeline, and stakeholder management. Share externally with customers.") },
+		"Customer Journey": { title: __("Customer Journey"), body: __("Track every touchpoint from first contact to closed deal. Visualize the full journey with timeline and attribution data.") },
+		"SLA Policy": { title: __("SLA Policies"), body: __("Define response time expectations for leads and opportunities. Automatic monitoring, escalation workflows, and breach logging.") },
+		"Gamification Settings": { title: __("Gamification"), body: __("Configure the gamification engine: point values, badge thresholds, challenge types, and leaderboard settings to boost team performance.") },
+		"WhatsApp Broadcast": { title: __("WhatsApp Broadcast"), body: __("Send bulk WhatsApp messages with templates and personalization. Track delivery, read status, and responses.") },
+		"WhatsApp Chatbot": { title: __("WhatsApp Chatbot"), body: __("Build conversational chatbots for WhatsApp with a visual node editor. Qualify leads, answer FAQs, and route to agents.") },
+		"Competitor Profile": { title: __("Competitor Intel"), body: __("Track competitor information, pricing, strengths/weaknesses. Log competitive intelligence entries for market positioning.") },
+		"Content Calendar Entry": { title: __("Content Calendar"), body: __("Plan and schedule content across channels. Visual calendar view with drag-and-drop scheduling and AI content suggestions.") },
+		"Attribution Model": { title: __("Attribution Models"), body: __("Choose how conversion credit is distributed: first-touch, last-touch, linear, time-decay, or custom weighted models.") },
+		"Audience Segment": { title: __("Audience Segments"), body: __("Create dynamic segments based on lead behavior, demographics, engagement, and custom criteria for targeted campaigns.") },
+		"Influencer Profile": { title: __("Influencer Campaigns"), body: __("Manage influencer partnerships with profile tracking, campaign assignment, and ROI measurement.") },
 	};
 
 	const DEFAULT_HELP = {
@@ -615,60 +615,60 @@ function _bind360Events($body, data) {
 // License: MIT
 // frappe_visual Integration for AuraCRM
 
-(function() {
-    "use strict";
+(function () {
+	"use strict";
 
-    // App branding registration
-    const APP_CONFIG = {
-        name: "auracrm",
-        title: "AuraCRM",
-        color: "#6366F1",
-        module: "AuraCRM",
-    };
+	// App branding registration
+	const APP_CONFIG = {
+		name: "auracrm",
+		title: "AuraCRM",
+		color: "#6366F1",
+		module: "AuraCRM",
+	};
 
-    // Initialize visual enhancements when ready
-    $(document).on("app_ready", function() {
-        // Register app color with visual theme system
-        if (frappe.visual && frappe.visual.ThemeManager) {
-            try {
-                document.documentElement.style.setProperty(
-                    "--auracrm-primary",
-                    APP_CONFIG.color
-                );
-            } catch(e) {}
-        }
+	// Initialize visual enhancements when ready
+	$(document).on("app_ready", function () {
+		// Register app color with visual theme system
+		if (frappe.visual && frappe.visual.ThemeManager) {
+			try {
+				document.documentElement.style.setProperty(
+					"--auracrm-primary",
+					APP_CONFIG.color
+				);
+			} catch (e) { }
+		}
 
-        // Initialize bilingual tooltips for Arabic support
-        if (frappe.visual && frappe.visual.bilingualTooltip) {
-            // bilingualTooltip auto-initializes — just ensure it's active
-        }
-    });
+		// Initialize bilingual tooltips for Arabic support
+		if (frappe.visual && frappe.visual.bilingualTooltip) {
+			// bilingualTooltip auto-initializes — just ensure it's active
+		}
+	});
 
-    // Route-based visual page rendering
-    $(document).on("page-change", function() {
-        if (!frappe.visual || !frappe.visual.generator) return;
+	// Route-based visual page rendering
+	$(document).on("page-change", function () {
+		if (!frappe.visual || !frappe.visual.generator) return;
 
-    // Visual Settings Page
-    if (frappe.get_route_str() === 'auracrm-settings') {
-        const page = frappe.container.page;
-        if (page && page.main && frappe.visual.generator) {
-            frappe.visual.generator.settingsPage(
-                page.main[0] || page.main,
-                "AuraCRM Settings"
-            );
-        }
-    }
+		// Visual Settings Page
+		if (frappe.get_route_str() === 'auracrm-settings') {
+			const page = frappe.container.page;
+			if (page && page.main && frappe.visual.generator) {
+				frappe.visual.generator.settingsPage(
+					page.main[0] || page.main,
+					"AuraCRM Settings"
+				);
+			}
+		}
 
-    // Visual Reports Hub
-    if (frappe.get_route_str() === 'auracrm-reports') {
-        const page = frappe.container.page;
-        if (page && page.main && frappe.visual.generator) {
-            frappe.visual.generator.reportsHub(
-                page.main[0] || page.main,
-                "AuraCRM"
-            );
-        }
-    }
-    });
+		// Visual Reports Hub
+		if (frappe.get_route_str() === 'auracrm-reports') {
+			const page = frappe.container.page;
+			if (page && page.main && frappe.visual.generator) {
+				frappe.visual.generator.reportsHub(
+					page.main[0] || page.main,
+					"AuraCRM"
+				);
+			}
+		}
+	});
 })();
 
