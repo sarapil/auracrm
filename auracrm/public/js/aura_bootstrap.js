@@ -13,8 +13,11 @@
     "use strict";
 
     // Guard: skip if frappe core not loaded (transient HTTP/2 proxy failures)
-if (typeof frappe === "undefined" || typeof frappe.provide !== "function") { return; }
-frappe.provide("frappe.auracrm");
+    if (typeof frappe === "undefined" || typeof frappe.provide !== "function") {
+        window.frappe = window.frappe || {};
+        frappe.provide = frappe.provide || function () {};
+    }
+    frappe.provide("frappe.auracrm");
     frappe.provide("frappe.auracrm._cache");
 
     const BUNDLE = "auracrm.bundle.js";

@@ -10,7 +10,7 @@
  * Links to the 5 visual pages + key DocType lists.
  */
 // Guard: skip if jQuery/frappe not loaded
-if (typeof $ === "undefined" || typeof frappe === "undefined") return;
+if (typeof $ !== "undefined" && typeof frappe !== "undefined")
 
 (function () {
     "use strict";
