@@ -25,7 +25,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AuraCRM Settings",
+   "label": "Settings",
    "link_count": 0,
    "link_to": "AuraCRM Settings",
    "link_type": "DocType",
@@ -35,7 +35,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AuraCRM Industry Preset",
+   "label": "Industry Preset",
    "link_count": 0,
    "link_to": "AuraCRM Industry Preset",
    "link_type": "DocType",

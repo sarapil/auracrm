@@ -74,7 +74,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AuraCRM Home",
+   "label": "Home",
    "link_count": 0,
    "link_to": "auracrm",
    "link_type": "Page",
@@ -84,7 +84,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AuraCRM Hub",
+   "label": "Hub",
    "link_count": 0,
    "link_to": "auracrm-hub",
    "link_type": "Page",
@@ -457,7 +457,7 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "AuraCRM Settings",
+   "label": "Settings",
    "link_count": 0,
    "link_to": "AuraCRM Settings",
    "link_type": "DocType",
