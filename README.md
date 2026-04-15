@@ -271,3 +271,10 @@ Currently shipped: **Arabic** (`ar.csv`) with **1,539** translated strings cover
 ## 📄 License
 
 MIT
+
+## Contact
+
+For support and inquiries:
+- Phone: +201508268982
+- WhatsApp: https://wa.me/201508268982
+
